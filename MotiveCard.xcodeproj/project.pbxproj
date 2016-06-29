@@ -87,6 +87,7 @@
 		E0B9CD9A1D241FAE00A8C61F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MC;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Ahmad;
