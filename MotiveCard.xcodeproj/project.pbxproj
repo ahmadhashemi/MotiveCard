@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0B530D31D2531960075F999 /* MCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B530D21D2531960075F999 /* MCMainViewController.swift */; };
 		E0B9CDA61D241FAF00A8C61F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9CDA51D241FAF00A8C61F /* AppDelegate.swift */; };
 		E0B9CDAB1D241FAF00A8C61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDA91D241FAF00A8C61F /* Main.storyboard */; };
 		E0B9CDAD1D241FAF00A8C61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDAC1D241FAF00A8C61F /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0B530D21D2531960075F999 /* MCMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMainViewController.swift; sourceTree = "<group>"; };
 		E0B9CDA21D241FAE00A8C61F /* MotiveCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotiveCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B9CDA51D241FAF00A8C61F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B9CDAA1D241FAF00A8C61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0B530D11D2531720075F999 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0B530D21D2531960075F999 /* MCMainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		E0B9CD991D241FAE00A8C61F = {
 			isa = PBXGroup;
 			children = (
@@ -52,6 +62,7 @@
 		E0B9CDA41D241FAF00A8C61F /* MotiveCard */ = {
 			isa = PBXGroup;
 			children = (
+				E0B530D11D2531720075F999 /* ViewControllers */,
 				E0B9CDA51D241FAF00A8C61F /* AppDelegate.swift */,
 				E0B9CDA91D241FAF00A8C61F /* Main.storyboard */,
 				E0B9CDAC1D241FAF00A8C61F /* Assets.xcassets */,
@@ -134,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B9CDA61D241FAF00A8C61F /* AppDelegate.swift in Sources */,
+				E0B530D31D2531960075F999 /* MCMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +297,7 @@
 				E0B9CDB61D241FAF00A8C61F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
