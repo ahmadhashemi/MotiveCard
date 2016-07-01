@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E0B530D31D2531960075F999 /* MCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B530D21D2531960075F999 /* MCMainViewController.swift */; };
+		E0B531191D2718330075F999 /* MCCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B531181D2718330075F999 /* MCCard.swift */; };
+		E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B5311A1D27183C0075F999 /* MCPack.swift */; };
+		E0B5311F1D271B060075F999 /* MCPacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B5311E1D271B060075F999 /* MCPacksViewController.swift */; };
 		E0B9CDA61D241FAF00A8C61F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B9CDA51D241FAF00A8C61F /* AppDelegate.swift */; };
 		E0B9CDAB1D241FAF00A8C61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDA91D241FAF00A8C61F /* Main.storyboard */; };
 		E0B9CDAD1D241FAF00A8C61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDAC1D241FAF00A8C61F /* Assets.xcassets */; };
@@ -15,7 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E0B530D21D2531960075F999 /* MCMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMainViewController.swift; sourceTree = "<group>"; };
+		E0B531181D2718330075F999 /* MCCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCCard.swift; sourceTree = "<group>"; };
+		E0B5311A1D27183C0075F999 /* MCPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPack.swift; sourceTree = "<group>"; };
+		E0B5311E1D271B060075F999 /* MCPacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPacksViewController.swift; sourceTree = "<group>"; };
 		E0B9CDA21D241FAE00A8C61F /* MotiveCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotiveCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B9CDA51D241FAF00A8C61F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B9CDAA1D241FAF00A8C61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,9 +42,18 @@
 		E0B530D11D2531720075F999 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E0B530D21D2531960075F999 /* MCMainViewController.swift */,
+				E0B5311E1D271B060075F999 /* MCPacksViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E0B531171D2718100075F999 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0B531181D2718330075F999 /* MCCard.swift */,
+				E0B5311A1D27183C0075F999 /* MCPack.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E0B9CD991D241FAE00A8C61F = {
@@ -62,6 +75,7 @@
 		E0B9CDA41D241FAF00A8C61F /* MotiveCard */ = {
 			isa = PBXGroup;
 			children = (
+				E0B531171D2718100075F999 /* Models */,
 				E0B530D11D2531720075F999 /* ViewControllers */,
 				E0B9CDA51D241FAF00A8C61F /* AppDelegate.swift */,
 				E0B9CDA91D241FAF00A8C61F /* Main.storyboard */,
@@ -144,8 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0B5311F1D271B060075F999 /* MCPacksViewController.swift in Sources */,
+				E0B531191D2718330075F999 /* MCCard.swift in Sources */,
 				E0B9CDA61D241FAF00A8C61F /* AppDelegate.swift in Sources */,
-				E0B530D31D2531960075F999 /* MCMainViewController.swift in Sources */,
+				E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
