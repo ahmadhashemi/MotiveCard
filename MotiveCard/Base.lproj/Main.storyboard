@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QZJ-3T-uJZ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="IRANSans.ttf">
+            <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
+        </mutableArray>
+        <mutableArray key="IRANSansMobile(FaNum)_Medium.ttf">
+            <string>IRANSansMobileFaNum-Medium</string>
+            <string>IRANSansMobileFaNum-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--Packs View Controller-->
+        <!--بسته‌های مرور-->
         <scene sceneID="QrT-oN-usu">
             <objects>
                 <viewController id="h4Y-cB-qnv" customClass="MCPacksViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,11 +67,209 @@
                             <constraint firstItem="wYf-8P-cXL" firstAttribute="height" secondItem="ybF-Jo-lRS" secondAttribute="height" id="ypH-GR-ZtD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bcf-t3-BaX"/>
+                    <navigationItem key="navigationItem" title="بسته‌های مرور" id="bcf-t3-BaX"/>
+                    <connections>
+                        <outlet property="tableView" destination="wYf-8P-cXL" id="eND-DO-gsp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tz9-n6-qhn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926" y="399"/>
+            <point key="canvasLocation" x="1570" y="384"/>
+        </scene>
+        <!--Review View Controller-->
+        <scene sceneID="oqA-nW-6uP">
+            <objects>
+                <viewController storyboardIdentifier="ReviewVC" id="rkG-Lh-uZR" customClass="MCReviewViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yeb-II-mBx"/>
+                        <viewControllerLayoutGuide type="bottom" id="jwP-vW-NPO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8cY-ro-Max">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdK-lu-bpG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="354"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUZ-DR-S7e">
+                                <rect key="frame" x="76" y="439" width="47" height="43"/>
+                                <state key="normal" image="Button-Movie"/>
+                                <connections>
+                                    <action selector="movieButtonTapped:" destination="rkG-Lh-uZR" eventType="touchUpInside" id="deA-R2-iHn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QO6-AB-HPV">
+                                <rect key="frame" x="198" y="437" width="47" height="47"/>
+                                <state key="normal" image="Button-Next"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="rkG-Lh-uZR" eventType="touchUpInside" id="TnP-2j-vxt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QO6-AB-HPV" firstAttribute="centerX" secondItem="8cY-ro-Max" secondAttribute="centerX" constant="61.5" id="Bqy-Rh-AaS"/>
+                            <constraint firstItem="jwP-vW-NPO" firstAttribute="top" secondItem="QO6-AB-HPV" secondAttribute="bottom" constant="84" id="DRO-fN-673"/>
+                            <constraint firstItem="mUZ-DR-S7e" firstAttribute="centerX" secondItem="8cY-ro-Max" secondAttribute="centerX" constant="-60.5" id="Tm4-fB-OYe"/>
+                            <constraint firstItem="NdK-lu-bpG" firstAttribute="width" secondItem="8cY-ro-Max" secondAttribute="width" id="Uqc-9p-ikx"/>
+                            <constraint firstItem="NdK-lu-bpG" firstAttribute="centerX" secondItem="8cY-ro-Max" secondAttribute="centerX" id="ZJL-oy-mVe"/>
+                            <constraint firstItem="QO6-AB-HPV" firstAttribute="top" secondItem="NdK-lu-bpG" secondAttribute="bottom" constant="83" id="b48-EW-HqB"/>
+                            <constraint firstItem="mUZ-DR-S7e" firstAttribute="centerY" secondItem="QO6-AB-HPV" secondAttribute="centerY" id="dxF-ch-LvU"/>
+                            <constraint firstItem="NdK-lu-bpG" firstAttribute="top" secondItem="8cY-ro-Max" secondAttribute="top" id="pEr-1Z-gsF"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pageView" destination="NdK-lu-bpG" id="26H-Ra-4Mn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YEw-rX-nmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2033" y="389"/>
+        </scene>
+        <!--Card View Controller-->
+        <scene sceneID="5yU-p2-YCa">
+            <objects>
+                <viewController storyboardIdentifier="CardVC" id="AEE-5E-Imk" customClass="MCCardViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Apb-Kr-DQo"/>
+                        <viewControllerLayoutGuide type="bottom" id="eQd-GF-0Rp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hBw-py-Zg9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzY-Wk-qWd">
+                                <rect key="frame" x="141" y="50" width="37" height="59.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59.5" id="0ic-8H-NGc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-J0-wbe">
+                                <rect key="frame" x="31" y="130" width="258" height="131"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="75"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="1oA-J0-wbe" secondAttribute="bottom" constant="39" id="WXp-7E-gmc"/>
+                            <constraint firstItem="xzY-Wk-qWd" firstAttribute="top" secondItem="Apb-Kr-DQo" secondAttribute="bottom" constant="50" id="bXV-P8-bjy"/>
+                            <constraint firstItem="1oA-J0-wbe" firstAttribute="leading" secondItem="hBw-py-Zg9" secondAttribute="leading" constant="31" id="fJy-3q-bsR"/>
+                            <constraint firstAttribute="trailing" secondItem="1oA-J0-wbe" secondAttribute="trailing" constant="31" id="kfp-Ce-ay7"/>
+                            <constraint firstItem="xzY-Wk-qWd" firstAttribute="centerX" secondItem="hBw-py-Zg9" secondAttribute="centerX" id="nBT-RU-1dc"/>
+                            <constraint firstItem="1oA-J0-wbe" firstAttribute="top" secondItem="xzY-Wk-qWd" secondAttribute="bottom" constant="20.5" id="sQq-kC-90j"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="300"/>
+                    <connections>
+                        <outlet property="indexLabel" destination="xzY-Wk-qWd" id="0F8-Wa-ege"/>
+                        <outlet property="wordLabel" destination="1oA-J0-wbe" id="eoI-OY-p2g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ux1-Lv-v88" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2483" y="389"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="oBg-ny-URZ">
+            <objects>
+                <viewController storyboardIdentifier="ResultVC" id="8O4-6b-g4L" customClass="MCResultViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ggz-wO-5Vb"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vkf-08-ZFg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="axL-GU-dJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FP-c2-ebd">
+                                <rect key="frame" x="113.5" y="70" width="93" height="148.5"/>
+                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="100"/>
+                                <color key="textColor" red="0.29019607843137252" green="0.29019607843137252" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Result-Correct" translatesAutoresizingMaskIntoConstraints="NO" id="zLS-cQ-RBf">
+                                <rect key="frame" x="180" y="292" width="36" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zLS-cQ-RBf" secondAttribute="height" multiplier="18:19" id="4n7-4j-ee4"/>
+                                    <constraint firstAttribute="width" constant="36" id="8o0-YT-6JN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Result-Wrong" translatesAutoresizingMaskIntoConstraints="NO" id="B8J-kZ-61k">
+                                <rect key="frame" x="180" y="365" width="36" height="38"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2Q-68-U7K">
+                                <rect key="frame" x="138" y="287" width="22" height="35.5"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="24"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حدس درست" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPu-ZM-XfV">
+                                <rect key="frame" x="102" y="314" width="58" height="21"/>
+                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۸" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWp-8e-Ezs">
+                                <rect key="frame" x="145.5" y="355" width="14.5" height="36"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="24"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حدس نادرست" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iK-s4-0y1">
+                                <rect key="frame" x="96" y="382.5" width="64" height="21"/>
+                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
+                                <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQ9-K1-ukv">
+                                <rect key="frame" x="135" y="495" width="51" height="29"/>
+                                <state key="normal" image="Result-Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="8O4-6b-g4L" eventType="touchUpInside" id="H3Z-rl-tYs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B8J-kZ-61k" firstAttribute="leading" secondItem="GWp-8e-Ezs" secondAttribute="trailing" constant="20" id="3hF-Nh-XuP"/>
+                            <constraint firstItem="zLS-cQ-RBf" firstAttribute="centerX" secondItem="axL-GU-dJ1" secondAttribute="centerX" constant="38" id="6fo-0z-2cd"/>
+                            <constraint firstItem="zLS-cQ-RBf" firstAttribute="leading" secondItem="LPu-ZM-XfV" secondAttribute="trailing" constant="20" id="6wn-EL-CSP"/>
+                            <constraint firstItem="B8J-kZ-61k" firstAttribute="leading" secondItem="3iK-s4-0y1" secondAttribute="trailing" constant="20" id="7Xp-3a-P9P"/>
+                            <constraint firstItem="B8J-kZ-61k" firstAttribute="top" secondItem="zLS-cQ-RBf" secondAttribute="bottom" constant="35" id="9cU-TM-XYx"/>
+                            <constraint firstItem="B8J-kZ-61k" firstAttribute="centerX" secondItem="zLS-cQ-RBf" secondAttribute="centerX" id="ANY-VG-MyK"/>
+                            <constraint firstItem="7FP-c2-ebd" firstAttribute="centerX" secondItem="axL-GU-dJ1" secondAttribute="centerX" id="TXC-bD-Lzs"/>
+                            <constraint firstItem="B8J-kZ-61k" firstAttribute="height" secondItem="zLS-cQ-RBf" secondAttribute="height" id="UnY-Bc-fx3"/>
+                            <constraint firstItem="bQ9-K1-ukv" firstAttribute="centerX" secondItem="axL-GU-dJ1" secondAttribute="centerX" id="Yuv-hw-p1K"/>
+                            <constraint firstItem="Vkf-08-ZFg" firstAttribute="top" secondItem="bQ9-K1-ukv" secondAttribute="bottom" constant="44" id="azL-tX-1vJ"/>
+                            <constraint firstItem="B8J-kZ-61k" firstAttribute="top" secondItem="GWp-8e-Ezs" secondAttribute="bottom" constant="-26" id="bgT-Np-UXq"/>
+                            <constraint firstItem="3iK-s4-0y1" firstAttribute="top" secondItem="GWp-8e-Ezs" secondAttribute="bottom" constant="-8.5" id="gIt-ti-YUo"/>
+                            <constraint firstItem="B8J-kZ-61k" firstAttribute="width" secondItem="zLS-cQ-RBf" secondAttribute="width" id="gO9-by-n2f"/>
+                            <constraint firstItem="zLS-cQ-RBf" firstAttribute="centerY" secondItem="axL-GU-dJ1" secondAttribute="centerY" constant="27" id="ifu-n2-FjB"/>
+                            <constraint firstItem="zLS-cQ-RBf" firstAttribute="leading" secondItem="r2Q-68-U7K" secondAttribute="trailing" constant="20" id="sBa-0o-mtO"/>
+                            <constraint firstItem="7FP-c2-ebd" firstAttribute="top" secondItem="ggz-wO-5Vb" secondAttribute="bottom" constant="50" id="yrz-gN-Ari"/>
+                            <constraint firstItem="r2Q-68-U7K" firstAttribute="top" secondItem="zLS-cQ-RBf" secondAttribute="top" constant="-5" id="zPP-DJ-WBP"/>
+                            <constraint firstItem="LPu-ZM-XfV" firstAttribute="top" secondItem="r2Q-68-U7K" secondAttribute="bottom" constant="-8.5" id="zhR-SR-yHF"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="correctCountLabel" destination="r2Q-68-U7K" id="eez-xo-5fB"/>
+                        <outlet property="scoreLabel" destination="7FP-c2-ebd" id="3z9-hO-hR7"/>
+                        <outlet property="wrongCountLabel" destination="GWp-8e-Ezs" id="DCM-sb-8Vc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lsh-zr-v7C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2943" y="389"/>
         </scene>
         <!--بسته‌های مرور-->
         <scene sceneID="t9I-Lc-HDm">
@@ -77,7 +289,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84b-EO-4Yu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="399"/>
+            <point key="canvasLocation" x="1068" y="384"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hxW-7m-yXn">
@@ -99,6 +311,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Button-Movie" width="47" height="43"/>
+        <image name="Button-Next" width="47" height="47"/>
+        <image name="Result-Back" width="51" height="29"/>
+        <image name="Result-Correct" width="34" height="34"/>
+        <image name="Result-Wrong" width="33" height="33"/>
         <image name="TabBar-Packs" width="25" height="25"/>
     </resources>
 </document>

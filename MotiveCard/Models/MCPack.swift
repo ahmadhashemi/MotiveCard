@@ -10,11 +10,11 @@ import UIKit
 
 class MCPack: NSObject {
     
-    var packName: NSString = ""
-    var movieName: NSString = ""
+    var packName: NSString? = ""
+    var movieName: NSString? = ""
     
-    var subtitlePath: NSString = ""
-    var movieURL: NSURL = NSURL()
+    var subtitlePath: NSString? = ""
+    var movieURL: NSURL? = NSURL()
     
     var words: [MCCard] = []
     
@@ -32,13 +32,17 @@ class MCPack: NSObject {
     
     required init?(coder aDecoder: NSCoder) {
         
-        self.packName = aDecoder.decodeObjectForKey("packName") as! NSString
-        self.movieName = aDecoder.decodeObjectForKey("movieName") as! NSString
+        self.packName = aDecoder.decodeObjectForKey("packName") as? NSString
+        self.movieName = aDecoder.decodeObjectForKey("movieName") as? NSString
         
-        self.subtitlePath = aDecoder.decodeObjectForKey("subtitlePath") as! NSString
-        self.movieURL = aDecoder.decodeObjectForKey("movieURL") as! NSURL
+        self.subtitlePath = aDecoder.decodeObjectForKey("subtitlePath") as? NSString
+        self.movieURL = aDecoder.decodeObjectForKey("movieURL") as? NSURL
         
         self.words = aDecoder.decodeObjectForKey("words") as! [MCCard]
+        
+    }
+    
+    override init() {
         
     }
 

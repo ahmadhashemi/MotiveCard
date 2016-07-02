@@ -10,8 +10,9 @@ import UIKit
 
 class MCCard: NSObject, NSCoding {
     
-    var word: NSString = ""
-    var definition: NSString = ""
+    var word: NSString? = ""
+    var definition: NSString? = ""
+    
     var box: NSInteger = 1
     var daysToReview: NSInteger = 1
     
@@ -26,10 +27,14 @@ class MCCard: NSObject, NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         
-        self.word = aDecoder.decodeObjectForKey("word") as! NSString
-        self.definition = aDecoder.decodeObjectForKey("definition") as! NSString
-        self.box = aDecoder.decodeIntegerForKey("box") as NSInteger
-        self.daysToReview = aDecoder.decodeIntegerForKey("daysToReview") as NSInteger
+        self.word = aDecoder.decodeObjectForKey("word") as? NSString
+        self.definition = aDecoder.decodeObjectForKey("definition") as? NSString
+        self.box = aDecoder.decodeIntegerForKey("box") 
+        self.daysToReview = aDecoder.decodeIntegerForKey("daysToReview") 
+        
+    }
+    
+    override init() {
         
     }
     

@@ -14,7 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let tabBarFont = UIFont(name: "IRANSans", size: 10)
+        let navBarFont = UIFont(name: "IRANSans", size: 20)
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName:tabBarFont!], forState: .Normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName:tabBarFont!], forState: .Selected)
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName:navBarFont!], forState: .Normal)
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:navBarFont!]
+        
         return true
     }
 
