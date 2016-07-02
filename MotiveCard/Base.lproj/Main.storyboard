@@ -12,6 +12,9 @@
             <string>IRANSans</string>
             <string>IRANSans</string>
             <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
         </mutableArray>
         <mutableArray key="IRANSansMobile(FaNum)_Medium.ttf">
             <string>IRANSansMobileFaNum-Medium</string>
@@ -31,26 +34,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYf-8P-cXL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="141" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYf-8P-cXL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="8qX-eg-EO6" style="IBUITableViewCellStyleDefault" id="UXQ-mB-sUA">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="141" id="UXQ-mB-sUA" customClass="MCPacksTableViewCell" customModule="MotiveCard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UXQ-mB-sUA" id="bJJ-er-nHW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8qX-eg-EO6">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sample" translatesAutoresizingMaskIntoConstraints="NO" id="H7q-cR-UhM">
+                                                    <rect key="frame" x="8" y="4" width="304" height="133"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfM-tI-aNV">
+                                                    <rect key="frame" x="8" y="4" width="304" height="133"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="گلادیاتور" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h08-So-2me">
+                                                            <rect key="frame" x="242.5" y="23.5" width="41.5" height="25.5"/>
+                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مرور بعدی : ۱۲ لغت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htr-I0-EfI">
+                                                            <rect key="frame" x="179" y="97" width="106" height="25.5"/>
+                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لغات دشوار" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o82-jE-QGv">
+                                                            <rect key="frame" x="166" y="40.5" width="118" height="52"/>
+                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="35"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.098039215686274508" green="0.16470588235294117" blue="0.39215686274509803" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="o82-jE-QGv" firstAttribute="centerY" secondItem="tfM-tI-aNV" secondAttribute="centerY" id="0fl-6z-wS8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="htr-I0-EfI" secondAttribute="trailing" constant="19" id="4UA-d7-94s"/>
+                                                        <constraint firstItem="o82-jE-QGv" firstAttribute="top" secondItem="h08-So-2me" secondAttribute="bottom" constant="-8.5" id="8QO-BZ-d1C"/>
+                                                        <constraint firstAttribute="bottom" secondItem="htr-I0-EfI" secondAttribute="bottom" constant="10" id="B4g-Dj-VQ7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="h08-So-2me" secondAttribute="trailing" constant="20" id="MNH-pp-gm3"/>
+                                                        <constraint firstAttribute="trailing" secondItem="o82-jE-QGv" secondAttribute="trailing" constant="20" id="MjI-K7-1xd"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="H7q-cR-UhM" secondAttribute="bottom" constant="4" id="3Sf-Z7-7AQ"/>
+                                                <constraint firstItem="H7q-cR-UhM" firstAttribute="leading" secondItem="bJJ-er-nHW" secondAttribute="leading" constant="8" id="6ra-cD-CEz"/>
+                                                <constraint firstItem="tfM-tI-aNV" firstAttribute="width" secondItem="H7q-cR-UhM" secondAttribute="width" id="EMr-mR-F0q"/>
+                                                <constraint firstItem="tfM-tI-aNV" firstAttribute="centerX" secondItem="H7q-cR-UhM" secondAttribute="centerX" id="Jeo-nf-s7i"/>
+                                                <constraint firstItem="tfM-tI-aNV" firstAttribute="centerY" secondItem="H7q-cR-UhM" secondAttribute="centerY" id="ORl-fr-1dQ"/>
+                                                <constraint firstItem="H7q-cR-UhM" firstAttribute="top" secondItem="bJJ-er-nHW" secondAttribute="top" constant="4" id="VUO-p7-Dvj"/>
+                                                <constraint firstAttribute="trailing" secondItem="H7q-cR-UhM" secondAttribute="trailing" constant="8" id="pyH-Jn-LMq"/>
+                                                <constraint firstItem="tfM-tI-aNV" firstAttribute="height" secondItem="H7q-cR-UhM" secondAttribute="height" id="vIt-Xm-pOR"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="movieImageView" destination="H7q-cR-UhM" id="r4S-qP-I7f"/>
+                                            <outlet property="movieNameLabel" destination="h08-So-2me" id="Uun-rC-qur"/>
+                                            <outlet property="packDetailsLabel" destination="htr-I0-EfI" id="NV6-hP-hXS"/>
+                                            <outlet property="packNameLabel" destination="o82-jE-QGv" id="iEC-9a-zf9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -316,6 +365,7 @@
         <image name="Result-Back" width="51" height="29"/>
         <image name="Result-Correct" width="34" height="34"/>
         <image name="Result-Wrong" width="33" height="33"/>
+        <image name="Sample" width="426" height="240"/>
         <image name="TabBar-Packs" width="25" height="25"/>
     </resources>
 </document>

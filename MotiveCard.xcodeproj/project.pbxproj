@@ -15,6 +15,8 @@
 		E023E0281D2820F300F58077 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E023E0231D2820F300F58077 /* IRANSansMobile(FaNum)_Medium.ttf */; };
 		E023E0291D2820F300F58077 /* IRANSansUltraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E023E0241D2820F300F58077 /* IRANSansUltraLight.ttf */; };
 		E023E02B1D28364C00F58077 /* MCResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E02A1D28364C00F58077 /* MCResultViewController.swift */; };
+		E023E02D1D2848D700F58077 /* Room.srt in Resources */ = {isa = PBXBuildFile; fileRef = E023E02C1D2848D700F58077 /* Room.srt */; };
+		E023E02F1D284FDF00F58077 /* MCPacksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E02E1D284FDF00F58077 /* MCPacksTableViewCell.swift */; };
 		E0B531191D2718330075F999 /* MCCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B531181D2718330075F999 /* MCCard.swift */; };
 		E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B5311A1D27183C0075F999 /* MCPack.swift */; };
 		E0B5311F1D271B060075F999 /* MCPacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B5311E1D271B060075F999 /* MCPacksViewController.swift */; };
@@ -23,6 +25,18 @@
 		E0B9CDAD1D241FAF00A8C61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDAC1D241FAF00A8C61F /* Assets.xcassets */; };
 		E0B9CDB01D241FAF00A8C61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDAE1D241FAF00A8C61F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E023E0AD1D28562700F58077 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E023E01A1D281E8400F58077 /* MCReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCReviewViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +47,8 @@
 		E023E0231D2820F300F58077 /* IRANSansMobile(FaNum)_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile(FaNum)_Medium.ttf"; sourceTree = "<group>"; };
 		E023E0241D2820F300F58077 /* IRANSansUltraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansUltraLight.ttf; sourceTree = "<group>"; };
 		E023E02A1D28364C00F58077 /* MCResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCResultViewController.swift; sourceTree = "<group>"; };
+		E023E02C1D2848D700F58077 /* Room.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Room.srt; sourceTree = "<group>"; };
+		E023E02E1D284FDF00F58077 /* MCPacksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPacksTableViewCell.swift; sourceTree = "<group>"; };
 		E0B531181D2718330075F999 /* MCCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCCard.swift; sourceTree = "<group>"; };
 		E0B5311A1D27183C0075F999 /* MCPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPack.swift; sourceTree = "<group>"; };
 		E0B5311E1D271B060075F999 /* MCPacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPacksViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +91,21 @@
 			path = IRAN;
 			sourceTree = "<group>";
 		};
+		E023E0301D284FE200F58077 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E023E02E1D284FDF00F58077 /* MCPacksTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		E023E0311D28555400F58077 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		E0B530D11D2531720075F999 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +113,7 @@
 				E023E01A1D281E8400F58077 /* MCReviewViewController.swift */,
 				E023E01C1D281E8F00F58077 /* MCCardViewController.swift */,
 				E023E02A1D28364C00F58077 /* MCResultViewController.swift */,
+				E023E0301D284FE200F58077 /* Cells */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -119,8 +151,10 @@
 				E0B9CDAC1D241FAF00A8C61F /* Assets.xcassets */,
 				E0B9CDAE1D241FAF00A8C61F /* LaunchScreen.storyboard */,
 				E0B9CDB11D241FAF00A8C61F /* Info.plist */,
-				E0B530D11D2531720075F999 /* ViewControllers */,
+				E023E02C1D2848D700F58077 /* Room.srt */,
 				E0B531171D2718100075F999 /* Models */,
+				E0B530D11D2531720075F999 /* ViewControllers */,
+				E023E0311D28555400F58077 /* Components */,
 				E023E01E1D2820DF00F58077 /* Fonts */,
 			);
 			path = MotiveCard;
@@ -136,6 +170,7 @@
 				E0B9CD9E1D241FAE00A8C61F /* Sources */,
 				E0B9CD9F1D241FAE00A8C61F /* Frameworks */,
 				E0B9CDA01D241FAE00A8C61F /* Resources */,
+				E023E0AD1D28562700F58077 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -189,6 +224,7 @@
 				E023E0291D2820F300F58077 /* IRANSansUltraLight.ttf in Resources */,
 				E0B9CDB01D241FAF00A8C61F /* LaunchScreen.storyboard in Resources */,
 				E023E0281D2820F300F58077 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
+				E023E02D1D2848D700F58077 /* Room.srt in Resources */,
 				E0B9CDAD1D241FAF00A8C61F /* Assets.xcassets in Resources */,
 				E0B9CDAB1D241FAF00A8C61F /* Main.storyboard in Resources */,
 				E023E0251D2820F300F58077 /* IRANSans.ttf in Resources */,
@@ -205,6 +241,7 @@
 			files = (
 				E0B5311F1D271B060075F999 /* MCPacksViewController.swift in Sources */,
 				E023E01B1D281E8400F58077 /* MCReviewViewController.swift in Sources */,
+				E023E02F1D284FDF00F58077 /* MCPacksTableViewCell.swift in Sources */,
 				E023E02B1D28364C00F58077 /* MCResultViewController.swift in Sources */,
 				E0B531191D2718330075F999 /* MCCard.swift in Sources */,
 				E0B9CDA61D241FAF00A8C61F /* AppDelegate.swift in Sources */,

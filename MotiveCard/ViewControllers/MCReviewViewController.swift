@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class MCReviewViewController: UIViewController {
 
@@ -25,7 +26,7 @@ class MCReviewViewController: UIViewController {
         
         super.viewDidLoad()
         
-        self.findWordsToReview()
+        self.findCardsToReview()
         self.configurePageView()
         
     }
@@ -82,6 +83,41 @@ extension MCReviewViewController {
     
     @IBAction func movieButtonTapped(sender: UIButton) {
         
+        let reviewCard = cardsToReview[selectedCardIndex]
+        
+        self.search(forWord: reviewCard.word as? String, inMovie: self.selectedPack.movieName as? String)
+        
+    }
+    
+}
+
+extension MCReviewViewController {
+    
+    func search(forWord word: String?, inMovie movie: String?) {
+        
+        if word == nil { return }
+        if movie == nil { return }
+        
+        let subtitlePath = NSBundle.mainBundle().pathForResource(movie, ofType: "srt")
+        
+        if subtitlePath == nil { return }
+        
+        let subtitleString = try? NSString(contentsOfFile: subtitlePath!, encoding: 1)
+        
+        let allComponents = (subtitleString?.componentsSeparatedByString("\r\n\r\n"))! as [String]
+        let containedComponents = allComponents.filter({ (component) -> Bool in
+            component.containsString(word!)
+        })
+        
+        if containedComponents.count == 0 {
+            return
+        }
+        
+        let component = containedComponents[0]
+        let timeLine = component.componentsSeparatedByString("\r\n")[1]
+        let beginTime = timeLine.componentsSeparatedByString(" --> ")[0]
+        
+        print(beginTime)
         
         
     }
@@ -90,10 +126,11 @@ extension MCReviewViewController {
 
 extension MCReviewViewController {
     
-    func findWordsToReview() {
+    func findCardsToReview() {
         
         cardsToReview = selectedPack.words.filter({ (card) -> Bool in
-            return card.daysToReview == 1
+            let result = card.daysToReview == 1 && card.box < 7
+            return result
         })
         
         

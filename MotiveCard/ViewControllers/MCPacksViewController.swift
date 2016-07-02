@@ -43,13 +43,15 @@ extension MCPacksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MCPacksTableViewCell
         
         let thisPack = dataSource[indexPath.row]
         
-        cell?.textLabel?.text = thisPack.packName as? String
+        //cell.movieImageView?.hnk_setImageFromURL(thisPack.imageURL)
+        cell.movieNameLabel.text = thisPack.movieName as? String
+        cell.packNameLabel.text = thisPack.packName as? String
         
-        return cell!
+        return cell
         
     }
     
@@ -66,6 +68,8 @@ extension MCPacksViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
+////////
+
 extension MCPacksViewController {
     
     func tempFunctionToGetDataSource() -> MCPack {
@@ -81,6 +85,7 @@ extension MCPacksViewController {
         let newPack = MCPack()
         newPack.packName = "لغات سخت"
         newPack.movieName = "Room"
+        newPack.imageURL = NSURL(string: "https://i.ytimg.com/vi/MBkci3ujIus/maxresdefault.jpg")
         
         var newCard = MCCard()
         newCard.word = "zoomed down"
@@ -103,11 +108,11 @@ extension MCPacksViewController {
         newCard = MCCard()
         newCard.word = "hobo"
         newPack.words.append(newCard)
+
+        newCard = MCCard()
+        newCard.word = "squirrels"
+        newPack.words.append(newCard)
 //
-//        newCard = MCCard()
-//        newCard.word = "squirrels"
-//        newPack.words.append(newCard)
-//        
 //        newCard = MCCard()
 //        newCard.word = "splattered"
 //        newPack.words.append(newCard)

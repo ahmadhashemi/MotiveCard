@@ -15,6 +15,7 @@ class MCPack: NSObject {
     
     var subtitlePath: NSString? = ""
     var movieURL: NSURL? = NSURL()
+    var imageURL: NSURL? = NSURL()
     
     var words: [MCCard] = []
     
@@ -25,6 +26,7 @@ class MCPack: NSObject {
         
         aCoder.encodeObject(self.subtitlePath, forKey: "subtitlePath")
         aCoder.encodeObject(self.movieURL, forKey: "movieURL")
+        aCoder.encodeObject(self.imageURL, forKey: "imageURL")
         
         aCoder.encodeObject(self.words, forKey: "words")
         
@@ -37,6 +39,7 @@ class MCPack: NSObject {
         
         self.subtitlePath = aDecoder.decodeObjectForKey("subtitlePath") as? NSString
         self.movieURL = aDecoder.decodeObjectForKey("movieURL") as? NSURL
+        self.imageURL = aDecoder.decodeObjectForKey("imageURL") as? NSURL
         
         self.words = aDecoder.decodeObjectForKey("words") as! [MCCard]
         
