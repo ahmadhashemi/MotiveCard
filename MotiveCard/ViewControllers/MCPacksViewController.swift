@@ -23,12 +23,23 @@ class MCPacksViewController: UIViewController {
         
         self.makeDataSource()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MCPacksViewController.reloadTableView), name: "ReloadPacksTableView", object: nil)
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.tabBarController?.tabBar.hidden = false
+        
     }
     
     func makeDataSource() {
         
         self.tempFunctionToMakeDataSource()
-        dataSource = [self.tempFunctionToGetDataSource()]
+        dataSource = self.tempFunctionToGetDataSource()
         
     }
     
@@ -47,22 +58,90 @@ extension MCPacksViewController: UITableViewDelegate, UITableViewDataSource {
         
         let thisPack = dataSource[indexPath.row]
         
-        //cell.movieImageView?.hnk_setImageFromURL(thisPack.imageURL)
+        cell.movieImageView.moa.url = thisPack.imageURL?.absoluteString
         cell.movieNameLabel.text = thisPack.movieName as? String
         cell.packNameLabel.text = thisPack.packName as? String
+        cell.packDetailsLabel.text = self.detailsStringForPack(thisPack)
         
         return cell
         
     }
     
+    func detailsStringForPack(pack: MCPack) -> String {
+        
+        let packDetails: String
+        
+        let wordsToReview = pack.words.filter { (card) -> Bool in
+            return card.daysToReview == 1
+        }
+        
+        if (wordsToReview.count == 0) {
+            
+            let unreviewdWords = pack.words.filter { (card) -> Bool in
+                return card.box < 7
+            }
+            
+            if unreviewdWords.count == 0 {
+                packDetails = "مرور این بسته به پایان رسیده است"
+            } else {
+                packDetails = "مرور بعدی خالی است"
+            }
+            
+        } else {
+            
+            packDetails = "مرور بعدی : \(wordsToReview.count) لغت"
+            
+        }
+        
+        return packDetails
+        
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+//        let selectedPack = dataSource[indexPath.row]
+//        
+//        let alert = UIAlertController(title: selectedPack.packName as? String, message: nil, preferredStyle: .ActionSheet)
+//        
+//        alert.addAction(UIAlertAction(title: "مرور", style: .Default, handler: { (action) in
+//            
+//            let reviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("ReviewVC") as! MCReviewViewController
+//            
+//            reviewVC.selectedPack = selectedPack
+//            reviewVC.navigationItem.title = selectedPack.packName as? String
+//            
+//            reviewVC.hidesBottomBarWhenPushed = true
+//            
+//            self.navigationController?.pushViewController(reviewVC, animated: true)
+//            
+//        }))
+//        
+//        alert.addAction(UIAlertAction(title: "ریست پیشرفت", style: .Destructive, handler: { (action) in
+//            
+//            
+//            
+//        }))
+//        
+//        alert.addAction(UIAlertAction(title: "بازگشت", style: .Cancel, handler: nil))
+//        
+//        self.presentViewController(alert, animated: true, completion: nil)
+        
+        let selectedPack = dataSource[indexPath.row]
         
         let reviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("ReviewVC") as! MCReviewViewController
         
-        reviewVC.selectedPack = dataSource[indexPath.row]
-        reviewVC.navigationItem.title = dataSource[indexPath.row].packName as? String
+        reviewVC.selectedPack = selectedPack
+        reviewVC.navigationItem.title = selectedPack.packName as? String
+        
+        reviewVC.hidesBottomBarWhenPushed = true
         
         self.navigationController?.pushViewController(reviewVC, animated: true)
+        
+    }
+    
+    func reloadTableView() {
+        
+        self.tableView.reloadData()
         
     }
     
@@ -72,9 +151,9 @@ extension MCPacksViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MCPacksViewController {
     
-    func tempFunctionToGetDataSource() -> MCPack {
+    func tempFunctionToGetDataSource() -> [MCPack] {
         
-        let newPack = NSKeyedUnarchiver.unarchiveObjectWithFile("/Users/ahmad/Desktop/packData") as! MCPack
+        let newPack = NSKeyedUnarchiver.unarchiveObjectWithFile("/Users/ahmad/Desktop/packData") as! [MCPack]
         
         return newPack
         
@@ -83,7 +162,7 @@ extension MCPacksViewController {
     func tempFunctionToMakeDataSource() {
         
         let newPack = MCPack()
-        newPack.packName = "لغات سخت"
+        newPack.packName = "لغات دشوار"
         newPack.movieName = "Room"
         newPack.imageURL = NSURL(string: "https://i.ytimg.com/vi/MBkci3ujIus/maxresdefault.jpg")
         
@@ -97,21 +176,21 @@ extension MCPacksViewController {
         //newCard.daysToReview = 2
         newPack.words.append(newCard)
         
-        newCard = MCCard()
-        newCard.word = "batter"
-        newPack.words.append(newCard)
-        
-        newCard = MCCard()
-        newCard.word = "abracadabra"
-        newPack.words.append(newCard)
-        
-        newCard = MCCard()
-        newCard.word = "hobo"
-        newPack.words.append(newCard)
-
-        newCard = MCCard()
-        newCard.word = "squirrels"
-        newPack.words.append(newCard)
+//        newCard = MCCard()
+//        newCard.word = "batter"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "abracadabra"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "hobo"
+//        newPack.words.append(newCard)
+//
+//        newCard = MCCard()
+//        newCard.word = "squirrels"
+//        newPack.words.append(newCard)
 //
 //        newCard = MCCard()
 //        newCard.word = "splattered"
@@ -237,7 +316,7 @@ extension MCPacksViewController {
 //        newCard.word = "drape"
 //        newPack.words.append(newCard)
         
-        NSKeyedArchiver.archiveRootObject(newPack, toFile: "/Users/ahmad/Desktop/packData")
+        NSKeyedArchiver.archiveRootObject([newPack], toFile: "/Users/ahmad/Desktop/packData")
         
     }
     

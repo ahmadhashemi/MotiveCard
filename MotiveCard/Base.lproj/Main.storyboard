@@ -15,8 +15,10 @@
             <string>IRANSans</string>
             <string>IRANSans</string>
             <string>IRANSans</string>
+            <string>IRANSans</string>
         </mutableArray>
         <mutableArray key="IRANSansMobile(FaNum)_Medium.ttf">
+            <string>IRANSansMobileFaNum-Medium</string>
             <string>IRANSansMobileFaNum-Medium</string>
             <string>IRANSansMobileFaNum-Medium</string>
         </mutableArray>
@@ -45,7 +47,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sample" translatesAutoresizingMaskIntoConstraints="NO" id="H7q-cR-UhM">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H7q-cR-UhM">
                                                     <rect key="frame" x="8" y="4" width="304" height="133"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfM-tI-aNV">
@@ -358,6 +360,61 @@
             </objects>
             <point key="canvasLocation" x="434" y="959"/>
         </scene>
+        <!--Status View Controller-->
+        <scene sceneID="Uaa-7P-zB8">
+            <objects>
+                <viewController storyboardIdentifier="StatusVC" id="e43-Ia-EQx" customClass="MCStatusViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uOu-CE-3fT"/>
+                        <viewControllerLayoutGuide type="bottom" id="n9J-0x-ZbG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eQl-wc-Ucf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CM5-4W-1fQ">
+                                <rect key="frame" x="135" y="495" width="51" height="29"/>
+                                <state key="normal" image="Result-Back"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="e43-Ia-EQx" eventType="touchUpInside" id="lqr-4H-rjL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="متن تست جهت بررسی ابعاد نوشته" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-DX-XBZ">
+                                <rect key="frame" x="20" y="271.5" width="280" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="متن تست جهت بررسی ابعاد نوشته" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40S-tZ-G98">
+                                <rect key="frame" x="20" y="237.5" width="280" height="21"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="40S-tZ-G98" firstAttribute="width" secondItem="caZ-DX-XBZ" secondAttribute="width" id="4g8-FT-Zjw"/>
+                            <constraint firstItem="caZ-DX-XBZ" firstAttribute="leading" secondItem="eQl-wc-Ucf" secondAttribute="leading" constant="20" id="5aW-KU-kY7"/>
+                            <constraint firstItem="CM5-4W-1fQ" firstAttribute="centerX" secondItem="eQl-wc-Ucf" secondAttribute="centerX" id="HQl-Zc-JMi"/>
+                            <constraint firstItem="caZ-DX-XBZ" firstAttribute="centerY" secondItem="eQl-wc-Ucf" secondAttribute="centerY" id="TAn-7f-wto"/>
+                            <constraint firstItem="caZ-DX-XBZ" firstAttribute="top" secondItem="40S-tZ-G98" secondAttribute="bottom" constant="13" id="UOA-qI-OTE"/>
+                            <constraint firstItem="40S-tZ-G98" firstAttribute="centerX" secondItem="caZ-DX-XBZ" secondAttribute="centerX" id="dFF-xm-sSW"/>
+                            <constraint firstItem="caZ-DX-XBZ" firstAttribute="centerX" secondItem="eQl-wc-Ucf" secondAttribute="centerX" id="duh-C0-1HD"/>
+                            <constraint firstAttribute="trailing" secondItem="caZ-DX-XBZ" secondAttribute="trailing" constant="20" id="ip7-J4-lMb"/>
+                            <constraint firstItem="n9J-0x-ZbG" firstAttribute="top" secondItem="CM5-4W-1fQ" secondAttribute="bottom" constant="44" id="qqG-ls-qOu"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="textLabel" destination="caZ-DX-XBZ" id="KW4-th-HXR"/>
+                        <outlet property="titleLabel" destination="40S-tZ-G98" id="ogW-bB-7mz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJQ-Ia-jdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3366" y="389"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Button-Movie" width="47" height="43"/>
@@ -365,7 +422,6 @@
         <image name="Result-Back" width="51" height="29"/>
         <image name="Result-Correct" width="34" height="34"/>
         <image name="Result-Wrong" width="33" height="33"/>
-        <image name="Sample" width="426" height="240"/>
         <image name="TabBar-Packs" width="25" height="25"/>
     </resources>
 </document>

@@ -24,7 +24,7 @@ class MCResultViewController: UIViewController {
         self.correctCountLabel.text = "\(corectCount)"
         self.wrongCountLabel.text = "\(wrongCount)"
         
-        self.scoreLabel.text = "\(Float(corectCount)/Float(corectCount + wrongCount) * 100)"
+        self.scoreLabel.text = NSString(format: "%.0f", Float(corectCount)/Float(corectCount + wrongCount) * 100) as String
         
     }
 

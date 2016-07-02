@@ -26,6 +26,8 @@ class MCReviewViewController: UIViewController {
         
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         self.findCardsToReview()
         self.configurePageView()
         
@@ -156,15 +158,53 @@ extension MCReviewViewController {
         
     }
     
-    ////////
+    //////// when has no cards to review:
     
     func reviewHasNoCards() {
         
+        self.configureNotReviewedCards()
+        self.saveConfiguredPack()
+        self.moveViewToNoCardsStatus()
         
+        NSNotificationCenter.defaultCenter().postNotificationName("ReloadPacksTableView", object: nil)
         
     }
     
-    ////////
+    func moveViewToNoCardsStatus() {
+        
+        let title: NSString
+        let text: NSString
+        
+        let unreviewdWords = self.selectedPack.words.filter { (card) -> Bool in
+            return card.box < 7
+        }
+        
+        if unreviewdWords.count == 0 {
+            
+            title = "مرور این بسته به پایان رسیده است"
+            text = "در صورتی که می‌خواهید این بسته را بار دیگر مرور کنید، از صفحه نخست به جای مرور، گزینه ریست پیشرفت را انتخاب نمایید"
+            
+        } else {
+            
+            title = "جعبه مرور خالی است"
+            text = "لغتی برای مرور وجود ندارد. جهت ادامه روند مرور، بار دیگر جعبه را باز نمایید"
+            
+        }
+        
+        let statusVC = self.storyboard?.instantiateViewControllerWithIdentifier("StatusVC") as! MCStatusViewController
+        
+        statusVC.titleString = title as String
+        statusVC.textString = text as String
+        
+        statusVC.modalTransitionStyle = .FlipHorizontal
+        
+        self.navigationController?.presentViewController(statusVC, animated: true) {
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        
+    }
+    
+    //////// when review is finished:
     
     func reviewFinished() {
         
@@ -172,7 +212,26 @@ extension MCReviewViewController {
         self.saveConfiguredPack()
         self.moveViewToFinishStatus()
         
+        NSNotificationCenter.defaultCenter().postNotificationName("ReloadPacksTableView", object: nil)
+        
     }
+    
+    func moveViewToFinishStatus() {
+        
+        let resultVC = self.storyboard?.instantiateViewControllerWithIdentifier("ResultVC") as! MCResultViewController
+        
+        resultVC.corectCount = correctCount
+        resultVC.wrongCount = wrongCount
+        
+        resultVC.modalTransitionStyle = .FlipHorizontal
+        
+        self.navigationController?.presentViewController(resultVC, animated: true) {
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        
+    }
+    
+    //////// in common for finish and nocard:
     
     func configureNotReviewedCards() {
         
@@ -190,21 +249,6 @@ extension MCReviewViewController {
     func saveConfiguredPack() {
         
         //NSKeyedArchiver.archiveRootObject(newPack, toFile: "/Users/ahmad/Desktop/packData")
-        
-    }
-    
-    func moveViewToFinishStatus() {
-        
-        let resultVC = self.storyboard?.instantiateViewControllerWithIdentifier("ResultVC") as! MCResultViewController
-        
-        resultVC.corectCount = correctCount
-        resultVC.wrongCount = wrongCount
-        
-        resultVC.modalTransitionStyle = .FlipHorizontal
-        
-        self.navigationController?.presentViewController(resultVC, animated: true) {
-            self.navigationController?.popViewControllerAnimated(true)
-        }
         
     }
     
