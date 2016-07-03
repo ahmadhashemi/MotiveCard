@@ -10,6 +10,8 @@ import UIKit
 
 class MCPacksTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var tintView: UIView!
+    
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieNameLabel: UILabel!
     

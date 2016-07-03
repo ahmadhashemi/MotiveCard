@@ -101,6 +101,7 @@
                                             <outlet property="movieNameLabel" destination="h08-So-2me" id="Uun-rC-qur"/>
                                             <outlet property="packDetailsLabel" destination="htr-I0-EfI" id="NV6-hP-hXS"/>
                                             <outlet property="packNameLabel" destination="o82-jE-QGv" id="iEC-9a-zf9"/>
+                                            <outlet property="tintView" destination="tfM-tI-aNV" id="6ch-cs-3yC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

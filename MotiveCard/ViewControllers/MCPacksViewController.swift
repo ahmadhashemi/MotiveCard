@@ -11,6 +11,9 @@ import UIKit
 class MCPacksViewController: UIViewController {
     
     var dataSource: [MCPack] = []
+    
+    //var dataSourcePath: String =  "/Users/ahmad/Desktop/packs"
+    var dataSourcePath: String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] + "/packs"
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -31,7 +34,6 @@ class MCPacksViewController: UIViewController {
         
         super.viewWillAppear(animated)
         
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.tabBarController?.tabBar.hidden = false
         
     }
@@ -58,6 +60,7 @@ extension MCPacksViewController: UITableViewDelegate, UITableViewDataSource {
         
         let thisPack = dataSource[indexPath.row]
         
+        cell.tintView.backgroundColor = self.randomColorForTintView()
         cell.movieImageView.moa.url = thisPack.imageURL?.absoluteString
         cell.movieNameLabel.text = thisPack.movieName as? String
         cell.packNameLabel.text = thisPack.packName as? String
@@ -65,6 +68,18 @@ extension MCPacksViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
         
+    }
+    
+    func randomColorForTintView() -> UIColor {
+        
+        let colors = [UIColor(red:0.064,  green:0.115,  blue:0.235, alpha:0.5),
+                      UIColor(red:0.098,  green:0.392,  blue:0.118, alpha:0.5),
+                      UIColor(red:0.392,  green:0.098,  blue:0.098, alpha:0.5),
+                      UIColor(red:0.098,  green:0.376,  blue:0.392, alpha:0.5)]
+        
+        let randomIndex = arc4random_uniform(UInt32(colors.count))
+        
+        return colors[Int(randomIndex)]
     }
     
     func detailsStringForPack(pack: MCPack) -> String {
@@ -153,7 +168,7 @@ extension MCPacksViewController {
     
     func tempFunctionToGetDataSource() -> [MCPack] {
         
-        let newPack = NSKeyedUnarchiver.unarchiveObjectWithFile("/Users/ahmad/Desktop/packData") as! [MCPack]
+        let newPack = NSKeyedUnarchiver.unarchiveObjectWithFile(dataSourcePath) as! [MCPack]
         
         return newPack
         
@@ -168,29 +183,36 @@ extension MCPacksViewController {
         
         var newCard = MCCard()
         newCard.word = "zoomed down"
+        newCard.definition = "الکی"
         newPack.words.append(newCard)
         
         newCard = MCCard()
         newCard.word = "boing"
+        newCard.definition = "الکی"
         //newCard.box = 2
         //newCard.daysToReview = 2
         newPack.words.append(newCard)
         
-//        newCard = MCCard()
-//        newCard.word = "batter"
-//        newPack.words.append(newCard)
-//        
-//        newCard = MCCard()
-//        newCard.word = "abracadabra"
-//        newPack.words.append(newCard)
-//        
-//        newCard = MCCard()
-//        newCard.word = "hobo"
-//        newPack.words.append(newCard)
-//
-//        newCard = MCCard()
-//        newCard.word = "squirrels"
-//        newPack.words.append(newCard)
+        newCard = MCCard()
+        newCard.word = "batter"
+        newCard.definition = "الکی"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "abracadabra"
+        newCard.definition = "الکی"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "hobo"
+        newCard.definition = "الکی"
+        newPack.words.append(newCard)
+
+        newCard = MCCard()
+        newCard.word = "squirrels"
+        newCard.definition = "الکی"
+        newPack.words.append(newCard)
+        
 //
 //        newCard = MCCard()
 //        newCard.word = "splattered"
@@ -316,7 +338,7 @@ extension MCPacksViewController {
 //        newCard.word = "drape"
 //        newPack.words.append(newCard)
         
-        NSKeyedArchiver.archiveRootObject([newPack], toFile: "/Users/ahmad/Desktop/packData")
+        NSKeyedArchiver.archiveRootObject([newPack], toFile: dataSourcePath)
         
     }
     
