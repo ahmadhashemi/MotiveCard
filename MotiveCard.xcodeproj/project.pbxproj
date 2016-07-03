@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E8166521D29AC4B009003A4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8166511D29AC4B009003A4 /* CoreData.framework */; };
+		7E8166551D29AC67009003A4 /* TestMotive.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 7E8166541D29AC67009003A4 /* TestMotive.xcdatamodeld */; };
+		7E8166581D29AD28009003A4 /* MCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8166571D29AD28009003A4 /* MCTableViewController.swift */; };
+		7E81665A1D29AD46009003A4 /* MCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8166591D29AD46009003A4 /* MCTableViewCell.swift */; };
+		7E81665C1D29AD81009003A4 /* MCAddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81665B1D29AD81009003A4 /* MCAddNewViewController.swift */; };
+		7E81665E1D29AF15009003A4 /* MCNewWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81665D1D29AF15009003A4 /* MCNewWord.swift */; };
 		E023E01B1D281E8400F58077 /* MCReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E01A1D281E8400F58077 /* MCReviewViewController.swift */; };
 		E023E01D1D281E8F00F58077 /* MCCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E01C1D281E8F00F58077 /* MCCardViewController.swift */; };
 		E023E0251D2820F300F58077 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E023E0201D2820F300F58077 /* IRANSans.ttf */; };
@@ -45,6 +51,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E8166511D29AC4B009003A4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7E8166531D29AC67009003A4 /* TestMotive.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestMotive.xcdatamodel; sourceTree = "<group>"; };
+		7E8166571D29AD28009003A4 /* MCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCTableViewController.swift; sourceTree = "<group>"; };
+		7E8166591D29AD46009003A4 /* MCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCTableViewCell.swift; sourceTree = "<group>"; };
+		7E81665B1D29AD81009003A4 /* MCAddNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCAddNewViewController.swift; sourceTree = "<group>"; };
+		7E81665D1D29AF15009003A4 /* MCNewWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCNewWord.swift; sourceTree = "<group>"; };
 		E023E01A1D281E8400F58077 /* MCReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCReviewViewController.swift; sourceTree = "<group>"; };
 		E023E01C1D281E8F00F58077 /* MCCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCCardViewController.swift; sourceTree = "<group>"; };
 		E023E0201D2820F300F58077 /* IRANSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans.ttf; sourceTree = "<group>"; };
@@ -81,12 +93,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8166521D29AC4B009003A4 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E8166561D29ACEB009003A4 /* Adding New Words */ = {
+			isa = PBXGroup;
+			children = (
+				7E8166571D29AD28009003A4 /* MCTableViewController.swift */,
+				7E8166591D29AD46009003A4 /* MCTableViewCell.swift */,
+				7E81665B1D29AD81009003A4 /* MCAddNewViewController.swift */,
+				7E81665D1D29AF15009003A4 /* MCNewWord.swift */,
+			);
+			name = "Adding New Words";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		E023E01E1D2820DF00F58077 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E023E0C11D2871F100F58077 /* MoaDistrib.swift */,
+				7E8166561D29ACEB009003A4 /* Adding New Words */,
 				E023E0B41D28702700F58077 /* KMNavigationBarTransition */,
 			);
 			path = Components;
@@ -164,6 +190,7 @@
 		E0B9CD991D241FAE00A8C61F = {
 			isa = PBXGroup;
 			children = (
+				7E8166511D29AC4B009003A4 /* CoreData.framework */,
 				E0B9CDA41D241FAF00A8C61F /* MotiveCard */,
 				E0B9CDA31D241FAE00A8C61F /* Products */,
 			);
@@ -186,6 +213,7 @@
 				E0B9CDAE1D241FAF00A8C61F /* LaunchScreen.storyboard */,
 				E0B9CDB11D241FAF00A8C61F /* Info.plist */,
 				E023E02C1D2848D700F58077 /* Room.srt */,
+				7E8166541D29AC67009003A4 /* TestMotive.xcdatamodeld */,
 				E0B531171D2718100075F999 /* Models */,
 				E0B530D11D2531720075F999 /* ViewControllers */,
 				E023E0311D28555400F58077 /* Components */,
@@ -261,6 +289,7 @@
 				E023E02D1D2848D700F58077 /* Room.srt in Resources */,
 				E0B9CDAD1D241FAF00A8C61F /* Assets.xcassets in Resources */,
 				E0B9CDAB1D241FAF00A8C61F /* Main.storyboard in Resources */,
+				7E8166551D29AC67009003A4 /* TestMotive.xcdatamodeld in Resources */,
 				E023E0251D2820F300F58077 /* IRANSans.ttf in Resources */,
 				E023E0261D2820F300F58077 /* IRANSansBold.ttf in Resources */,
 			);
@@ -274,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B5311F1D271B060075F999 /* MCPacksViewController.swift in Sources */,
+				7E8166581D29AD28009003A4 /* MCTableViewController.swift in Sources */,
 				E023E0BF1D28702700F58077 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
+				7E81665A1D29AD46009003A4 /* MCTableViewCell.swift in Sources */,
 				E023E01B1D281E8400F58077 /* MCReviewViewController.swift in Sources */,
 				E023E0C01D28702700F58077 /* UIViewController+KMNavigationBarTransition.m in Sources */,
 				E023E02F1D284FDF00F58077 /* MCPacksTableViewCell.swift in Sources */,
@@ -283,7 +314,9 @@
 				E0B531191D2718330075F999 /* MCCard.swift in Sources */,
 				E023E0C21D2871F100F58077 /* MoaDistrib.swift in Sources */,
 				E0B9CDA61D241FAF00A8C61F /* AppDelegate.swift in Sources */,
+				7E81665C1D29AD81009003A4 /* MCAddNewViewController.swift in Sources */,
 				E023E0BE1D28702700F58077 /* KMWeakObjectContainer.m in Sources */,
+				7E81665E1D29AF15009003A4 /* MCNewWord.swift in Sources */,
 				E023E01D1D281E8F00F58077 /* MCCardViewController.swift in Sources */,
 				E023E0BD1D28702700F58077 /* KMSwizzle.m in Sources */,
 				E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */,
@@ -443,6 +476,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7E8166541D29AC67009003A4 /* TestMotive.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7E8166531D29AC67009003A4 /* TestMotive.xcdatamodel */,
+			);
+			currentVersion = 7E8166531D29AC67009003A4 /* TestMotive.xcdatamodel */;
+			name = TestMotive.xcdatamodeld;
+			path = ../../Desktop/TestMotive/TestMotive/TestMotive.xcdatamodeld;
+			sourceTree = "<group>";
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E0B9CD9A1D241FAE00A8C61F /* Project object */;
 }
