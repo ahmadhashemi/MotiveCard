@@ -26,8 +26,8 @@ class MCPacksViewController: UIViewController {
         
         self.makeDataSource()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MCPacksViewController.reloadTableView), name: "ReloadPacksTableView", object: nil)
-        
+       // NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MCPacksViewController.reloadTableView), name: "ReloadPacksTableView", object: nil)
+          NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("MCPacksViewController.reloadTableView(MCPacksViewController)"), name: "ReloadPacksTableView", object: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
