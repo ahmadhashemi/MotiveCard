@@ -362,10 +362,10 @@
             </objects>
             <point key="canvasLocation" x="434" y="959"/>
         </scene>
-        <!--Table View Controller-->
+        <!--اضافه کردن لغت جدید-->
         <scene sceneID="nRa-qY-x4n">
             <objects>
-                <tableViewController id="T8B-HT-h48" customClass="MCTableViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="اضافه کردن لغت جدید" id="T8B-HT-h48" customClass="MCTableViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" id="2vn-An-daR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,6 +388,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="Label" destination="uJC-Cd-yfI" id="oke-BB-bLn"/>
+                                    <segue destination="TzH-w2-kcl" kind="show" identifier="UpdateCell" id="sv5-cD-eY3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -507,10 +508,10 @@
             </objects>
             <point key="canvasLocation" x="3366" y="389"/>
         </scene>
-        <!--Item-->
+        <!--اضافه کردن لغت جدید-->
         <scene sceneID="Y5S-mi-WXI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XbJ-XT-K1g" sceneMemberID="viewController">
+                <navigationController title="اضافه کردن لغت جدید" automaticallyAdjustsScrollViewInsets="NO" id="XbJ-XT-K1g" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dLL-mk-YMI"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -536,4 +537,7 @@
         <image name="Result-Wrong" width="33" height="33"/>
         <image name="TabBar-Packs" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="sv5-cD-eY3"/>
+    </inferredMetricsTieBreakers>
 </document>
