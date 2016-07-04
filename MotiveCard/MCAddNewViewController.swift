@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class MCAddNewViewController: UIViewController {
     
@@ -16,49 +15,29 @@ class MCAddNewViewController: UIViewController {
     @IBOutlet weak var TextField: UITextField!
     
     
-    var word : String = ""
-    var existingItem : NSManagedObject!
-    
-    
     @IBAction func SaveButton(sender: AnyObject) {
-        
-        let AppDell = UIApplication.sharedApplication().delegate as! AppDelegate
-        let theContext : NSManagedObjectContext = AppDell.managedObjectContext
-        let theEnt = NSEntityDescription.entityForName("Word", inManagedObjectContext: theContext)
-        
-        if (existingItem != nil){
-            
-            existingItem.setValue(TextField.text as String?, forKey: "word")
-            
-            
-        }else {
-            
-            let newItem = MCNewWord(entity: theEnt!, insertIntoManagedObjectContext: theContext)
-            
-            newItem.word = TextField.text!
-            
-        }
-        
-        
-        do {
-            try theContext.save()
-        } catch {
-            print("Saving Erorr")
-        }
-        
-        self.navigationController?.popToRootViewControllerAnimated(true)
-        // Searching function HERE
-
-        
-        
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (existingItem != nil) {
-            TextField.text = word
-        }
+
+        // Do any additional setup after loading the view.
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

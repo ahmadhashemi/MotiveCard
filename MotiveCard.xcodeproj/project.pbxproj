@@ -109,6 +109,7 @@
 				7E81665D1D29AF15009003A4 /* MCNewWord.swift */,
 			);
 			name = "Adding New Words";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E023E01E1D2820DF00F58077 /* Fonts */ = {
@@ -143,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				E023E0C11D2871F100F58077 /* MoaDistrib.swift */,
+				7E8166561D29ACEB009003A4 /* Adding New Words */,
 				E023E0B41D28702700F58077 /* KMNavigationBarTransition */,
 			);
 			path = Components;
@@ -212,7 +214,6 @@
 				E0B9CDB11D241FAF00A8C61F /* Info.plist */,
 				E023E02C1D2848D700F58077 /* Room.srt */,
 				7E8166541D29AC67009003A4 /* TestMotive.xcdatamodeld */,
-				7E8166561D29ACEB009003A4 /* Adding New Words */,
 				E0B531171D2718100075F999 /* Models */,
 				E0B530D11D2531720075F999 /* ViewControllers */,
 				E023E0311D28555400F58077 /* Components */,

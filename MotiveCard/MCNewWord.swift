@@ -12,6 +12,7 @@ import CoreData
 
 class MCNewWord: NSManagedObject {
     
-    @NSManaged var word : String
     
+    
+
 }
