@@ -7,6 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0231F0D1D29CE6A00DC7A24 /* MCMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */; };
+		E0231F0F1D29CE7600DC7A24 /* MCMoviePacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F0E1D29CE7600DC7A24 /* MCMoviePacksViewController.swift */; };
+		E0231F111D29CEE900DC7A24 /* MCMoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F101D29CEE900DC7A24 /* MCMoviesTableViewCell.swift */; };
+		E0231F131D29CEF700DC7A24 /* MCMoviePacksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F121D29CEF700DC7A24 /* MCMoviePacksTableViewCell.swift */; };
+		E0231F281D29D25900DC7A24 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F151D29D25900DC7A24 /* FrameView.swift */; };
+		E0231F291D29D25900DC7A24 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F161D29D25900DC7A24 /* HUD.swift */; };
+		E0231F2A1D29D25900DC7A24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0231F171D29D25900DC7A24 /* Images.xcassets */; };
+		E0231F2B1D29D25900DC7A24 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0231F181D29D25900DC7A24 /* Info.plist */; };
+		E0231F2C1D29D25900DC7A24 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F1A1D29D25900DC7A24 /* PKHUD.swift */; };
+		E0231F2D1D29D25900DC7A24 /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F1B1D29D25900DC7A24 /* PKHUDAnimating.swift */; };
+		E0231F2E1D29D25900DC7A24 /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F1C1D29D25900DC7A24 /* PKHUDAnimation.swift */; };
+		E0231F2F1D29D25900DC7A24 /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F1D1D29D25900DC7A24 /* PKHUDAssets.swift */; };
+		E0231F301D29D25900DC7A24 /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F1E1D29D25900DC7A24 /* PKHUDErrorView.swift */; };
+		E0231F311D29D25900DC7A24 /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F1F1D29D25900DC7A24 /* PKHUDProgressView.swift */; };
+		E0231F321D29D25900DC7A24 /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F201D29D25900DC7A24 /* PKHUDRotatingImageView.swift */; };
+		E0231F331D29D25900DC7A24 /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F211D29D25900DC7A24 /* PKHUDSquareBaseView.swift */; };
+		E0231F341D29D25900DC7A24 /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F221D29D25900DC7A24 /* PKHUDSuccessView.swift */; };
+		E0231F351D29D25900DC7A24 /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F231D29D25900DC7A24 /* PKHUDSystemActivityIndicatorView.swift */; };
+		E0231F361D29D25900DC7A24 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F241D29D25900DC7A24 /* PKHUDTextView.swift */; };
+		E0231F371D29D25900DC7A24 /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F251D29D25900DC7A24 /* PKHUDWideBaseView.swift */; };
+		E0231F381D29D25900DC7A24 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F261D29D25900DC7A24 /* Window.swift */; };
+		E0231F391D29D25900DC7A24 /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F271D29D25900DC7A24 /* WindowRootViewController.swift */; };
+		E0231F421D29D2BC00DC7A24 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3C1D29D2BC00DC7A24 /* Bolts.framework */; };
+		E0231F431D29D2BC00DC7A24 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3D1D29D2BC00DC7A24 /* Parse.framework */; };
+		E0231F441D29D2BC00DC7A24 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3E1D29D2BC00DC7A24 /* ParseFacebookUtils.framework */; };
+		E0231F451D29D2BC00DC7A24 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3F1D29D2BC00DC7A24 /* ParseFacebookUtilsV4.framework */; };
+		E0231F461D29D2BC00DC7A24 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F401D29D2BC00DC7A24 /* ParseTwitterUtils.framework */; };
+		E0231F471D29D2BC00DC7A24 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F411D29D2BC00DC7A24 /* ParseUI.framework */; };
+		E0231F491D29D2CE00DC7A24 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F481D29D2CE00DC7A24 /* AudioToolbox.framework */; };
+		E0231F4B1D29D2D500DC7A24 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F4A1D29D2D500DC7A24 /* CFNetwork.framework */; };
+		E0231F4D1D29D2DC00DC7A24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F4C1D29D2DC00DC7A24 /* CoreGraphics.framework */; };
+		E0231F4F1D29D2E200DC7A24 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F4E1D29D2E200DC7A24 /* CoreLocation.framework */; };
+		E0231F511D29D2E900DC7A24 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F501D29D2E900DC7A24 /* QuartzCore.framework */; };
+		E0231F531D29D2F000DC7A24 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F521D29D2F000DC7A24 /* Security.framework */; };
+		E0231F551D29D2F600DC7A24 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F541D29D2F600DC7A24 /* StoreKit.framework */; };
+		E0231F571D29D2FC00DC7A24 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F561D29D2FC00DC7A24 /* SystemConfiguration.framework */; };
+		E0231F591D29D30100DC7A24 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F581D29D30100DC7A24 /* libz.tbd */; };
+		E0231F5B1D29D30700DC7A24 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F5A1D29D30700DC7A24 /* libsqlite3.tbd */; };
+		E0231F5D1D29D5DE00DC7A24 /* MCOnlinePack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F5C1D29D5DE00DC7A24 /* MCOnlinePack.swift */; };
+		E0231F5F1D29E21A00DC7A24 /* MCHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F5E1D29E21A00DC7A24 /* MCHandlers.swift */; };
 		E023E01B1D281E8400F58077 /* MCReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E01A1D281E8400F58077 /* MCReviewViewController.swift */; };
 		E023E01D1D281E8F00F58077 /* MCCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E01C1D281E8F00F58077 /* MCCardViewController.swift */; };
 		E023E0251D2820F300F58077 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E023E0201D2820F300F58077 /* IRANSans.ttf */; };
@@ -45,6 +85,47 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviesViewController.swift; sourceTree = "<group>"; };
+		E0231F0E1D29CE7600DC7A24 /* MCMoviePacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviePacksViewController.swift; sourceTree = "<group>"; };
+		E0231F101D29CEE900DC7A24 /* MCMoviesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviesTableViewCell.swift; sourceTree = "<group>"; };
+		E0231F121D29CEF700DC7A24 /* MCMoviePacksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviePacksTableViewCell.swift; sourceTree = "<group>"; };
+		E0231F151D29D25900DC7A24 /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		E0231F161D29D25900DC7A24 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		E0231F171D29D25900DC7A24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E0231F181D29D25900DC7A24 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0231F191D29D25900DC7A24 /* PKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKHUD.h; sourceTree = "<group>"; };
+		E0231F1A1D29D25900DC7A24 /* PKHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUD.swift; sourceTree = "<group>"; };
+		E0231F1B1D29D25900DC7A24 /* PKHUDAnimating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimating.swift; sourceTree = "<group>"; };
+		E0231F1C1D29D25900DC7A24 /* PKHUDAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimation.swift; sourceTree = "<group>"; };
+		E0231F1D1D29D25900DC7A24 /* PKHUDAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAssets.swift; sourceTree = "<group>"; };
+		E0231F1E1D29D25900DC7A24 /* PKHUDErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDErrorView.swift; sourceTree = "<group>"; };
+		E0231F1F1D29D25900DC7A24 /* PKHUDProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDProgressView.swift; sourceTree = "<group>"; };
+		E0231F201D29D25900DC7A24 /* PKHUDRotatingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDRotatingImageView.swift; sourceTree = "<group>"; };
+		E0231F211D29D25900DC7A24 /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
+		E0231F221D29D25900DC7A24 /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSuccessView.swift; sourceTree = "<group>"; };
+		E0231F231D29D25900DC7A24 /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
+		E0231F241D29D25900DC7A24 /* PKHUDTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDTextView.swift; sourceTree = "<group>"; };
+		E0231F251D29D25900DC7A24 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		E0231F261D29D25900DC7A24 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		E0231F271D29D25900DC7A24 /* WindowRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowRootViewController.swift; sourceTree = "<group>"; };
+		E0231F3C1D29D2BC00DC7A24 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E0231F3D1D29D2BC00DC7A24 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E0231F3E1D29D2BC00DC7A24 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		E0231F3F1D29D2BC00DC7A24 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		E0231F401D29D2BC00DC7A24 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		E0231F411D29D2BC00DC7A24 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		E0231F481D29D2CE00DC7A24 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E0231F4A1D29D2D500DC7A24 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E0231F4C1D29D2DC00DC7A24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E0231F4E1D29D2E200DC7A24 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E0231F501D29D2E900DC7A24 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E0231F521D29D2F000DC7A24 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E0231F541D29D2F600DC7A24 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E0231F561D29D2FC00DC7A24 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E0231F581D29D30100DC7A24 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E0231F5A1D29D30700DC7A24 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E0231F5C1D29D5DE00DC7A24 /* MCOnlinePack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCOnlinePack.swift; sourceTree = "<group>"; };
+		E0231F5E1D29E21A00DC7A24 /* MCHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCHandlers.swift; sourceTree = "<group>"; };
 		E023E01A1D281E8400F58077 /* MCReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCReviewViewController.swift; sourceTree = "<group>"; };
 		E023E01C1D281E8F00F58077 /* MCCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCCardViewController.swift; sourceTree = "<group>"; };
 		E023E0201D2820F300F58077 /* IRANSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSans.ttf; sourceTree = "<group>"; };
@@ -81,12 +162,85 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0231F5B1D29D30700DC7A24 /* libsqlite3.tbd in Frameworks */,
+				E0231F591D29D30100DC7A24 /* libz.tbd in Frameworks */,
+				E0231F571D29D2FC00DC7A24 /* SystemConfiguration.framework in Frameworks */,
+				E0231F551D29D2F600DC7A24 /* StoreKit.framework in Frameworks */,
+				E0231F531D29D2F000DC7A24 /* Security.framework in Frameworks */,
+				E0231F511D29D2E900DC7A24 /* QuartzCore.framework in Frameworks */,
+				E0231F4F1D29D2E200DC7A24 /* CoreLocation.framework in Frameworks */,
+				E0231F4D1D29D2DC00DC7A24 /* CoreGraphics.framework in Frameworks */,
+				E0231F4B1D29D2D500DC7A24 /* CFNetwork.framework in Frameworks */,
+				E0231F491D29D2CE00DC7A24 /* AudioToolbox.framework in Frameworks */,
+				E0231F471D29D2BC00DC7A24 /* ParseUI.framework in Frameworks */,
+				E0231F431D29D2BC00DC7A24 /* Parse.framework in Frameworks */,
+				E0231F421D29D2BC00DC7A24 /* Bolts.framework in Frameworks */,
+				E0231F451D29D2BC00DC7A24 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				E0231F441D29D2BC00DC7A24 /* ParseFacebookUtils.framework in Frameworks */,
+				E0231F461D29D2BC00DC7A24 /* ParseTwitterUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0231F141D29D25900DC7A24 /* PKHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E0231F151D29D25900DC7A24 /* FrameView.swift */,
+				E0231F161D29D25900DC7A24 /* HUD.swift */,
+				E0231F171D29D25900DC7A24 /* Images.xcassets */,
+				E0231F181D29D25900DC7A24 /* Info.plist */,
+				E0231F191D29D25900DC7A24 /* PKHUD.h */,
+				E0231F1A1D29D25900DC7A24 /* PKHUD.swift */,
+				E0231F1B1D29D25900DC7A24 /* PKHUDAnimating.swift */,
+				E0231F1C1D29D25900DC7A24 /* PKHUDAnimation.swift */,
+				E0231F1D1D29D25900DC7A24 /* PKHUDAssets.swift */,
+				E0231F1E1D29D25900DC7A24 /* PKHUDErrorView.swift */,
+				E0231F1F1D29D25900DC7A24 /* PKHUDProgressView.swift */,
+				E0231F201D29D25900DC7A24 /* PKHUDRotatingImageView.swift */,
+				E0231F211D29D25900DC7A24 /* PKHUDSquareBaseView.swift */,
+				E0231F221D29D25900DC7A24 /* PKHUDSuccessView.swift */,
+				E0231F231D29D25900DC7A24 /* PKHUDSystemActivityIndicatorView.swift */,
+				E0231F241D29D25900DC7A24 /* PKHUDTextView.swift */,
+				E0231F251D29D25900DC7A24 /* PKHUDWideBaseView.swift */,
+				E0231F261D29D25900DC7A24 /* Window.swift */,
+				E0231F271D29D25900DC7A24 /* WindowRootViewController.swift */,
+			);
+			path = PKHUD;
+			sourceTree = "<group>";
+		};
+		E0231F3A1D29D29200DC7A24 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0231F3B1D29D2BC00DC7A24 /* Parse */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0231F3B1D29D2BC00DC7A24 /* Parse */ = {
+			isa = PBXGroup;
+			children = (
+				E0231F5A1D29D30700DC7A24 /* libsqlite3.tbd */,
+				E0231F581D29D30100DC7A24 /* libz.tbd */,
+				E0231F561D29D2FC00DC7A24 /* SystemConfiguration.framework */,
+				E0231F541D29D2F600DC7A24 /* StoreKit.framework */,
+				E0231F521D29D2F000DC7A24 /* Security.framework */,
+				E0231F501D29D2E900DC7A24 /* QuartzCore.framework */,
+				E0231F4E1D29D2E200DC7A24 /* CoreLocation.framework */,
+				E0231F4C1D29D2DC00DC7A24 /* CoreGraphics.framework */,
+				E0231F4A1D29D2D500DC7A24 /* CFNetwork.framework */,
+				E0231F481D29D2CE00DC7A24 /* AudioToolbox.framework */,
+				E0231F3C1D29D2BC00DC7A24 /* Bolts.framework */,
+				E0231F3D1D29D2BC00DC7A24 /* Parse.framework */,
+				E0231F3E1D29D2BC00DC7A24 /* ParseFacebookUtils.framework */,
+				E0231F3F1D29D2BC00DC7A24 /* ParseFacebookUtilsV4.framework */,
+				E0231F401D29D2BC00DC7A24 /* ParseTwitterUtils.framework */,
+				E0231F411D29D2BC00DC7A24 /* ParseUI.framework */,
+			);
+			path = Parse;
+			sourceTree = "<group>";
+		};
 		E023E01E1D2820DF00F58077 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +265,8 @@
 			isa = PBXGroup;
 			children = (
 				E023E02E1D284FDF00F58077 /* MCPacksTableViewCell.swift */,
+				E0231F101D29CEE900DC7A24 /* MCMoviesTableViewCell.swift */,
+				E0231F121D29CEF700DC7A24 /* MCMoviePacksTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -118,6 +274,7 @@
 		E023E0311D28555400F58077 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E0231F141D29D25900DC7A24 /* PKHUD */,
 				E023E0C11D2871F100F58077 /* MoaDistrib.swift */,
 				E023E0B41D28702700F58077 /* KMNavigationBarTransition */,
 			);
@@ -147,6 +304,8 @@
 				E023E01C1D281E8F00F58077 /* MCCardViewController.swift */,
 				E023E02A1D28364C00F58077 /* MCResultViewController.swift */,
 				E023E0C51D287A3000F58077 /* MCStatusViewController.swift */,
+				E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */,
+				E0231F0E1D29CE7600DC7A24 /* MCMoviePacksViewController.swift */,
 				E023E0301D284FE200F58077 /* Cells */,
 			);
 			path = ViewControllers;
@@ -157,6 +316,8 @@
 			children = (
 				E0B531181D2718330075F999 /* MCCard.swift */,
 				E0B5311A1D27183C0075F999 /* MCPack.swift */,
+				E0231F5C1D29D5DE00DC7A24 /* MCOnlinePack.swift */,
+				E0231F5E1D29E21A00DC7A24 /* MCHandlers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +350,7 @@
 				E0B531171D2718100075F999 /* Models */,
 				E0B530D11D2531720075F999 /* ViewControllers */,
 				E023E0311D28555400F58077 /* Components */,
+				E0231F3A1D29D29200DC7A24 /* Frameworks */,
 				E023E01E1D2820DF00F58077 /* Fonts */,
 			);
 			path = MotiveCard;
@@ -255,12 +417,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E023E0271D2820F300F58077 /* IRANSansLight.ttf in Resources */,
+				E0231F2A1D29D25900DC7A24 /* Images.xcassets in Resources */,
 				E023E0291D2820F300F58077 /* IRANSansUltraLight.ttf in Resources */,
 				E0B9CDB01D241FAF00A8C61F /* LaunchScreen.storyboard in Resources */,
 				E023E0281D2820F300F58077 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
 				E023E02D1D2848D700F58077 /* Room.srt in Resources */,
 				E0B9CDAD1D241FAF00A8C61F /* Assets.xcassets in Resources */,
 				E0B9CDAB1D241FAF00A8C61F /* Main.storyboard in Resources */,
+				E0231F2B1D29D25900DC7A24 /* Info.plist in Resources */,
 				E023E0251D2820F300F58077 /* IRANSans.ttf in Resources */,
 				E023E0261D2820F300F58077 /* IRANSansBold.ttf in Resources */,
 			);
@@ -274,6 +438,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B5311F1D271B060075F999 /* MCPacksViewController.swift in Sources */,
+				E0231F2C1D29D25900DC7A24 /* PKHUD.swift in Sources */,
+				E0231F291D29D25900DC7A24 /* HUD.swift in Sources */,
+				E0231F331D29D25900DC7A24 /* PKHUDSquareBaseView.swift in Sources */,
 				E023E0BF1D28702700F58077 /* UINavigationController+KMNavigationBarTransition.m in Sources */,
 				E023E01B1D281E8400F58077 /* MCReviewViewController.swift in Sources */,
 				E023E0C01D28702700F58077 /* UIViewController+KMNavigationBarTransition.m in Sources */,
@@ -281,12 +448,31 @@
 				E023E02B1D28364C00F58077 /* MCResultViewController.swift in Sources */,
 				E023E0C61D287A3000F58077 /* MCStatusViewController.swift in Sources */,
 				E0B531191D2718330075F999 /* MCCard.swift in Sources */,
+				E0231F0F1D29CE7600DC7A24 /* MCMoviePacksViewController.swift in Sources */,
+				E0231F5F1D29E21A00DC7A24 /* MCHandlers.swift in Sources */,
+				E0231F341D29D25900DC7A24 /* PKHUDSuccessView.swift in Sources */,
+				E0231F371D29D25900DC7A24 /* PKHUDWideBaseView.swift in Sources */,
+				E0231F111D29CEE900DC7A24 /* MCMoviesTableViewCell.swift in Sources */,
+				E0231F281D29D25900DC7A24 /* FrameView.swift in Sources */,
+				E0231F2D1D29D25900DC7A24 /* PKHUDAnimating.swift in Sources */,
+				E0231F361D29D25900DC7A24 /* PKHUDTextView.swift in Sources */,
+				E0231F321D29D25900DC7A24 /* PKHUDRotatingImageView.swift in Sources */,
+				E0231F351D29D25900DC7A24 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
+				E0231F0D1D29CE6A00DC7A24 /* MCMoviesViewController.swift in Sources */,
 				E023E0C21D2871F100F58077 /* MoaDistrib.swift in Sources */,
+				E0231F391D29D25900DC7A24 /* WindowRootViewController.swift in Sources */,
+				E0231F2E1D29D25900DC7A24 /* PKHUDAnimation.swift in Sources */,
 				E0B9CDA61D241FAF00A8C61F /* AppDelegate.swift in Sources */,
 				E023E0BE1D28702700F58077 /* KMWeakObjectContainer.m in Sources */,
+				E0231F2F1D29D25900DC7A24 /* PKHUDAssets.swift in Sources */,
+				E0231F311D29D25900DC7A24 /* PKHUDProgressView.swift in Sources */,
 				E023E01D1D281E8F00F58077 /* MCCardViewController.swift in Sources */,
+				E0231F5D1D29D5DE00DC7A24 /* MCOnlinePack.swift in Sources */,
 				E023E0BD1D28702700F58077 /* KMSwizzle.m in Sources */,
 				E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */,
+				E0231F131D29CEF700DC7A24 /* MCMoviePacksTableViewCell.swift in Sources */,
+				E0231F301D29D25900DC7A24 /* PKHUDErrorView.swift in Sources */,
+				E0231F381D29D25900DC7A24 /* Window.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +587,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MotiveCard/Frameworks/Parse",
+				);
 				INFOPLIST_FILE = MotiveCard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -413,6 +603,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MotiveCard/Frameworks/Parse",
+				);
 				INFOPLIST_FILE = MotiveCard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

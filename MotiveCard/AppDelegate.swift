@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        self.configureAppearance()
+        
+        Parse.initializeWithConfiguration(ParseClientConfiguration(block: { (config) in
+            
+            config.applicationId = "ZCDx0cqm6Wu4JJ7hWFJXqErhaA0qpka11Daxgd5n"
+            config.clientKey = " "
+            config.server = "https://back.ahmadhashemi.com/parse"
+            
+        }))
+        
+        return true
+    }
+    
+    func configureAppearance() {
         
         let tabBarFont = UIFont(name: "IRANSans", size: 10)
         let navBarFont = UIFont(name: "IRANSans", size: 20)
@@ -24,7 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName:navBarFont!], forState: .Normal)
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:navBarFont!]
         
-        return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
