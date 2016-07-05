@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E8167191D2C2B27009003A4 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8167181D2C2B27009003A4 /* AddViewController.swift */; };
-		7E81671B1D2C2B83009003A4 /* AddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81671A1D2C2B83009003A4 /* AddTableViewCell.swift */; };
+		7E8167191D2C2B27009003A4 /* MCNewPackWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8167181D2C2B27009003A4 /* MCNewPackWordsViewController.swift */; };
 		E0231F0D1D29CE6A00DC7A24 /* MCMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */; };
-		E0231F0F1D29CE7600DC7A24 /* MCMoviePacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F0E1D29CE7600DC7A24 /* MCMoviePacksViewController.swift */; };
 		E0231F111D29CEE900DC7A24 /* MCMoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F101D29CEE900DC7A24 /* MCMoviesTableViewCell.swift */; };
 		E0231F131D29CEF700DC7A24 /* MCMoviePacksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F121D29CEF700DC7A24 /* MCMoviePacksTableViewCell.swift */; };
 		E0231F281D29D25900DC7A24 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F151D29D25900DC7A24 /* FrameView.swift */; };
@@ -72,6 +70,8 @@
 		E0B9CDAB1D241FAF00A8C61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDA91D241FAF00A8C61F /* Main.storyboard */; };
 		E0B9CDAD1D241FAF00A8C61F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDAC1D241FAF00A8C61F /* Assets.xcassets */; };
 		E0B9CDB01D241FAF00A8C61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDAE1D241FAF00A8C61F /* LaunchScreen.storyboard */; };
+		E0E05D3A1D2C656E00DC288F /* MCNewPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */; };
+		E0E05D3C1D2C6DB300DC288F /* MCMoviePacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,10 +87,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7E8167181D2C2B27009003A4 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		7E81671A1D2C2B83009003A4 /* AddTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewCell.swift; sourceTree = "<group>"; };
+		7E8167181D2C2B27009003A4 /* MCNewPackWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCNewPackWordsViewController.swift; path = ../MCNewPackWordsViewController.swift; sourceTree = "<group>"; };
 		E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviesViewController.swift; sourceTree = "<group>"; };
-		E0231F0E1D29CE7600DC7A24 /* MCMoviePacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviePacksViewController.swift; sourceTree = "<group>"; };
 		E0231F101D29CEE900DC7A24 /* MCMoviesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviesTableViewCell.swift; sourceTree = "<group>"; };
 		E0231F121D29CEF700DC7A24 /* MCMoviePacksTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviePacksTableViewCell.swift; sourceTree = "<group>"; };
 		E0231F151D29D25900DC7A24 /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
@@ -159,6 +157,8 @@
 		E0B9CDAC1D241FAF00A8C61F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0B9CDAF1D241FAF00A8C61F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0B9CDB11D241FAF00A8C61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCNewPackViewController.swift; sourceTree = "<group>"; };
+		E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviePacksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,8 +191,6 @@
 		7E8167171D2C2AFF009003A4 /* AddViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7E8167181D2C2B27009003A4 /* AddViewController.swift */,
-				7E81671A1D2C2B83009003A4 /* AddTableViewCell.swift */,
 			);
 			name = AddViewControllers;
 			sourceTree = "<group>";
@@ -318,7 +316,9 @@
 				E023E02A1D28364C00F58077 /* MCResultViewController.swift */,
 				E023E0C51D287A3000F58077 /* MCStatusViewController.swift */,
 				E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */,
-				E0231F0E1D29CE7600DC7A24 /* MCMoviePacksViewController.swift */,
+				E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */,
+				E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */,
+				7E8167181D2C2B27009003A4 /* MCNewPackWordsViewController.swift */,
 				E023E0301D284FE200F58077 /* Cells */,
 			);
 			path = ViewControllers;
@@ -460,17 +460,18 @@
 				E023E0C01D28702700F58077 /* UIViewController+KMNavigationBarTransition.m in Sources */,
 				E023E02F1D284FDF00F58077 /* MCPacksTableViewCell.swift in Sources */,
 				E023E02B1D28364C00F58077 /* MCResultViewController.swift in Sources */,
+				E0E05D3A1D2C656E00DC288F /* MCNewPackViewController.swift in Sources */,
 				E023E0C61D287A3000F58077 /* MCStatusViewController.swift in Sources */,
 				E0B531191D2718330075F999 /* MCCard.swift in Sources */,
-				E0231F0F1D29CE7600DC7A24 /* MCMoviePacksViewController.swift in Sources */,
 				E0231F5F1D29E21A00DC7A24 /* MCHandlers.swift in Sources */,
 				E0231F341D29D25900DC7A24 /* PKHUDSuccessView.swift in Sources */,
 				E0231F371D29D25900DC7A24 /* PKHUDWideBaseView.swift in Sources */,
 				E0231F111D29CEE900DC7A24 /* MCMoviesTableViewCell.swift in Sources */,
 				E0231F281D29D25900DC7A24 /* FrameView.swift in Sources */,
 				E0231F2D1D29D25900DC7A24 /* PKHUDAnimating.swift in Sources */,
+				E0E05D3C1D2C6DB300DC288F /* MCMoviePacksViewController.swift in Sources */,
 				E0231F361D29D25900DC7A24 /* PKHUDTextView.swift in Sources */,
-				7E8167191D2C2B27009003A4 /* AddViewController.swift in Sources */,
+				7E8167191D2C2B27009003A4 /* MCNewPackWordsViewController.swift in Sources */,
 				E0231F321D29D25900DC7A24 /* PKHUDRotatingImageView.swift in Sources */,
 				E0231F351D29D25900DC7A24 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
 				E0231F0D1D29CE6A00DC7A24 /* MCMoviesViewController.swift in Sources */,
@@ -482,7 +483,6 @@
 				E0231F2F1D29D25900DC7A24 /* PKHUDAssets.swift in Sources */,
 				E0231F311D29D25900DC7A24 /* PKHUDProgressView.swift in Sources */,
 				E023E01D1D281E8F00F58077 /* MCCardViewController.swift in Sources */,
-				7E81671B1D2C2B83009003A4 /* AddTableViewCell.swift in Sources */,
 				E0231F5D1D29D5DE00DC7A24 /* MCOnlinePack.swift in Sources */,
 				E023E0BD1D28702700F58077 /* KMSwizzle.m in Sources */,
 				E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */,
