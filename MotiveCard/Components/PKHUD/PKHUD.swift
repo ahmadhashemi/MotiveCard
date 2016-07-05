@@ -31,7 +31,7 @@ public class PKHUD: NSObject {
     public override init () {
         super.init()
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: #selector(PKHUD.willEnterForeground(_:)),
+            selector: Selector("willEnterForeground(_:)"),
             name: UIApplicationWillEnterForegroundNotification,
             object: nil)
         userInteractionOnUnderlyingViewsEnabled = false
@@ -106,7 +106,7 @@ public class PKHUD: NSObject {
         hideTimer?.invalidate()
         hideTimer = NSTimer.scheduledTimerWithTimeInterval(delay,
                                                            target: self,
-                                                           selector: #selector(PKHUD.performDelayedHide(_:)),
+                                                           selector: Selector("performDelayedHide(_:)"),
                                                            userInfo: userInfo,
                                                            repeats: false)
     }

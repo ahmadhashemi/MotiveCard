@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E8167191D2C2B27009003A4 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8167181D2C2B27009003A4 /* AddViewController.swift */; };
+		7E81671B1D2C2B83009003A4 /* AddTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E81671A1D2C2B83009003A4 /* AddTableViewCell.swift */; };
 		E0231F0D1D29CE6A00DC7A24 /* MCMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */; };
 		E0231F0F1D29CE7600DC7A24 /* MCMoviePacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F0E1D29CE7600DC7A24 /* MCMoviePacksViewController.swift */; };
 		E0231F111D29CEE900DC7A24 /* MCMoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F101D29CEE900DC7A24 /* MCMoviesTableViewCell.swift */; };
@@ -85,6 +87,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E8167181D2C2B27009003A4 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		7E81671A1D2C2B83009003A4 /* AddTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewCell.swift; sourceTree = "<group>"; };
 		E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviesViewController.swift; sourceTree = "<group>"; };
 		E0231F0E1D29CE7600DC7A24 /* MCMoviePacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviePacksViewController.swift; sourceTree = "<group>"; };
 		E0231F101D29CEE900DC7A24 /* MCMoviesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviesTableViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +188,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E8167171D2C2AFF009003A4 /* AddViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E8167181D2C2B27009003A4 /* AddViewController.swift */,
+				7E81671A1D2C2B83009003A4 /* AddTableViewCell.swift */,
+			);
+			name = AddViewControllers;
+			sourceTree = "<group>";
+		};
 		E0231F141D29D25900DC7A24 /* PKHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +360,7 @@
 				E0B9CDAE1D241FAF00A8C61F /* LaunchScreen.storyboard */,
 				E0B9CDB11D241FAF00A8C61F /* Info.plist */,
 				E023E02C1D2848D700F58077 /* Room.srt */,
+				7E8167171D2C2AFF009003A4 /* AddViewControllers */,
 				E0B531171D2718100075F999 /* Models */,
 				E0B530D11D2531720075F999 /* ViewControllers */,
 				E023E0311D28555400F58077 /* Components */,
@@ -456,6 +470,7 @@
 				E0231F281D29D25900DC7A24 /* FrameView.swift in Sources */,
 				E0231F2D1D29D25900DC7A24 /* PKHUDAnimating.swift in Sources */,
 				E0231F361D29D25900DC7A24 /* PKHUDTextView.swift in Sources */,
+				7E8167191D2C2B27009003A4 /* AddViewController.swift in Sources */,
 				E0231F321D29D25900DC7A24 /* PKHUDRotatingImageView.swift in Sources */,
 				E0231F351D29D25900DC7A24 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
 				E0231F0D1D29CE6A00DC7A24 /* MCMoviesViewController.swift in Sources */,
@@ -467,6 +482,7 @@
 				E0231F2F1D29D25900DC7A24 /* PKHUDAssets.swift in Sources */,
 				E0231F311D29D25900DC7A24 /* PKHUDProgressView.swift in Sources */,
 				E023E01D1D281E8F00F58077 /* MCCardViewController.swift in Sources */,
+				7E81671B1D2C2B83009003A4 /* AddTableViewCell.swift in Sources */,
 				E0231F5D1D29D5DE00DC7A24 /* MCOnlinePack.swift in Sources */,
 				E023E0BD1D28702700F58077 /* KMSwizzle.m in Sources */,
 				E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */,
