@@ -359,11 +359,113 @@
                     </tabBar>
                     <connections>
                         <segue destination="YQi-U9-yeH" kind="relationship" relationship="viewControllers" id="wt7-37-R8Q"/>
+                        <segue destination="UKg-jw-CtM" kind="relationship" relationship="viewControllers" id="LFG-c5-4Aa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6G-7t-VOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="434" y="959"/>
+        </scene>
+        <!--بسته جدید-->
+        <scene sceneID="ch5-g4-HPE">
+            <objects>
+                <viewController id="JLz-6W-Vxx" customClass="MCNewPackViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oBT-sg-xzS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zci-Eg-giF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7fh-2c-PTE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="بسته لغتی که می‌سازید مربوط به کدام فیلم است؟" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGn-6z-D6m">
+                                <rect key="frame" x="20" y="183" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AC-Or-723">
+                                <rect key="frame" x="142" y="330" width="91" height="30"/>
+                                <state key="normal" title="اضافه کردن لغات"/>
+                                <connections>
+                                    <action selector="addWordsButtonTapped:" destination="JLz-6W-Vxx" eventType="touchUpInside" id="lqK-7q-tNZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام بسته لغت را وارد کنید" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Epc-nc-8Mh">
+                                <rect key="frame" x="20" y="227" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="بسته جدید" id="tmk-QZ-gzW"/>
+                    <connections>
+                        <outlet property="movieNameField" destination="UGn-6z-D6m" id="Xti-IS-9iN"/>
+                        <outlet property="packNameField" destination="Epc-nc-8Mh" id="VNF-1o-jAB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4U-Gq-Gto" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671.5" y="1561.5"/>
+        </scene>
+        <!--ساخت بسته لغت-->
+        <scene sceneID="Nk0-fr-OYo">
+            <objects>
+                <viewController storyboardIdentifier="NewPackWordsVC" id="zVT-Wr-SFz" customClass="MCNewPackWordsViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EK2-HJ-EPi"/>
+                        <viewControllerLayoutGuide type="bottom" id="gve-9T-x2N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rrI-Hm-Dah">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dm1-pe-l8j">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="H6Y-rJ-UUX" rowHeight="45" style="IBUITableViewCellStyleDefault" id="wvH-q2-o89">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wvH-q2-o89" id="gPe-eT-cXZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H6Y-rJ-UUX">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="44.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zVT-Wr-SFz" id="MKF-nn-lEa"/>
+                                    <outlet property="delegate" destination="zVT-Wr-SFz" id="H4b-uM-8iz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dm1-pe-l8j" firstAttribute="width" secondItem="rrI-Hm-Dah" secondAttribute="width" id="6Qb-ha-kZC"/>
+                            <constraint firstItem="Dm1-pe-l8j" firstAttribute="centerY" secondItem="rrI-Hm-Dah" secondAttribute="centerY" id="C4r-Hl-NPB"/>
+                            <constraint firstItem="Dm1-pe-l8j" firstAttribute="centerX" secondItem="rrI-Hm-Dah" secondAttribute="centerX" id="S36-3B-S8O"/>
+                            <constraint firstItem="Dm1-pe-l8j" firstAttribute="height" secondItem="rrI-Hm-Dah" secondAttribute="height" id="mdR-eM-rgA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ساخت بسته لغت" id="WSJ-gx-IqN"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="Dm1-pe-l8j" id="GPI-q4-8GF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDZ-dB-EBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2184.5" y="1561.5"/>
         </scene>
         <!--Status View Controller-->
         <scene sceneID="Uaa-7P-zB8">
@@ -610,10 +712,31 @@
             </objects>
             <point key="canvasLocation" x="2028" y="-358"/>
         </scene>
+        <!--اضافه کردن لغت جدید-->
+        <scene sceneID="cP4-Fc-6NO">
+            <objects>
+                <navigationController title="اضافه کردن لغت جدید" automaticallyAdjustsScrollViewInsets="NO" id="UKg-jw-CtM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="اضافه کردن بسته" image="Pack-Add" id="pQc-T8-7RQ"/>
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="395-sF-mB5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JLz-6W-Vxx" kind="relationship" relationship="rootViewController" id="ry5-yI-MCY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4RO-o6-bp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095.5" y="1561.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Button-Movie" width="47" height="43"/>
         <image name="Button-Next" width="47" height="47"/>
+        <image name="Pack-Add" width="25" height="25"/>
         <image name="Result-Back" width="51" height="29"/>
         <image name="Result-Correct" width="34" height="34"/>
         <image name="Result-Wrong" width="33" height="33"/>
