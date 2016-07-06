@@ -39,7 +39,6 @@ class MCPacksViewController: UIViewController {
     
     func makeDataSource() {
         
-        //MCHandlers.tempFunctionToMakeDataSource()
         dataSource = MCHandlers.getLocalPacks()
         
     }
@@ -113,37 +112,11 @@ extension MCPacksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-//        let selectedPack = dataSource[indexPath.row]
-//        
-//        let alert = UIAlertController(title: selectedPack.packName as? String, message: nil, preferredStyle: .ActionSheet)
-//        
-//        alert.addAction(UIAlertAction(title: "مرور", style: .Default, handler: { (action) in
-//            
-//            let reviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("ReviewVC") as! MCReviewViewController
-//            
-//            reviewVC.selectedPack = selectedPack
-//            reviewVC.navigationItem.title = selectedPack.packName as? String
-//            
-//            reviewVC.hidesBottomBarWhenPushed = true
-//            
-//            self.navigationController?.pushViewController(reviewVC, animated: true)
-//            
-//        }))
-//        
-//        alert.addAction(UIAlertAction(title: "ریست پیشرفت", style: .Destructive, handler: { (action) in
-//            
-//            
-//            
-//        }))
-//        
-//        alert.addAction(UIAlertAction(title: "بازگشت", style: .Cancel, handler: nil))
-//        
-//        self.presentViewController(alert, animated: true, completion: nil)
-        
         let selectedPack = dataSource[indexPath.row]
         
         let reviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("ReviewVC") as! MCReviewViewController
         
+        reviewVC.allPacks = self.dataSource
         reviewVC.selectedPack = selectedPack
         reviewVC.navigationItem.title = selectedPack.packName as? String
         

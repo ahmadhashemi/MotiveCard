@@ -12,21 +12,35 @@ class MCReviewViewController: UIViewController {
 
     @IBOutlet weak var pageView: UIView!
     
+    var allPacks = [MCPack]()
     var selectedPack = MCPack()
     var cardsToReview: [MCCard] = []
     
     var pageVC = UIPageViewController()
     var selectedCardIndex = 0
     
-    var correctCount: NSInteger = 0
-    var wrongCount: NSInteger = 0
+    var newHistory = MCHistory()
+}
+
+extension MCReviewViewController {
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        newHistory.pack = selectedPack
+        
         self.findCardsToReview()
         self.configurePageView()
+        
+    }
+    
+    func findCardsToReview() {
+        
+        cardsToReview = selectedPack.words.filter({ (card) -> Bool in
+            let result = card.daysToReview == 1 && card.box < 7
+            return result
+        })
         
     }
     
@@ -41,8 +55,8 @@ class MCReviewViewController: UIViewController {
         self.goToNextCardViewController()
         
     }
-    
 
+    
 }
 
 extension MCReviewViewController {
@@ -56,14 +70,16 @@ extension MCReviewViewController {
         alert.addAction(UIAlertAction(title: "حدس زدم", style: .Default, handler: { (action) in
             
             self.guessedDefinitionForCard(selectedCard, correct: true)
-            self.commonTaks()
+            self.selectedCardIndex = self.selectedCardIndex + 1
+            self.goToNextCardViewController()
             
         }));
         
         alert.addAction(UIAlertAction(title: "حدس نزدم", style: .Default, handler: { (action) in
             
             self.guessedDefinitionForCard(selectedCard, correct: false)
-            self.commonTaks()
+            self.selectedCardIndex = self.selectedCardIndex + 1
+            self.goToNextCardViewController()
             
         }));
         
@@ -73,10 +89,29 @@ extension MCReviewViewController {
         
     }
     
-    func commonTaks() {
+    func goToNextCardViewController() {
         
-        selectedCardIndex = selectedCardIndex + 1
-        self.goToNextCardViewController()
+        let cardVC = self.storyboard?.instantiateViewControllerWithIdentifier("CardVC") as! MCCardViewController
+        
+        if selectedCardIndex == cardsToReview.count { // should not go to next card view controller. but why?
+            
+            if cardsToReview.count == 0 { // because there was no cards at all.
+                
+                self.reviewHasNoCards()
+                
+            } else {
+                
+                self.reviewFinished() // because review is finished.
+                
+            }
+            
+            return
+        }
+        
+        cardVC.selectedCard = cardsToReview[selectedCardIndex]
+        cardVC.cardIndex = cardsToReview.count - selectedCardIndex
+        
+        pageVC.setViewControllers([cardVC], direction: .Forward, animated: true, completion: nil)
         
     }
     
@@ -84,56 +119,13 @@ extension MCReviewViewController {
         
         let reviewCard = cardsToReview[selectedCardIndex]
         
-        self.search(forWord: reviewCard.word as? String, inMovie: self.selectedPack.movieName as? String)
+        MCHandlers.search(forWord: reviewCard.word as? String, inMovie: self.selectedPack.movieName as? String)
         
     }
     
 }
 
 extension MCReviewViewController {
-    
-    func search(forWord word: String?, inMovie movie: String?) {
-        
-        if word == nil { return }
-        if movie == nil { return }
-        
-        let subtitlePath = NSBundle.mainBundle().pathForResource(movie, ofType: "srt")
-        
-        if subtitlePath == nil { return }
-        
-        let subtitleString = try? NSString(contentsOfFile: subtitlePath!, encoding: 1)
-        
-        let allComponents = (subtitleString?.componentsSeparatedByString("\r\n\r\n"))! as [String]
-        let containedComponents = allComponents.filter({ (component) -> Bool in
-            component.containsString(word!)
-        })
-        
-        if containedComponents.count == 0 {
-            return
-        }
-        
-        let component = containedComponents[0]
-        let timeLine = component.componentsSeparatedByString("\r\n")[1]
-        let beginTime = timeLine.componentsSeparatedByString(" --> ")[0]
-        
-        print(beginTime)
-        
-        
-    }
-    
-}
-
-extension MCReviewViewController {
-    
-    func findCardsToReview() {
-        
-        cardsToReview = selectedPack.words.filter({ (card) -> Bool in
-            let result = card.daysToReview == 1 && card.box < 7
-            return result
-        })
-        
-        
-    }
     
     func guessedDefinitionForCard(card: MCCard, correct: Bool) {
         
@@ -142,25 +134,69 @@ extension MCReviewViewController {
             card.box = card.box + 1
             card.daysToReview = card.box
             
-            correctCount = correctCount + 1
+            newHistory.correctWords.addObject(card)
             
         } else {
             
             card.box = 1
             card.daysToReview = 1
             
-            wrongCount = wrongCount + 1
+            newHistory.wrongWords.addObject(card)
             
         }
         
     }
     
-    //////// when has no cards to review:
+}
+
+//////// when review is finished:
+
+extension MCReviewViewController {
+    
+    func reviewFinished() {
+        
+        self.configureNotReviewedCards()
+        self.saveConfiguredPack()
+        self.saveNewHistoryItem()
+        
+        self.moveViewToFinishStatus()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("ReloadPacksTableView", object: nil)
+        
+    }
+    
+    func moveViewToFinishStatus() {
+        
+        let resultVC = self.storyboard?.instantiateViewControllerWithIdentifier("ResultVC") as! MCResultViewController
+        
+        resultVC.corectCount = newHistory.correctWords.count
+        resultVC.wrongCount = newHistory.wrongWords.count
+        
+        resultVC.modalTransitionStyle = .FlipHorizontal
+        
+        self.navigationController?.presentViewController(resultVC, animated: true) {
+            self.navigationController?.popViewControllerAnimated(true)
+        }
+        
+    }
+    
+    func saveNewHistoryItem() {
+        
+        MCHandlers.addNewHistoryToLocalHistory(self.newHistory)
+        
+    }
+    
+}
+
+//////// when has no cards to review (both no this time and not at all)
+
+extension MCReviewViewController {
     
     func reviewHasNoCards() {
         
         self.configureNotReviewedCards()
         self.saveConfiguredPack()
+        
         self.moveViewToNoCardsStatus()
         
         NSNotificationCenter.defaultCenter().postNotificationName("ReloadPacksTableView", object: nil)
@@ -172,14 +208,14 @@ extension MCReviewViewController {
         let title: NSString
         let text: NSString
         
-        let unreviewdWords = self.selectedPack.words.filter { (card) -> Bool in
+        let remainingCardsInPack = self.selectedPack.words.filter { (card) -> Bool in
             return card.box < 7
         }
         
-        if unreviewdWords.count == 0 {
+        if remainingCardsInPack.count == 0 {
             
             title = "مرور این بسته به پایان رسیده است"
-            text = "در صورتی که می‌خواهید این بسته را بار دیگر مرور کنید، از صفحه نخست به جای مرور، گزینه ریست پیشرفت را انتخاب نمایید"
+            text = ""
             
         } else {
             
@@ -201,34 +237,11 @@ extension MCReviewViewController {
         
     }
     
-    //////// when review is finished:
-    
-    func reviewFinished() {
-        
-        self.configureNotReviewedCards()
-        self.saveConfiguredPack()
-        self.moveViewToFinishStatus()
-        
-        NSNotificationCenter.defaultCenter().postNotificationName("ReloadPacksTableView", object: nil)
-        
-    }
-    
-    func moveViewToFinishStatus() {
-        
-        let resultVC = self.storyboard?.instantiateViewControllerWithIdentifier("ResultVC") as! MCResultViewController
-        
-        resultVC.corectCount = correctCount
-        resultVC.wrongCount = wrongCount
-        
-        resultVC.modalTransitionStyle = .FlipHorizontal
-        
-        self.navigationController?.presentViewController(resultVC, animated: true) {
-            self.navigationController?.popViewControllerAnimated(true)
-        }
-        
-    }
-    
-    //////// in common for finish and nocard:
+}
+
+//////// in common for finish and nocard:
+
+extension MCReviewViewController {
     
     func configureNotReviewedCards() {
         
@@ -245,38 +258,9 @@ extension MCReviewViewController {
     
     func saveConfiguredPack() {
         
-        //NSKeyedArchiver.archiveRootObject(newPack, toFile: "/Users/ahmad/Desktop/packData")
+        MCHandlers.saveLocalPacks(self.allPacks)
         
     }
     
 }
 
-extension MCReviewViewController {
-    
-    func goToNextCardViewController() {
-        
-        let cardVC = self.storyboard?.instantiateViewControllerWithIdentifier("CardVC") as! MCCardViewController
-        
-        if selectedCardIndex == cardsToReview.count { // review is finished
-            
-            if cardsToReview.count == 0 {
-                
-                self.reviewHasNoCards()
-                
-            } else {
-                
-                self.reviewFinished()
-                
-            }
-            
-            return
-        }
-        
-        cardVC.selectedCard = cardsToReview[selectedCardIndex]
-        cardVC.cardIndex = cardsToReview.count - selectedCardIndex
-        
-        pageVC.setViewControllers([cardVC], direction: .Forward, animated: true, completion: nil)
-        
-    }
-    
-}

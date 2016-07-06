@@ -73,7 +73,50 @@
 		E0E05D3A1D2C656E00DC288F /* MCNewPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */; };
 		E0E05D3C1D2C6DB300DC288F /* MCMoviePacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */; };
 		E0E05D3E1D2C871700DC288F /* MCHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D3D1D2C871700DC288F /* MCHistory.swift */; };
+		E0F5F11E1D2D488800A5D099 /* MCStatusPacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5F11D1D2D488800A5D099 /* MCStatusPacksViewController.swift */; };
+		E0F5F1201D2D489300A5D099 /* MCStatusWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5F11F1D2D489300A5D099 /* MCStatusWordsViewController.swift */; };
+		E0F5F1241D2D61F900A5D099 /* MCHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5F1231D2D61F900A5D099 /* MCHistoryViewController.swift */; };
+		E0F5F1341D2D650300A5D099 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F5F12D1D2D64F500A5D099 /* Charts.framework */; };
+		E0F5F1351D2D650300A5D099 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E0F5F12D1D2D64F500A5D099 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0F5F12C1D2D64F500A5D099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0F5F1251D2D64F500A5D099 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+		E0F5F12E1D2D64F500A5D099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0F5F1251D2D64F500A5D099 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
+			remoteInfo = "Charts-TV";
+		};
+		E0F5F1301D2D64F500A5D099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0F5F1251D2D64F500A5D099 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65B3F5BF1C7370BE000983D0;
+			remoteInfo = "Charts-OSX";
+		};
+		E0F5F1321D2D64F500A5D099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0F5F1251D2D64F500A5D099 /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
+			remoteInfo = ChartsTests;
+		};
+		E0F5F1361D2D650300A5D099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0F5F1251D2D64F500A5D099 /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = "Charts-iOS";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E023E0AD1D28562700F58077 /* CopyFiles */ = {
@@ -83,6 +126,17 @@
 			dstSubfolderSpec = 7;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0F5F1381D2D650300A5D099 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E0F5F1351D2D650300A5D099 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -161,6 +215,10 @@
 		E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCNewPackViewController.swift; sourceTree = "<group>"; };
 		E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviePacksViewController.swift; sourceTree = "<group>"; };
 		E0E05D3D1D2C871700DC288F /* MCHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCHistory.swift; sourceTree = "<group>"; };
+		E0F5F11D1D2D488800A5D099 /* MCStatusPacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCStatusPacksViewController.swift; sourceTree = "<group>"; };
+		E0F5F11F1D2D489300A5D099 /* MCStatusWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCStatusWordsViewController.swift; sourceTree = "<group>"; };
+		E0F5F1231D2D61F900A5D099 /* MCHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCHistoryViewController.swift; sourceTree = "<group>"; };
+		E0F5F1251D2D64F500A5D099 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +233,7 @@
 				E0231F531D29D2F000DC7A24 /* Security.framework in Frameworks */,
 				E0231F511D29D2E900DC7A24 /* QuartzCore.framework in Frameworks */,
 				E0231F4F1D29D2E200DC7A24 /* CoreLocation.framework in Frameworks */,
+				E0F5F1341D2D650300A5D099 /* Charts.framework in Frameworks */,
 				E0231F4D1D29D2DC00DC7A24 /* CoreGraphics.framework in Frameworks */,
 				E0231F4B1D29D2D500DC7A24 /* CFNetwork.framework in Frameworks */,
 				E0231F491D29D2CE00DC7A24 /* AudioToolbox.framework in Frameworks */,
@@ -280,6 +339,7 @@
 		E023E0311D28555400F58077 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E0F5F1251D2D64F500A5D099 /* Charts.xcodeproj */,
 				E0231F141D29D25900DC7A24 /* PKHUD */,
 				E023E0C11D2871F100F58077 /* MoaDistrib.swift */,
 				E023E0B41D28702700F58077 /* KMNavigationBarTransition */,
@@ -305,15 +365,10 @@
 		E0B530D11D2531720075F999 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E0B5311E1D271B060075F999 /* MCPacksViewController.swift */,
-				E023E01A1D281E8400F58077 /* MCReviewViewController.swift */,
-				E023E01C1D281E8F00F58077 /* MCCardViewController.swift */,
-				E023E02A1D28364C00F58077 /* MCResultViewController.swift */,
-				E023E0C51D287A3000F58077 /* MCStatusViewController.swift */,
-				E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */,
-				E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */,
-				E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */,
-				7E8167181D2C2B27009003A4 /* MCNewPackWordsViewController.swift */,
+				E0F5F11C1D2D471800A5D099 /* Review */,
+				E0F5F1191D2D46FB00A5D099 /* Make */,
+				E0F5F1211D2D489700A5D099 /* Status */,
+				E0F5F1221D2D61E900A5D099 /* History */,
 				E023E0301D284FE200F58077 /* Cells */,
 			);
 			path = ViewControllers;
@@ -365,6 +420,73 @@
 			path = MotiveCard;
 			sourceTree = "<group>";
 		};
+		E0F5F1191D2D46FB00A5D099 /* Make */ = {
+			isa = PBXGroup;
+			children = (
+				E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */,
+				7E8167181D2C2B27009003A4 /* MCNewPackWordsViewController.swift */,
+			);
+			name = Make;
+			sourceTree = "<group>";
+		};
+		E0F5F11A1D2D470B00A5D099 /* Online */ = {
+			isa = PBXGroup;
+			children = (
+				E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */,
+				E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */,
+			);
+			name = Online;
+			sourceTree = "<group>";
+		};
+		E0F5F11B1D2D471300A5D099 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E0B5311E1D271B060075F999 /* MCPacksViewController.swift */,
+				E023E01A1D281E8400F58077 /* MCReviewViewController.swift */,
+				E023E01C1D281E8F00F58077 /* MCCardViewController.swift */,
+				E023E02A1D28364C00F58077 /* MCResultViewController.swift */,
+				E023E0C51D287A3000F58077 /* MCStatusViewController.swift */,
+			);
+			name = Local;
+			sourceTree = "<group>";
+		};
+		E0F5F11C1D2D471800A5D099 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5F11B1D2D471300A5D099 /* Local */,
+				E0F5F11A1D2D470B00A5D099 /* Online */,
+			);
+			name = Review;
+			sourceTree = "<group>";
+		};
+		E0F5F1211D2D489700A5D099 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5F11D1D2D488800A5D099 /* MCStatusPacksViewController.swift */,
+				E0F5F11F1D2D489300A5D099 /* MCStatusWordsViewController.swift */,
+			);
+			name = Status;
+			sourceTree = "<group>";
+		};
+		E0F5F1221D2D61E900A5D099 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5F1231D2D61F900A5D099 /* MCHistoryViewController.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
+		E0F5F1261D2D64F500A5D099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0F5F12D1D2D64F500A5D099 /* Charts.framework */,
+				E0F5F12F1D2D64F500A5D099 /* Charts.framework */,
+				E0F5F1311D2D64F500A5D099 /* Charts.framework */,
+				E0F5F1331D2D64F500A5D099 /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,10 +498,12 @@
 				E0B9CD9F1D241FAE00A8C61F /* Frameworks */,
 				E0B9CDA01D241FAE00A8C61F /* Resources */,
 				E023E0AD1D28562700F58077 /* CopyFiles */,
+				E0F5F1381D2D650300A5D099 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E0F5F1371D2D650300A5D099 /* PBXTargetDependency */,
 			);
 			name = MotiveCard;
 			productName = MotiveCard;
@@ -413,12 +537,49 @@
 			mainGroup = E0B9CD991D241FAE00A8C61F;
 			productRefGroup = E0B9CDA31D241FAE00A8C61F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E0F5F1261D2D64F500A5D099 /* Products */;
+					ProjectRef = E0F5F1251D2D64F500A5D099 /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E0B9CDA11D241FAE00A8C61F /* MotiveCard */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E0F5F12D1D2D64F500A5D099 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = E0F5F12C1D2D64F500A5D099 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E0F5F12F1D2D64F500A5D099 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = E0F5F12E1D2D64F500A5D099 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E0F5F1311D2D64F500A5D099 /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = E0F5F1301D2D64F500A5D099 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E0F5F1331D2D64F500A5D099 /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = E0F5F1321D2D64F500A5D099 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E0B9CDA01D241FAE00A8C61F /* Resources */ = {
@@ -457,6 +618,7 @@
 				E023E02B1D28364C00F58077 /* MCResultViewController.swift in Sources */,
 				E0E05D3A1D2C656E00DC288F /* MCNewPackViewController.swift in Sources */,
 				E023E0C61D287A3000F58077 /* MCStatusViewController.swift in Sources */,
+				E0F5F1201D2D489300A5D099 /* MCStatusWordsViewController.swift in Sources */,
 				E0B531191D2718330075F999 /* MCCard.swift in Sources */,
 				E0231F5F1D29E21A00DC7A24 /* MCHandlers.swift in Sources */,
 				E0231F341D29D25900DC7A24 /* PKHUDSuccessView.swift in Sources */,
@@ -478,9 +640,11 @@
 				E023E0BE1D28702700F58077 /* KMWeakObjectContainer.m in Sources */,
 				E0231F2F1D29D25900DC7A24 /* PKHUDAssets.swift in Sources */,
 				E0231F311D29D25900DC7A24 /* PKHUDProgressView.swift in Sources */,
+				E0F5F1241D2D61F900A5D099 /* MCHistoryViewController.swift in Sources */,
 				E023E01D1D281E8F00F58077 /* MCCardViewController.swift in Sources */,
 				E0231F5D1D29D5DE00DC7A24 /* MCOnlinePack.swift in Sources */,
 				E023E0BD1D28702700F58077 /* KMSwizzle.m in Sources */,
+				E0F5F11E1D2D488800A5D099 /* MCStatusPacksViewController.swift in Sources */,
 				E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */,
 				E0231F131D29CEF700DC7A24 /* MCMoviePacksTableViewCell.swift in Sources */,
 				E0231F301D29D25900DC7A24 /* PKHUDErrorView.swift in Sources */,
@@ -489,6 +653,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0F5F1371D2D650300A5D099 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Charts-iOS";
+			targetProxy = E0F5F1361D2D650300A5D099 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E0B9CDA91D241FAF00A8C61F /* Main.storyboard */ = {
@@ -599,6 +771,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MotiveCard/Frameworks/Parse",
@@ -615,6 +788,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MotiveCard/Frameworks/Parse",
