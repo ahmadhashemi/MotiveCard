@@ -7,12 +7,11 @@
 //
 
 import UIKit
+import Parse
 
 class MCNewPackWordsViewController: UIViewController {
     
-    var words: Array<String> = []
-    var packName: String = ""
-    var movieName: String = ""
+    var newOnlinePack = MCOnlinePack()
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -20,8 +19,11 @@ class MCNewPackWordsViewController: UIViewController {
         
         super.viewDidLoad()
         
+        tableView.editing = true
+        tableView.allowsSelectionDuringEditing = true
+        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Pack-Add"), style: .Plain, target: self, action: Selector("addButtonTapped:"))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Save", style: .Done, target: self, action: Selector("saveButtonTapped:"))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Done", style: .Done, target: self, action: Selector("doneButtonTapped:"))
         
     }
     
@@ -34,7 +36,7 @@ extension MCNewPackWordsViewController {
         let alert = UIAlertController(title: "اضافه کردن لغت جدید", message: "", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
-            textField.placeholder = "لغت خود را وارد کنید"
+            textField.placeholder = "لغت مورد نظر را وارد کنید"
             textField.textAlignment = .Center
         })
         
@@ -46,7 +48,16 @@ extension MCNewPackWordsViewController {
                 return
             }
             
-            self.words.insert(wordTextField.text!, atIndex: 0)
+            let dublicates = self.newOnlinePack.words.filter({ (word) -> Bool in
+                return word == wordTextField.text
+            })
+            
+            if dublicates.count != 0 {
+                print("dublicate word")
+                return
+            }
+            
+            self.newOnlinePack.words.insert(wordTextField.text!, atIndex: 0)
             self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Fade)
             
         }))
@@ -58,11 +69,54 @@ extension MCNewPackWordsViewController {
     }
     
     
-    func saveButtonTapped(sender: AnyObject) {
+    func doneButtonTapped(sender: AnyObject) {
         
-        print(self.movieName)
-        print(self.packName)
-        print(self.words)
+        if self.newOnlinePack.words.count == 0 {
+            self.navigationController?.popViewControllerAnimated(true)
+            return
+        }
+        
+        let title = "بسته جدید"
+        let message = "آیا قصد ارسال بسته جدید به سرور و ذخیره‌سازی آنلاین آن را دارید؟"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        alert.addAction(UIAlertAction(title: "بله", style: .Default, handler: { (action) in
+            
+            self.makeNewOnlinePack(withName: self.newOnlinePack.packName, movieName: self.newOnlinePack.movieName, andWords: self.newOnlinePack.words as NSArray)
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "خیر", style: .Cancel, handler : { (action) in
+            
+            self.navigationController?.popViewControllerAnimated(true)
+            
+        }))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
+}
+
+extension MCNewPackWordsViewController {
+    
+    func makeNewOnlinePack(withName name: NSString, movieName: NSString, andWords words: NSArray) {
+        
+        let newOnlinePack = PFObject(className: "Packs")
+        
+        newOnlinePack.setObject(name, forKey: "PackName")
+        newOnlinePack.setObject(movieName, forKey: "MovieName")
+        newOnlinePack.setObject(words, forKey: "Words")
+        
+        newOnlinePack.saveInBackgroundWithBlock { (saved, error) in
+            
+            if !saved {
+                print(error?.localizedDescription)
+            }
+            
+            self.navigationController?.popViewControllerAnimated(true)
+            
+        }
         
     }
     
@@ -71,14 +125,14 @@ extension MCNewPackWordsViewController {
 extension MCNewPackWordsViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return words.count
+        return self.newOnlinePack.words.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
-        cell?.textLabel!.text = words[indexPath.row]
+        cell?.textLabel!.text = self.newOnlinePack.words[indexPath.row] as String
         
         return cell!
     }
@@ -87,13 +141,64 @@ extension MCNewPackWordsViewController : UITableViewDelegate, UITableViewDataSou
         
         if editingStyle == UITableViewCellEditingStyle.Delete {
             
-            words.removeAtIndex(indexPath.row)
+            self.newOnlinePack.words.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
         }
         
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let word = self.newOnlinePack.words[indexPath.row]
+        
+        let message = "ویرایش لغت"
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .Alert)
+        
+        alert.addTextFieldWithConfigurationHandler { (textField) in
+            textField.textAlignment = .Center
+            textField.text = word as String
+        }
+        
+        alert.addAction(UIAlertAction(title: "ذخیره", style: .Default, handler: { (action) in
+            
+            let newWord = alert.textFields![0].text
+            
+            self.newOnlinePack.words.removeAtIndex(indexPath.row)
+            
+            if newWord == "" {
+                
+                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                
+            } else {
+                
+                self.newOnlinePack.words.insert(newWord!, atIndex: indexPath.row)
+                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                
+            }
+            
+        }))
+        
+        alert.addAction(UIAlertAction(title: "انصراف", style: .Cancel, handler: nil))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        
+        let moveWord = self.newOnlinePack.words[sourceIndexPath.row]
+        self.newOnlinePack.words.removeAtIndex(sourceIndexPath.row)
+        self.newOnlinePack.words.insert(moveWord, atIndex: destinationIndexPath.row)
+        
+    }
 
 }

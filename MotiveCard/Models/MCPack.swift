@@ -13,11 +13,11 @@ class MCPack: NSObject {
     var packName: NSString? = ""
     var movieName: NSString? = ""
     
-    var subtitlePath: NSString? = ""
-    var movieURL: NSURL? = NSURL()
-    var imageURL: NSURL? = NSURL()
-    
     var words: [MCCard] = []
+    
+    var subtitlePath: NSString? = "" // missing
+    var movieURL: NSURL? = NSURL() // missing
+    var imageURL: NSURL? = NSURL() // missing
     
     func encodeWithCoder(aCoder: NSCoder) {
         

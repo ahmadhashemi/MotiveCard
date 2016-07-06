@@ -72,6 +72,7 @@
 		E0B9CDB01D241FAF00A8C61F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B9CDAE1D241FAF00A8C61F /* LaunchScreen.storyboard */; };
 		E0E05D3A1D2C656E00DC288F /* MCNewPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */; };
 		E0E05D3C1D2C6DB300DC288F /* MCMoviePacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */; };
+		E0E05D3E1D2C871700DC288F /* MCHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D3D1D2C871700DC288F /* MCHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -159,6 +160,7 @@
 		E0B9CDB11D241FAF00A8C61F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCNewPackViewController.swift; sourceTree = "<group>"; };
 		E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviePacksViewController.swift; sourceTree = "<group>"; };
+		E0E05D3D1D2C871700DC288F /* MCHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,13 +190,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7E8167171D2C2AFF009003A4 /* AddViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = AddViewControllers;
-			sourceTree = "<group>";
-		};
 		E0231F141D29D25900DC7A24 /* PKHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,10 +322,11 @@
 		E0B531171D2718100075F999 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E0231F5E1D29E21A00DC7A24 /* MCHandlers.swift */,
 				E0B531181D2718330075F999 /* MCCard.swift */,
 				E0B5311A1D27183C0075F999 /* MCPack.swift */,
 				E0231F5C1D29D5DE00DC7A24 /* MCOnlinePack.swift */,
-				E0231F5E1D29E21A00DC7A24 /* MCHandlers.swift */,
+				E0E05D3D1D2C871700DC288F /* MCHistory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -360,7 +356,6 @@
 				E0B9CDAE1D241FAF00A8C61F /* LaunchScreen.storyboard */,
 				E0B9CDB11D241FAF00A8C61F /* Info.plist */,
 				E023E02C1D2848D700F58077 /* Room.srt */,
-				7E8167171D2C2AFF009003A4 /* AddViewControllers */,
 				E0B531171D2718100075F999 /* Models */,
 				E0B530D11D2531720075F999 /* ViewControllers */,
 				E023E0311D28555400F58077 /* Components */,
@@ -474,6 +469,7 @@
 				7E8167191D2C2B27009003A4 /* MCNewPackWordsViewController.swift in Sources */,
 				E0231F321D29D25900DC7A24 /* PKHUDRotatingImageView.swift in Sources */,
 				E0231F351D29D25900DC7A24 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
+				E0E05D3E1D2C871700DC288F /* MCHistory.swift in Sources */,
 				E0231F0D1D29CE6A00DC7A24 /* MCMoviesViewController.swift in Sources */,
 				E023E0C21D2871F100F58077 /* MoaDistrib.swift in Sources */,
 				E0231F391D29D25900DC7A24 /* WindowRootViewController.swift in Sources */,

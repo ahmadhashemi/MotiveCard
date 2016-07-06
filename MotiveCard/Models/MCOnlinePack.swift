@@ -14,7 +14,7 @@ class MCOnlinePack: NSObject {
     var movieName: NSString = ""
     var words: [NSString] = []
     
-    //var movieURL
-    //var imageURL
+    var movieURL: NSURL = NSURL() // missing
+    var imageURL: NSURL = NSURL() // missing
 
 }

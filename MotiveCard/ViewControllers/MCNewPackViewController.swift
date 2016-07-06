@@ -31,8 +31,15 @@ class MCNewPackViewController: UIViewController {
         
         let addWordsVC = self.storyboard?.instantiateViewControllerWithIdentifier("NewPackWordsVC") as! MCNewPackWordsViewController
         
-        addWordsVC.packName = self.packNameField.text!
-        addWordsVC.movieName = self.movieNameField.text!
+        let newOnlinePack = MCOnlinePack()
+        
+        newOnlinePack.packName = self.packNameField.text!
+        newOnlinePack.movieName = self.movieNameField.text!
+        
+        addWordsVC.newOnlinePack = newOnlinePack
+        
+        self.packNameField.text = ""
+        self.movieNameField.text = ""
         
         self.navigationController?.pushViewController(addWordsVC, animated: true)
         

@@ -20,8 +20,11 @@
             <string>IRANSans</string>
             <string>IRANSans</string>
             <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
         </mutableArray>
         <mutableArray key="IRANSansMobile(FaNum)_Medium.ttf">
+            <string>IRANSansMobileFaNum-Medium</string>
             <string>IRANSansMobileFaNum-Medium</string>
             <string>IRANSansMobileFaNum-Medium</string>
             <string>IRANSansMobileFaNum-Medium</string>
@@ -366,7 +369,7 @@
             </objects>
             <point key="canvasLocation" x="434" y="959"/>
         </scene>
-        <!--بسته جدید-->
+        <!--ساخت بسته مرور-->
         <scene sceneID="ch5-g4-HPE">
             <objects>
                 <viewController id="JLz-6W-Vxx" customClass="MCNewPackViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
@@ -379,26 +382,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="بسته لغتی که می‌سازید مربوط به کدام فیلم است؟" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGn-6z-D6m">
-                                <rect key="frame" x="20" y="183" width="335" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <rect key="frame" x="68" y="225" width="238" height="30"/>
+                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام بسته لغت را وارد کنید" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Epc-nc-8Mh">
+                                <rect key="frame" x="68" y="270" width="238" height="30"/>
+                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AC-Or-723">
-                                <rect key="frame" x="142" y="330" width="91" height="30"/>
+                                <rect key="frame" x="136" y="353" width="103" height="30"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="15"/>
                                 <state key="normal" title="اضافه کردن لغات"/>
                                 <connections>
                                     <action selector="addWordsButtonTapped:" destination="JLz-6W-Vxx" eventType="touchUpInside" id="lqK-7q-tNZ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام بسته لغت را وارد کنید" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Epc-nc-8Mh">
-                                <rect key="frame" x="20" y="227" width="335" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="بسته جدید" id="tmk-QZ-gzW"/>
+                    <navigationItem key="navigationItem" title="ساخت بسته مرور" id="tmk-QZ-gzW"/>
                     <connections>
                         <outlet property="movieNameField" destination="UGn-6z-D6m" id="Xti-IS-9iN"/>
                         <outlet property="packNameField" destination="Epc-nc-8Mh" id="VNF-1o-jAB"/>
@@ -716,7 +720,7 @@
         <scene sceneID="cP4-Fc-6NO">
             <objects>
                 <navigationController title="اضافه کردن لغت جدید" automaticallyAdjustsScrollViewInsets="NO" id="UKg-jw-CtM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="اضافه کردن بسته" image="Pack-Add" id="pQc-T8-7RQ"/>
+                    <tabBarItem key="tabBarItem" title="ساخت بسته مرور" image="Pack-Add" id="pQc-T8-7RQ"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="395-sF-mB5">
