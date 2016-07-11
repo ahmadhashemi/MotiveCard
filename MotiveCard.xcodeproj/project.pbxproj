@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E0502541D34283500B874EC /* MCVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0502531D34283500B874EC /* MCVideoPlayer.swift */; };
-		7E05025A1D3428C800B874EC /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7E0502591D3428C800B874EC /* video.mov */; };
+		7E05025C1D342B7600B874EC /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7E05025B1D342B7600B874EC /* video.mov */; };
 		7E8167191D2C2B27009003A4 /* MCNewPackWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8167181D2C2B27009003A4 /* MCNewPackWordsViewController.swift */; };
 		E0231F0D1D29CE6A00DC7A24 /* MCMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */; };
 		E0231F111D29CEE900DC7A24 /* MCMoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F101D29CEE900DC7A24 /* MCMoviesTableViewCell.swift */; };
@@ -163,7 +163,7 @@
 
 /* Begin PBXFileReference section */
 		7E0502531D34283500B874EC /* MCVideoPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCVideoPlayer.swift; sourceTree = "<group>"; };
-		7E0502591D3428C800B874EC /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		7E05025B1D342B7600B874EC /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		7E8167181D2C2B27009003A4 /* MCNewPackWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCNewPackWordsViewController.swift; path = ../MCNewPackWordsViewController.swift; sourceTree = "<group>"; };
 		E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviesViewController.swift; sourceTree = "<group>"; };
 		E0231F101D29CEE900DC7A24 /* MCMoviesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCMoviesTableViewCell.swift; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 		E023E0311D28555400F58077 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				7E0502591D3428C800B874EC /* video.mov */,
+				7E05025B1D342B7600B874EC /* video.mov */,
 				E0F5F1251D2D64F500A5D099 /* Charts.xcodeproj */,
 				E0231F141D29D25900DC7A24 /* PKHUD */,
 				E023E0C11D2871F100F58077 /* MoaDistrib.swift */,
@@ -654,10 +654,10 @@
 				E023E0271D2820F300F58077 /* IRANSansLight.ttf in Resources */,
 				E0231F2A1D29D25900DC7A24 /* Images.xcassets in Resources */,
 				E023E0291D2820F300F58077 /* IRANSansUltraLight.ttf in Resources */,
+				7E05025C1D342B7600B874EC /* video.mov in Resources */,
 				E0B9CDB01D241FAF00A8C61F /* LaunchScreen.storyboard in Resources */,
 				E023E0281D2820F300F58077 /* IRANSansMobile(FaNum)_Medium.ttf in Resources */,
 				E023E02D1D2848D700F58077 /* Room.srt in Resources */,
-				7E05025A1D3428C800B874EC /* video.mov in Resources */,
 				E0B9CDAD1D241FAF00A8C61F /* Assets.xcassets in Resources */,
 				E0B9CDAB1D241FAF00A8C61F /* Main.storyboard in Resources */,
 				E0231F2B1D29D25900DC7A24 /* Info.plist in Resources */,
