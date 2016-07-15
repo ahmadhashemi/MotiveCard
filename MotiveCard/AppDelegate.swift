@@ -31,14 +31,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func configureAppearance() {
         
+        let navBarColor = UIColor(red:0.074,  green:0.078,  blue:0.083, alpha:1)
+        let redColor = UIColor(red:0.951,  green:0.289,  blue:0.063, alpha:1)
+        let pinkColor = UIColor(red:0.698,  green:0.135,  blue:0.330, alpha:1)
+        
         let tabBarFont = UIFont(name: "IRANSans", size: 10)
         let navBarFont = UIFont(name: "IRANSans", size: 20)
         
         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName:tabBarFont!], forState: .Normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName:tabBarFont!], forState: .Selected)
+        UITabBar.appearance().tintColor =  redColor // UIColor.whiteColor()
         
         UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName:navBarFont!], forState: .Normal)
-        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:navBarFont!]
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName:navBarFont!,NSForegroundColorAttributeName:redColor]
+        
+        UINavigationBar.appearance().tintColor = pinkColor
+        UINavigationBar.appearance().barTintColor = navBarColor
+        UITabBar.appearance().barTintColor = navBarColor
         
     }
 

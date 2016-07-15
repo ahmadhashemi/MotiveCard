@@ -19,6 +19,9 @@ class MCMoviesViewController: UIViewController {
         
         super.viewDidLoad()
         
+        let cellNib = UINib(nibName: "MCPacksTableViewCell", bundle: NSBundle.mainBundle())
+        self.tableView.registerNib(cellNib, forCellReuseIdentifier: "Cell")
+        
         self.fillDataSource()
         
     }
@@ -53,6 +56,7 @@ extension MCMoviesViewController {
             aPack.movieName = pack["MovieName"] as! String
             aPack.packName = pack["PackName"] as! String
             aPack.words = pack["Words"] as! [String]
+            aPack.imageURL = NSURL(string: pack["ImageURL"] as! String)!
             
             if dataSource.keys.contains(aPack.movieName) {
                 dataSource[aPack.movieName]?.append(aPack)
@@ -74,13 +78,13 @@ extension MCMoviesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MCMoviesTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MCPacksTableViewCell
         
         let cellTitle = Array(dataSource.keys)[indexPath.row] as String
         let cellPacks = self.dataSource[cellTitle]
         
-        cell.movieNameLabel.text = cellTitle
-        cell.movieDetailsLabel?.text = "\((cellPacks?.count)!) بسته لغت"
+        //cell.movieNameLabel.text = cellTitle
+        //cell.movieDetailsLabel?.text = "\((cellPacks?.count)!) بسته لغت"
         
         return cell
         
@@ -97,6 +101,10 @@ extension MCMoviesViewController: UITableViewDelegate, UITableViewDataSource {
         
         self.navigationController?.pushViewController(packsVC, animated: true)
         
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 170;
     }
     
 }

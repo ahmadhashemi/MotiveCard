@@ -87,6 +87,7 @@ extension MCHandlers {
         
         newPack.packName = online.packName
         newPack.movieName = online.movieName
+        newPack.imageURL = online.imageURL
         
         for word in online.words {
             

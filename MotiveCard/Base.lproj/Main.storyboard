@@ -15,13 +15,6 @@
             <string>IRANSans</string>
             <string>IRANSans</string>
             <string>IRANSans</string>
-            <string>IRANSans</string>
-            <string>IRANSans</string>
-            <string>IRANSans</string>
-            <string>IRANSans</string>
-            <string>IRANSans</string>
-            <string>IRANSans</string>
-            <string>IRANSans</string>
         </mutableArray>
         <mutableArray key="IRANSansMobile(FaNum)_Medium.ttf">
             <string>IRANSansMobileFaNum-Medium</string>
@@ -36,7 +29,7 @@
         <!--بسته‌های مرور-->
         <scene sceneID="QrT-oN-usu">
             <objects>
-                <viewController id="h4Y-cB-qnv" customClass="MCPacksViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="h4Y-cB-qnv" customClass="MCPacksViewController" customModule="MotiveCard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZYc-uh-LnL"/>
                         <viewControllerLayoutGuide type="bottom" id="CFU-xW-JW6"/>
@@ -45,73 +38,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="141" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYf-8P-cXL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYf-8P-cXL">
+                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="141" id="UXQ-mB-sUA" customClass="MCPacksTableViewCell" customModule="MotiveCard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="141"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="170" id="eOy-t1-RaS">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UXQ-mB-sUA" id="bJJ-er-nHW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eOy-t1-RaS" id="m1v-XL-Ow5">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H7q-cR-UhM">
-                                                    <rect key="frame" x="8" y="4" width="304" height="133"/>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfM-tI-aNV">
-                                                    <rect key="frame" x="8" y="4" width="304" height="133"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="گلادیاتور" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h08-So-2me">
-                                                            <rect key="frame" x="242.5" y="23.5" width="41.5" height="25.5"/>
-                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="مرور بعدی : ۱۲ لغت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htr-I0-EfI">
-                                                            <rect key="frame" x="179" y="97" width="106" height="25.5"/>
-                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لغات دشوار" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o82-jE-QGv">
-                                                            <rect key="frame" x="166" y="40.5" width="118" height="52"/>
-                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="35"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.098039215686274508" green="0.16470588235294117" blue="0.39215686274509803" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstItem="o82-jE-QGv" firstAttribute="centerY" secondItem="tfM-tI-aNV" secondAttribute="centerY" id="0fl-6z-wS8"/>
-                                                        <constraint firstAttribute="trailing" secondItem="htr-I0-EfI" secondAttribute="trailing" constant="19" id="4UA-d7-94s"/>
-                                                        <constraint firstItem="o82-jE-QGv" firstAttribute="top" secondItem="h08-So-2me" secondAttribute="bottom" constant="-8.5" id="8QO-BZ-d1C"/>
-                                                        <constraint firstAttribute="bottom" secondItem="htr-I0-EfI" secondAttribute="bottom" constant="10" id="B4g-Dj-VQ7"/>
-                                                        <constraint firstAttribute="trailing" secondItem="h08-So-2me" secondAttribute="trailing" constant="20" id="MNH-pp-gm3"/>
-                                                        <constraint firstAttribute="trailing" secondItem="o82-jE-QGv" secondAttribute="trailing" constant="20" id="MjI-K7-1xd"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="H7q-cR-UhM" secondAttribute="bottom" constant="4" id="3Sf-Z7-7AQ"/>
-                                                <constraint firstItem="H7q-cR-UhM" firstAttribute="leading" secondItem="bJJ-er-nHW" secondAttribute="leading" constant="8" id="6ra-cD-CEz"/>
-                                                <constraint firstItem="tfM-tI-aNV" firstAttribute="width" secondItem="H7q-cR-UhM" secondAttribute="width" id="EMr-mR-F0q"/>
-                                                <constraint firstItem="tfM-tI-aNV" firstAttribute="centerX" secondItem="H7q-cR-UhM" secondAttribute="centerX" id="Jeo-nf-s7i"/>
-                                                <constraint firstItem="tfM-tI-aNV" firstAttribute="centerY" secondItem="H7q-cR-UhM" secondAttribute="centerY" id="ORl-fr-1dQ"/>
-                                                <constraint firstItem="H7q-cR-UhM" firstAttribute="top" secondItem="bJJ-er-nHW" secondAttribute="top" constant="4" id="VUO-p7-Dvj"/>
-                                                <constraint firstAttribute="trailing" secondItem="H7q-cR-UhM" secondAttribute="trailing" constant="8" id="pyH-Jn-LMq"/>
-                                                <constraint firstItem="tfM-tI-aNV" firstAttribute="height" secondItem="H7q-cR-UhM" secondAttribute="height" id="vIt-Xm-pOR"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="movieImageView" destination="H7q-cR-UhM" id="r4S-qP-I7f"/>
-                                            <outlet property="movieNameLabel" destination="h08-So-2me" id="Uun-rC-qur"/>
-                                            <outlet property="packDetailsLabel" destination="htr-I0-EfI" id="NV6-hP-hXS"/>
-                                            <outlet property="packNameLabel" destination="o82-jE-QGv" id="iEC-9a-zf9"/>
-                                            <outlet property="tintView" destination="tfM-tI-aNV" id="6ch-cs-3yC"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -119,13 +58,23 @@
                                     <outlet property="delegate" destination="h4Y-cB-qnv" id="Dqf-R4-rab"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="AxN-qC-qIn">
+                                <rect key="frame" x="0.0" y="64" width="320" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AxN-qC-qIn" secondAttribute="height" multiplier="40:1" id="urX-WL-NW6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.12156862745098039" blue="0.12549019607843137" alpha="0.86664951347305386" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wYf-8P-cXL" secondAttribute="trailing" id="EON-sx-kjO"/>
+                            <constraint firstItem="wYf-8P-cXL" firstAttribute="bottom" secondItem="ybF-Jo-lRS" secondAttribute="bottomMargin" id="IUf-57-cgI"/>
+                            <constraint firstItem="wYf-8P-cXL" firstAttribute="leading" secondItem="ybF-Jo-lRS" secondAttribute="leading" id="L1n-65-sGy"/>
                             <constraint firstItem="wYf-8P-cXL" firstAttribute="width" secondItem="ybF-Jo-lRS" secondAttribute="width" id="R9I-KI-E6a"/>
-                            <constraint firstItem="wYf-8P-cXL" firstAttribute="centerY" secondItem="ybF-Jo-lRS" secondAttribute="centerY" id="dHe-xN-Ni1"/>
-                            <constraint firstItem="wYf-8P-cXL" firstAttribute="centerX" secondItem="ybF-Jo-lRS" secondAttribute="centerX" id="hZf-4V-B1C"/>
-                            <constraint firstItem="wYf-8P-cXL" firstAttribute="height" secondItem="ybF-Jo-lRS" secondAttribute="height" id="ypH-GR-ZtD"/>
+                            <constraint firstItem="wYf-8P-cXL" firstAttribute="top" secondItem="AxN-qC-qIn" secondAttribute="bottom" id="X0N-Ib-2dy"/>
+                            <constraint firstItem="AxN-qC-qIn" firstAttribute="top" secondItem="ZYc-uh-LnL" secondAttribute="bottom" id="jYR-1d-2Qh"/>
+                            <constraint firstItem="AxN-qC-qIn" firstAttribute="leading" secondItem="ybF-Jo-lRS" secondAttribute="leading" id="lJM-2c-F8N"/>
+                            <constraint firstAttribute="trailing" secondItem="AxN-qC-qIn" secondAttribute="trailing" id="p7V-cz-ggD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="بسته‌های مرور" id="bcf-t3-BaX"/>
@@ -366,7 +315,6 @@
                         <segue destination="YQi-U9-yeH" kind="relationship" relationship="viewControllers" id="wt7-37-R8Q"/>
                         <segue destination="4qR-4G-DCM" kind="relationship" relationship="viewControllers" id="aWS-8A-kyB"/>
                         <segue destination="UKg-jw-CtM" kind="relationship" relationship="viewControllers" id="LFG-c5-4Aa"/>
-                        <segue destination="dDd-KV-IKW" kind="relationship" relationship="viewControllers" id="sUu-Oc-USf"/>
                         <segue destination="a4d-2g-xPT" kind="relationship" relationship="viewControllers" id="UNg-qx-LnQ"/>
                     </connections>
                 </tabBarController>
@@ -383,23 +331,23 @@
                         <viewControllerLayoutGuide type="bottom" id="7x2-b4-AB7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kta-Kx-grP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kCo-4G-SEp" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="72" width="320" height="219"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="219"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="219" id="B8C-ie-Pux"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ta6-iu-WHo">
-                                <rect key="frame" x="103" y="403.5" width="114" height="35"/>
+                                <rect key="frame" x="243" y="419" width="114" height="35"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="15"/>
                                 <state key="normal" title="آمار به تفکیک بسته"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSh-j1-wlh">
-                                <rect key="frame" x="109.5" y="359.5" width="101" height="35"/>
+                                <rect key="frame" x="249" y="375" width="101" height="35"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="15"/>
                                 <state key="normal" title="آمار به تفکیک روز"/>
                             </button>
@@ -422,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEM-ER-BwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="2655"/>
+            <point key="canvasLocation" x="2045" y="2633"/>
         </scene>
         <!--ساخت بسته مرور-->
         <scene sceneID="ch5-g4-HPE">
@@ -597,59 +545,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="141" id="Ycq-Ux-bKe" customClass="MCMoviesTableViewCell" customModule="MotiveCard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="141"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="170" id="Ycq-Ux-bKe" customClass="MCMoviesTableViewCell" customModule="MotiveCard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ycq-Ux-bKe" id="wC7-Aw-O0J">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7AU-YN-eDR">
-                                                    <rect key="frame" x="8" y="4" width="304" height="133"/>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxD-fM-jwd">
-                                                    <rect key="frame" x="8" y="4" width="304" height="133"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۳ بسته لغت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkA-gy-DRz">
-                                                            <rect key="frame" x="220.5" y="97" width="64.5" height="26"/>
-                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="گلادیاتور" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGp-xC-Nl4">
-                                                            <rect key="frame" x="198" y="40.5" width="86" height="52"/>
-                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="35"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.098039215690000001" green="0.1647058824" blue="0.3921568627" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="LGp-xC-Nl4" secondAttribute="trailing" constant="20" id="Ans-V2-epm"/>
-                                                        <constraint firstAttribute="trailing" secondItem="jkA-gy-DRz" secondAttribute="trailing" constant="19" id="Dgr-lT-4Td"/>
-                                                        <constraint firstAttribute="bottom" secondItem="jkA-gy-DRz" secondAttribute="bottom" constant="10" id="JSM-PK-08a"/>
-                                                        <constraint firstItem="LGp-xC-Nl4" firstAttribute="centerY" secondItem="ZxD-fM-jwd" secondAttribute="centerY" id="Qp4-9z-Htu"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstItem="ZxD-fM-jwd" firstAttribute="width" secondItem="7AU-YN-eDR" secondAttribute="width" id="5NZ-dU-CIH"/>
-                                                <constraint firstItem="ZxD-fM-jwd" firstAttribute="height" secondItem="7AU-YN-eDR" secondAttribute="height" id="7dy-B2-usn"/>
-                                                <constraint firstItem="ZxD-fM-jwd" firstAttribute="centerY" secondItem="7AU-YN-eDR" secondAttribute="centerY" id="OGS-Qd-Dtk"/>
-                                                <constraint firstItem="7AU-YN-eDR" firstAttribute="top" secondItem="wC7-Aw-O0J" secondAttribute="top" constant="4" id="aZD-wk-Iei"/>
-                                                <constraint firstItem="ZxD-fM-jwd" firstAttribute="centerX" secondItem="7AU-YN-eDR" secondAttribute="centerX" id="hAO-EC-NSh"/>
-                                                <constraint firstItem="7AU-YN-eDR" firstAttribute="leading" secondItem="wC7-Aw-O0J" secondAttribute="leading" constant="8" id="hBA-zt-C4A"/>
-                                                <constraint firstAttribute="bottom" secondItem="7AU-YN-eDR" secondAttribute="bottom" constant="4" id="igz-aK-svE"/>
-                                                <constraint firstAttribute="trailing" secondItem="7AU-YN-eDR" secondAttribute="trailing" constant="8" id="xUc-Qs-H4O"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="movieDetailsLabel" destination="jkA-gy-DRz" id="sXg-gS-4hd"/>
-                                            <outlet property="movieImageView" destination="7AU-YN-eDR" id="NZ5-XO-7GM"/>
-                                            <outlet property="movieNameLabel" destination="LGp-xC-Nl4" id="Znx-mo-uvi"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -692,59 +596,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="141" id="SS9-vn-YyW" customClass="MCMoviePacksTableViewCell" customModule="MotiveCard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="141"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="170" id="SS9-vn-YyW" customClass="MCMoviePacksTableViewCell" customModule="MotiveCard" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SS9-vn-YyW" id="iJN-sG-q8F">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rof-Qn-UUe">
-                                                    <rect key="frame" x="8" y="4" width="304" height="133"/>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NY9-2d-LdX">
-                                                    <rect key="frame" x="8" y="4" width="304" height="133"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۲۰ لغت" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpq-2D-8CM">
-                                                            <rect key="frame" x="242.5" y="97" width="42.5" height="26"/>
-                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="لغات دشوار" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vU-tX-Mh1">
-                                                            <rect key="frame" x="166" y="40.5" width="118" height="52"/>
-                                                            <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="35"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.098039215690000001" green="0.1647058824" blue="0.3921568627" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="bpq-2D-8CM" secondAttribute="trailing" constant="19" id="AOM-iv-kW6"/>
-                                                        <constraint firstAttribute="trailing" secondItem="5vU-tX-Mh1" secondAttribute="trailing" constant="20" id="p3J-io-kfN"/>
-                                                        <constraint firstItem="5vU-tX-Mh1" firstAttribute="centerY" secondItem="NY9-2d-LdX" secondAttribute="centerY" id="x5a-BN-mqI"/>
-                                                        <constraint firstAttribute="bottom" secondItem="bpq-2D-8CM" secondAttribute="bottom" constant="10" id="zp2-Hl-VJ7"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstItem="NY9-2d-LdX" firstAttribute="centerX" secondItem="rof-Qn-UUe" secondAttribute="centerX" id="BoD-7f-e3n"/>
-                                                <constraint firstItem="rof-Qn-UUe" firstAttribute="top" secondItem="iJN-sG-q8F" secondAttribute="top" constant="4" id="GTm-wG-dYx"/>
-                                                <constraint firstAttribute="trailing" secondItem="rof-Qn-UUe" secondAttribute="trailing" constant="8" id="Nv3-Rj-mRQ"/>
-                                                <constraint firstAttribute="bottom" secondItem="rof-Qn-UUe" secondAttribute="bottom" constant="4" id="Oya-fk-vCg"/>
-                                                <constraint firstItem="rof-Qn-UUe" firstAttribute="leading" secondItem="iJN-sG-q8F" secondAttribute="leading" constant="8" id="Pkh-Pz-nI9"/>
-                                                <constraint firstItem="NY9-2d-LdX" firstAttribute="height" secondItem="rof-Qn-UUe" secondAttribute="height" id="VqK-h9-AEl"/>
-                                                <constraint firstItem="NY9-2d-LdX" firstAttribute="width" secondItem="rof-Qn-UUe" secondAttribute="width" id="Yqb-jX-tAY"/>
-                                                <constraint firstItem="NY9-2d-LdX" firstAttribute="centerY" secondItem="rof-Qn-UUe" secondAttribute="centerY" id="hfV-mG-C24"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="movieImageView" destination="rof-Qn-UUe" id="7ub-2J-9Bu"/>
-                                            <outlet property="packDetailsLabel" destination="bpq-2D-8CM" id="P5S-KL-3rm"/>
-                                            <outlet property="packNameLabel" destination="5vU-tX-Mh1" id="P88-w3-rmc"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -870,7 +730,7 @@
         <scene sceneID="cP4-Fc-6NO">
             <objects>
                 <navigationController title="اضافه کردن لغت جدید" automaticallyAdjustsScrollViewInsets="NO" id="UKg-jw-CtM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ساخت بسته مرور" image="Pack-Add" id="pQc-T8-7RQ"/>
+                    <tabBarItem key="tabBarItem" title="ساخت بسته مرور" image="TabBar-Make" id="pQc-T8-7RQ"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="395-sF-mB5">
@@ -922,7 +782,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4V-sG-7UG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1086" y="2655"/>
+            <point key="canvasLocation" x="1208" y="2639"/>
         </scene>
         <!--درباره-->
         <scene sceneID="Aue-RN-flK">
@@ -947,12 +807,13 @@
     <resources>
         <image name="Button-Movie" width="47" height="43"/>
         <image name="Button-Next" width="47" height="47"/>
-        <image name="Pack-Add" width="25" height="25"/>
+        <image name="Line" width="375" height="7"/>
         <image name="Result-Back" width="51" height="29"/>
         <image name="Result-Correct" width="34" height="34"/>
         <image name="Result-Wrong" width="33" height="33"/>
         <image name="TabBar-About" width="21" height="21"/>
         <image name="TabBar-History" width="25" height="25"/>
+        <image name="TabBar-Make" width="25" height="25"/>
         <image name="TabBar-Packs" width="25" height="25"/>
         <image name="TabBar-Status" width="25" height="25"/>
     </resources>

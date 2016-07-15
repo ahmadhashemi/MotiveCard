@@ -17,6 +17,9 @@ class MCMoviePacksViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        let cellNib = UINib(nibName: "MCPacksTableViewCell", bundle: NSBundle.mainBundle())
+        self.tableView.registerNib(cellNib, forCellReuseIdentifier: "Cell")
 
         // Do any additional setup after loading the view.
     }
@@ -31,12 +34,12 @@ extension MCMoviePacksViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MCMoviePacksTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! MCPacksTableViewCell
         
         let thisPack = dataSource[indexPath.row]
         
-        cell.packNameLabel.text = thisPack.packName as String
-        cell.packDetailsLabel.text = "\(thisPack.words.count) لغت"
+        //cell.packNameLabel.text = thisPack.packName as String
+        //cell.packDetailsLabel.text = "\(thisPack.words.count) لغت"
         
         return cell
         
@@ -63,6 +66,10 @@ extension MCMoviePacksViewController: UITableViewDelegate, UITableViewDataSource
         
         self.presentViewController(alert, animated: true, completion: nil)
         
+    }
+    
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 170;
     }
 
 }

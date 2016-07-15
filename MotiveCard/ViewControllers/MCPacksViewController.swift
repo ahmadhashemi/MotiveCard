@@ -18,6 +18,16 @@ class MCPacksViewController: UIViewController {
         
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barStyle = .Black
+        
+        // temp
+//        var packs = MCHandlers.getLocalPacks()
+//        packs.removeAll()
+//        MCHandlers.saveLocalPacks(packs)
+        
+        let cellNib = UINib(nibName: "MCPacksTableViewCell", bundle: NSBundle.mainBundle())
+        self.tableView.registerNib(cellNib, forCellReuseIdentifier: "Cell")
+        
         self.navigationController?.navigationBar.translucent = false
         self.tabBarController?.tabBar.translucent = false
         
@@ -58,13 +68,30 @@ extension MCPacksViewController: UITableViewDelegate, UITableViewDataSource {
         
         let thisPack = dataSource[indexPath.row]
         
-        cell.tintView.backgroundColor = self.randomColorForTintView()
-        cell.movieImageView.moa.url = thisPack.imageURL?.absoluteString
-        cell.movieNameLabel.text = thisPack.movieName as? String
-        cell.packNameLabel.text = thisPack.packName as? String
-        cell.packDetailsLabel.text = self.detailsStringForPack(thisPack)
+        //cell.tintView.backgroundColor = self.randomColorForTintView()
+        cell.coverImageView.moa.url = thisPack.imageURL?.absoluteString
+        cell.nameLabel.text = thisPack.movieName! as String
+        cell.detailsLabel.text = thisPack.packName! as String
         
         return cell
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let selectedPack = dataSource[indexPath.row]
+        
+        let reviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("ReviewVC") as! MCReviewViewController
+        
+        reviewVC.allPacks = self.dataSource
+        reviewVC.selectedPack = selectedPack
+        reviewVC.navigationItem.title = selectedPack.packName as? String
+        
+        reviewVC.hidesBottomBarWhenPushed = true
+        
+        self.navigationController?.pushViewController(reviewVC, animated: true)
         
     }
     
@@ -110,24 +137,9 @@ extension MCPacksViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let selectedPack = dataSource[indexPath.row]
-        
-        let reviewVC = self.storyboard?.instantiateViewControllerWithIdentifier("ReviewVC") as! MCReviewViewController
-        
-        reviewVC.allPacks = self.dataSource
-        reviewVC.selectedPack = selectedPack
-        reviewVC.navigationItem.title = selectedPack.packName as? String
-        
-        reviewVC.hidesBottomBarWhenPushed = true
-        
-        self.navigationController?.pushViewController(reviewVC, animated: true)
-        
-    }
-    
     func reloadTableView() {
         
+        self.makeDataSource()
         self.tableView.reloadData()
         
     }

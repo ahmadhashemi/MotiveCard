@@ -10,12 +10,20 @@ import UIKit
 
 class MCPacksTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var tintView: UIView!
+    @IBOutlet weak var coverImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var detailsLabel: UILabel!
     
-    @IBOutlet weak var movieImageView: UIImageView!
-    @IBOutlet weak var movieNameLabel: UILabel!
-    
-    @IBOutlet weak var packNameLabel: UILabel!
-    @IBOutlet weak var packDetailsLabel: UILabel!
+    override func awakeFromNib() {
+        
+        nameLabel.layer.shadowOffset = CGSizeMake(0, 2)
+        nameLabel.layer.shadowOpacity = 0.3
+        
+        detailsLabel.layer.shadowOffset = nameLabel.layer.shadowOffset
+        detailsLabel.layer.shadowOpacity = nameLabel.layer.shadowOpacity
+        
+        self.backgroundColor = UIColor.clearColor()
+        
+    }
 
 }
