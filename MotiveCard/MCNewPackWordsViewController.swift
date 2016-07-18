@@ -19,11 +19,13 @@ class MCNewPackWordsViewController: UIViewController {
         
         super.viewDidLoad()
         
-        tableView.editing = true
-        tableView.allowsSelectionDuringEditing = true
+        self.tableView.editing = true
+        self.tableView.allowsSelectionDuringEditing = true
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "Pack-Add"), style: .Plain, target: self, action: Selector("addButtonTapped:"))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Done", style: .Done, target: self, action: Selector("doneButtonTapped:"))
+        
+        self.tableView.separatorColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
         
     }
     

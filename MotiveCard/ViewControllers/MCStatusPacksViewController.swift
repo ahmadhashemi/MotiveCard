@@ -21,6 +21,8 @@ class MCStatusPacksViewController: UIViewController {
         dataSource = MCHandlers.getLocalPacks()
         self.tableView.reloadData()
         
+        self.tableView.separatorColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.1)
+        
     }
 
 }
@@ -35,7 +37,8 @@ extension MCStatusPacksViewController: UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
-        cell?.textLabel?.text = dataSource[indexPath.row].packName as? String
+        cell?.textLabel?.text = dataSource[indexPath.row].movieName as? String
+        cell?.detailTextLabel?.text = dataSource[indexPath.row].packName as? String
         
         return cell!
         

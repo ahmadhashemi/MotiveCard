@@ -36,7 +36,7 @@ extension MCMoviesViewController {
         
         query.findObjectsInBackgroundWithBlock { (packs, error) in
             
-            if error != nil {
+            if error == nil {
                 print("fetch error")
             }
             

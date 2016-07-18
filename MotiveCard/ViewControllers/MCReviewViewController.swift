@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class MCReviewViewController: UIViewController {
 
@@ -20,6 +21,10 @@ class MCReviewViewController: UIViewController {
     var selectedCardIndex = 0
     
     var newHistory = MCHistory()
+    
+    var moviePlayer = MPMoviePlayerViewController()
+    
+    var containedTime: Int? = nil
 }
 
 extension MCReviewViewController {
@@ -30,8 +35,12 @@ extension MCReviewViewController {
         
         newHistory.pack = selectedPack
         
+        moviePlayer = MPMoviePlayerViewController(contentURL: self.selectedPack.movieURL!)
+        
         self.findCardsToReview()
         self.configurePageView()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(moviePlayStarted), name: MPMoviePlayerPlaybackStateDidChangeNotification, object: nil)
         
     }
     
@@ -119,7 +128,27 @@ extension MCReviewViewController {
         
         let reviewCard = cardsToReview[selectedCardIndex]
         
-        MCHandlers.search(forWord: reviewCard.word as? String, inMovie: self.selectedPack.movieName as? String)
+        containedTime = MCHandlers.search(forWord: reviewCard.word as? String, inMovie: self.selectedPack.movieName as? String)
+        
+        if containedTime == nil {
+            print("couldn't fine time")
+            return
+        }
+        
+        print(containedTime)
+        
+        self.presentMoviePlayerViewControllerAnimated(moviePlayer)
+        
+    }
+    
+    func moviePlayStarted() {
+        
+        if (moviePlayer.moviePlayer.playbackState == .Playing) {
+            
+            moviePlayer.moviePlayer.currentPlaybackTime = Double(containedTime!) - 30;
+            //containedTime = nil
+            
+        }
         
     }
     

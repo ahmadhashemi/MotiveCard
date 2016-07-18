@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QZJ-3T-uJZ">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -15,8 +14,13 @@
             <string>IRANSans</string>
             <string>IRANSans</string>
             <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
         </mutableArray>
         <mutableArray key="IRANSansMobile(FaNum)_Medium.ttf">
+            <string>IRANSansMobileFaNum-Medium</string>
             <string>IRANSansMobileFaNum-Medium</string>
             <string>IRANSansMobileFaNum-Medium</string>
             <string>IRANSansMobileFaNum-Medium</string>
@@ -35,11 +39,11 @@
                         <viewControllerLayoutGuide type="bottom" id="CFU-xW-JW6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ybF-Jo-lRS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="170" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYf-8P-cXL">
-                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="447"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="170" id="eOy-t1-RaS">
@@ -100,7 +104,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NdK-lu-bpG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="354"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUZ-DR-S7e">
                                 <rect key="frame" x="76" y="439" width="47" height="43"/>
@@ -117,7 +121,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="QO6-AB-HPV" firstAttribute="centerX" secondItem="8cY-ro-Max" secondAttribute="centerX" constant="61.5" id="Bqy-Rh-AaS"/>
                             <constraint firstItem="jwP-vW-NPO" firstAttribute="top" secondItem="QO6-AB-HPV" secondAttribute="bottom" constant="84" id="DRO-fN-673"/>
@@ -156,17 +160,17 @@
                                     <constraint firstAttribute="height" constant="59.5" id="0ic-8H-NGc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.70588235290000001" green="0.1176470588" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-J0-wbe">
                                 <rect key="frame" x="31" y="130" width="258" height="131"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="75"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="67"/>
+                                <color key="textColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="1oA-J0-wbe" secondAttribute="bottom" constant="39" id="WXp-7E-gmc"/>
                             <constraint firstItem="xzY-Wk-qWd" firstAttribute="top" secondItem="Apb-Kr-DQo" secondAttribute="bottom" constant="50" id="bXV-P8-bjy"/>
@@ -307,7 +311,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QZJ-3T-uJZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="dMX-HK-Tu6">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="dMX-HK-Tu6">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -315,7 +319,7 @@
                         <segue destination="YQi-U9-yeH" kind="relationship" relationship="viewControllers" id="wt7-37-R8Q"/>
                         <segue destination="4qR-4G-DCM" kind="relationship" relationship="viewControllers" id="aWS-8A-kyB"/>
                         <segue destination="UKg-jw-CtM" kind="relationship" relationship="viewControllers" id="LFG-c5-4Aa"/>
-                        <segue destination="a4d-2g-xPT" kind="relationship" relationship="viewControllers" id="UNg-qx-LnQ"/>
+                        <segue destination="Shn-xa-klS" kind="relationship" relationship="viewControllers" id="UNg-qx-LnQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6G-7t-VOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -381,29 +385,47 @@
                         <viewControllerLayoutGuide type="bottom" id="Zci-Eg-giF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7fh-2c-PTE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="بسته لغتی که می‌سازید مربوط به کدام فیلم است؟" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGn-6z-D6m">
-                                <rect key="frame" x="41" y="205" width="238" height="30"/>
-                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام بسته لغت را وارد کنید" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Epc-nc-8Mh">
-                                <rect key="frame" x="41" y="250" width="238" height="30"/>
-                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AC-Or-723">
-                                <rect key="frame" x="109" y="333" width="103" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nis-1N-eU4">
+                                <rect key="frame" x="44" y="192" width="232" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام فیلم (لاتین)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGn-6z-D6m">
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام بسته (فارسی)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Epc-nc-8Mh">
+                                        <rect key="frame" x="0.0" y="40" width="232" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="MSO-AC-LrE"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AC-Or-723">
+                                <rect key="frame" x="111" y="304" width="99" height="35"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="15"/>
-                                <state key="normal" title="اضافه کردن لغات"/>
+                                <state key="normal" title="اضافه کردن لغات">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="addWordsButtonTapped:" destination="JLz-6W-Vxx" eventType="touchUpInside" id="lqK-7q-tNZ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1AC-Or-723" firstAttribute="centerX" secondItem="7fh-2c-PTE" secondAttribute="centerX" id="8rn-kL-v9U"/>
+                            <constraint firstItem="Nis-1N-eU4" firstAttribute="centerY" secondItem="7fh-2c-PTE" secondAttribute="centerY" id="8xy-5e-YBG"/>
+                            <constraint firstItem="Nis-1N-eU4" firstAttribute="centerX" secondItem="7fh-2c-PTE" secondAttribute="centerX" id="9xP-SD-YxC"/>
+                            <constraint firstItem="1AC-Or-723" firstAttribute="top" secondItem="Nis-1N-eU4" secondAttribute="bottom" constant="42" id="Ogj-yI-BCQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ساخت بسته مرور" id="tmk-QZ-gzW"/>
                     <connections>
@@ -429,7 +451,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dm1-pe-l8j">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="H6Y-rJ-UUX" rowHeight="45" style="IBUITableViewCellStyleDefault" id="wvH-q2-o89">
                                         <rect key="frame" x="0.0" y="92" width="320" height="45"/>
@@ -442,11 +464,13 @@
                                                     <rect key="frame" x="15" y="0.0" width="290" height="44.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.96470588239999999" green="0.28627450980000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -455,7 +479,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Dm1-pe-l8j" firstAttribute="width" secondItem="rrI-Hm-Dah" secondAttribute="width" id="6Qb-ha-kZC"/>
                             <constraint firstItem="Dm1-pe-l8j" firstAttribute="centerY" secondItem="rrI-Hm-Dah" secondAttribute="centerY" id="C4r-Hl-NPB"/>
@@ -640,20 +664,38 @@
                         <viewControllerLayoutGuide type="bottom" id="03l-ht-UfM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ojv-ng-D3l">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3e9-ss-2WL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="N0E-Gw-zgF">
-                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="BP9-db-7tq" detailTextLabel="Sxb-aP-jLi" style="IBUITableViewCellStyleValue1" id="N0E-Gw-zgF">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="N0E-Gw-zgF" id="BEb-62-kh1">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BP9-db-7tq">
+                                                    <rect key="frame" x="15" y="10" width="90.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="نام بسته" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sxb-aP-jLi">
+                                                    <rect key="frame" x="264" y="10" width="41" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -662,7 +704,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3e9-ss-2WL" firstAttribute="centerY" secondItem="Ojv-ng-D3l" secondAttribute="centerY" id="1ur-Eu-kgy"/>
                             <constraint firstItem="3e9-ss-2WL" firstAttribute="centerX" secondItem="Ojv-ng-D3l" secondAttribute="centerX" id="HZN-6e-Uvh"/>
@@ -693,7 +735,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="GnW-U3-JDa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="d6w-WD-bXc">
                                         <rect key="frame" x="0.0" y="113.5" width="320" height="44"/>
@@ -733,7 +775,7 @@
                     <tabBarItem key="tabBarItem" title="ساخت بسته مرور" image="TabBar-Make" id="pQc-T8-7RQ"/>
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="395-sF-mB5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="395-sF-mB5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -752,7 +794,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4qR-4G-DCM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="وضعیت بسته‌ها" image="TabBar-Status" id="zNi-BX-tVH"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a7v-P3-geF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="a7v-P3-geF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -784,7 +826,7 @@
             </objects>
             <point key="canvasLocation" x="1208" y="2639"/>
         </scene>
-        <!--درباره-->
+        <!--درباره اپلیکیشن-->
         <scene sceneID="Aue-RN-flK">
             <objects>
                 <viewController id="a4d-2g-xPT" sceneMemberID="viewController">
@@ -793,13 +835,86 @@
                         <viewControllerLayoutGuide type="bottom" id="IEo-8Y-qyC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dmd-GV-XF3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MotiveCard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTX-9Z-UjD">
+                                <rect key="frame" x="66" y="116" width="188" height="41"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="34"/>
+                                <color key="textColor" red="0.96470588235294119" green="0.28627450980392155" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="JwN-JT-8e1">
+                                <rect key="frame" x="110" y="226" width="100" height="83"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="توسعه‌دهندگان" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAP-zJ-E2J">
+                                        <rect key="frame" x="1" y="0.0" width="100" height="26"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="17"/>
+                                        <color key="textColor" red="0.96470588235294119" green="0.28627450980392155" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CXf-6g-21D">
+                                        <rect key="frame" x="4" y="32" width="93" height="51"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="احمد هاشمی" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJs-HH-MWe">
+                                                <rect key="frame" x="12" y="0.0" width="70" height="26"/>
+                                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
+                                                <color key="textColor" red="0.70588235294117641" green="0.11764705882352941" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="محمدرضا اهوارکی" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suQ-mj-4pf">
+                                                <rect key="frame" x="0.0" y="26" width="93" height="26"/>
+                                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
+                                                <color key="textColor" red="0.70588235294117641" green="0.11764705882352941" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6hW-pB-e9g"/>
+                                    <constraint firstAttribute="height" constant="83" id="fzR-SI-aIm"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسخه آزمایشی" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0R-eZ-AAE">
+                                <rect key="frame" x="121" y="415" width="78.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="17"/>
+                                <color key="textColor" red="0.70588235290000001" green="0.1176470588" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JwN-JT-8e1" firstAttribute="centerY" secondItem="dmd-GV-XF3" secondAttribute="centerY" constant="40" id="19P-cV-FZl"/>
+                            <constraint firstItem="G0R-eZ-AAE" firstAttribute="centerX" secondItem="dmd-GV-XF3" secondAttribute="centerX" id="D7L-jM-R9u"/>
+                            <constraint firstItem="KTX-9Z-UjD" firstAttribute="top" secondItem="uyy-aR-yJg" secondAttribute="bottom" constant="116" id="V9Q-Zd-hWS"/>
+                            <constraint firstItem="IEo-8Y-qyC" firstAttribute="top" secondItem="G0R-eZ-AAE" secondAttribute="bottom" constant="14" id="ZzO-ej-nkU"/>
+                            <constraint firstItem="JwN-JT-8e1" firstAttribute="centerX" secondItem="dmd-GV-XF3" secondAttribute="centerX" id="kWe-mg-vPX"/>
+                            <constraint firstItem="KTX-9Z-UjD" firstAttribute="centerX" secondItem="dmd-GV-XF3" secondAttribute="centerX" id="rna-Zx-fIf"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="درباره" image="TabBar-About" id="CVr-mD-tNu"/>
+                    <navigationItem key="navigationItem" title="درباره اپلیکیشن" id="h6G-AY-6r6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcX-E5-0cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1618" y="3321"/>
+        </scene>
+        <!--درباره-->
+        <scene sceneID="TTR-Vj-I8Q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Shn-xa-klS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="درباره" image="TabBar-About" id="CVr-mD-tNu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="o2n-4l-LYi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a4d-2g-xPT" kind="relationship" relationship="rootViewController" id="VmU-FY-IUc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Xu-o0-Uxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086" y="3321"/>
         </scene>

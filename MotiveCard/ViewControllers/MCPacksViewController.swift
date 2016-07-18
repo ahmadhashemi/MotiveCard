@@ -17,13 +17,9 @@ class MCPacksViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        self.handlePacks()
         
         self.navigationController?.navigationBar.barStyle = .Black
-        
-        // temp
-//        var packs = MCHandlers.getLocalPacks()
-//        packs.removeAll()
-//        MCHandlers.saveLocalPacks(packs)
         
         let cellNib = UINib(nibName: "MCPacksTableViewCell", bundle: NSBundle.mainBundle())
         self.tableView.registerNib(cellNib, forCellReuseIdentifier: "Cell")
@@ -153,6 +149,286 @@ extension MCPacksViewController {
         let moviesVC = self.storyboard?.instantiateViewControllerWithIdentifier("MoviesVC") as! MCMoviesViewController
         
         self.navigationController?.pushViewController(moviesVC, animated: true)
+        
+    }
+    
+}
+
+extension MCPacksViewController {
+    
+    func handlePacks() {
+        
+        self.removePacks()
+        
+        self.makePacks()
+        
+    }
+    
+    func removePacks() {
+        
+        var packs = MCHandlers.getLocalPacks()
+        packs.removeAll()
+        MCHandlers.saveLocalPacks(packs)
+        
+    }
+    
+    func makePacks() {
+        
+        let packs: NSMutableArray = []
+        var newPack = MCPack()
+        var newCard = MCCard()
+        
+        // leon
+        
+        newPack = MCPack()
+        newPack.movieName = "Leon"
+        newPack.packName = "لغات ضروری"
+        newPack.imageURL = NSURL(string: "http://ahmadhashemi.com/motivecard/leon.jpg")
+        newPack.movieURL = NSURL(string: "http://as7.asset.aparat.com/aparat-video/a_01d72f5l6qnk0lp6n29n2pq74n99384noq4249275418-733a__b53da.mp4")
+        
+        newCard = MCCard()
+        newCard.word = "call you back"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "pick up"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "productive"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "leave"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "hire"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "license"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "keep calm"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "cursing"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "rent"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "afford"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "filthy"
+        newPack.words.append(newCard)
+        
+        packs.addObject(newPack)
+        
+        // avengers
+        
+        newPack = MCPack()
+        newPack.movieName = "The Avengers"
+        newPack.packName = "لغات ضروری"
+        newPack.imageURL = NSURL(string: "http://ahmadhashemi.com/motivecard/theavengers.jpg")
+        newPack.movieURL = NSURL(string: "http://as9.asset.aparat.com/aparat-video/a_bmci8k0g3h9lj7ml44h52jji9khlh33h4m5hj6834037-480w__72196.mp4")
+        
+        newCard = MCCard()
+        newCard.word = "immediately"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "in fact"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "trust me"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "pretending"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "slipped out"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "unable to"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "take the weight"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "deserve"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "tangled in"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "escape hatch"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "self-destruct"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "effort"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "short-range"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "old times"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "assassin"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "become"
+        newPack.words.append(newCard)
+        
+        packs.addObject(newPack)
+        
+        // room
+        
+//        newPack = MCPack()
+//        newPack.movieName = "Room"
+//        newPack.packName = "لغات ضروری"
+//        newPack.imageURL = NSURL(string: "http://ahmadhashemi.com/motivecard/room.jpg")
+//        newPack.movieURL = NSURL(string: "http://as4.asset.aparat.com/aparat-video/a_b9odomf31272qmmmn092mp2p0n426omm5o67p5694876-381b__c13d5.mp4")
+//        
+//        newCard = MCCard()
+//        newCard.word = "zoomed down"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "boing"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "batter"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "abracadabra"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "hobo"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "squirrels"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "splattered"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "alien"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "pulling teeth"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "indeed"
+//        newPack.words.append(newCard)
+//        newCard = MCCard()
+//        newCard.word = "octagon"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "leaf"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "rot"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "fridge"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "hammock"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "shed"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "stinky"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "floppy"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "dehydrated"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "fold over"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "wobbly"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "filthy"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "skylight"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "haystack"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "settle in"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "assess"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "unconfirmed"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "drape"
+//        newPack.words.append(newCard)
+//        
+//        packs.addObject(newPack)
+        
+        //
+        MCHandlers.saveLocalPacks(packs as! Array)
         
     }
     

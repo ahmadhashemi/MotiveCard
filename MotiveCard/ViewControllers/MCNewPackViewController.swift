@@ -20,11 +20,17 @@ class MCNewPackViewController: UIViewController {
     @IBAction func addWordsButtonTapped(sender: UIButton) {
         
         guard movieNameField.text != "" else {
+            let message = "نام فیلم را وارد نمایید"
+            TSMessage.showNotificationWithTitle(message, type: .Warning)
+            movieNameField.becomeFirstResponder()
             print("movie name is needed");
             return
         }
         
         guard packNameField.text != "" else {
+            let message = "نام بسته را وارد نمایید"
+            TSMessage.showNotificationWithTitle(message, type: .Warning)
+            packNameField.becomeFirstResponder()
             print("pack name is needed");
             return
         }

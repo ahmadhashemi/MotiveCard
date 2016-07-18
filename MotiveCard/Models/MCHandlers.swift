@@ -106,16 +106,21 @@ extension MCHandlers {
 
 extension MCHandlers {
     
-    static func search(forWord word: String?, inMovie movie: String?) {
+    static func search(forWord word: String?, inMovie movie: String?) -> Int? {
         
-        if word == nil { return }
-        if movie == nil { return }
+        if word == nil { return nil }
+        if movie == nil { return nil }
         
         let subtitlePath = NSBundle.mainBundle().pathForResource(movie, ofType: "srt")
+        //let subtitlePath = NSBundle.mainBundle().pathForResource("Room", ofType: "srt")
         
-        if subtitlePath == nil { return }
+        if subtitlePath == nil {
+            print("couldn't find subtitle")
+            return nil
+        }
         
-        let subtitleString = try? NSString(contentsOfFile: subtitlePath!, encoding: 1)
+        var subtitleString = try? NSString(contentsOfFile: subtitlePath!, encoding: 1)
+        subtitleString = subtitleString?.lowercaseString
         
         let allComponents = (subtitleString?.componentsSeparatedByString("\r\n\r\n"))! as [String]
         let containedComponents = allComponents.filter({ (component) -> Bool in
@@ -123,15 +128,23 @@ extension MCHandlers {
         })
         
         if containedComponents.count == 0 {
-            return
+            print("not in subtitle")
+            return nil
         }
         
         let component = containedComponents[0]
         let timeLine = component.componentsSeparatedByString("\r\n")[1]
-        let beginTime = timeLine.componentsSeparatedByString(" --> ")[0]
+        var beginTime = timeLine.componentsSeparatedByString(" --> ")[0]
+        beginTime = beginTime.componentsSeparatedByString(",")[0]
         
-        print(beginTime)
+        let timeComponents = beginTime.componentsSeparatedByString(":")
+        let hours = timeComponents[0]
+        let minutes = timeComponents[1]
+        let seconds = timeComponents[2]
         
+        let interval = Int(hours)!*60*60 + Int(minutes)!*60 + Int(seconds)!
+        
+        return interval
         
     }
     

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="IRANSansMobile(FaNum)_Medium.ttf">
+            <string>IRANSansMobileFaNum-Medium</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -14,20 +18,28 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u2l-RE-clR">
                     <rect key="frame" x="9" y="8" width="304" height="146"/>
                 </imageView>
+                <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGK-Jr-Dm8">
+                    <rect key="frame" x="9" y="8" width="304" height="146"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.28627450980000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cell-Tint" translatesAutoresizingMaskIntoConstraints="NO" id="JvF-XU-hbw">
                     <rect key="frame" x="9" y="8" width="304" height="146"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5Z-f7-2Tu">
-                    <rect key="frame" x="24" y="70" width="274" height="24"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5Z-f7-2Tu">
+                    <rect key="frame" x="24" y="69.5" width="274" height="25"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <size key="shadowOffset" width="2" height="-1"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jek-PA-rgm">
-                    <rect key="frame" x="24" y="94.5" width="274" height="18"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="15"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نام بسته" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jek-PA-rgm">
+                    <rect key="frame" x="24" y="95" width="274" height="23.5"/>
+                    <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
+                    <color key="shadowColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <size key="shadowOffset" width="2" height="-1"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -39,12 +51,16 @@
                 <constraint firstItem="jek-PA-rgm" firstAttribute="width" secondItem="r5Z-f7-2Tu" secondAttribute="width" id="FNE-dg-SJ8"/>
                 <constraint firstItem="r5Z-f7-2Tu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="H3T-w3-tZB"/>
                 <constraint firstAttribute="trailing" secondItem="u2l-RE-clR" secondAttribute="trailing" constant="8" id="KEt-wY-a8F"/>
+                <constraint firstItem="rGK-Jr-Dm8" firstAttribute="centerY" secondItem="u2l-RE-clR" secondAttribute="centerY" id="L3K-7R-HJo"/>
                 <constraint firstItem="jek-PA-rgm" firstAttribute="centerX" secondItem="r5Z-f7-2Tu" secondAttribute="centerX" id="NY1-sM-fYJ"/>
+                <constraint firstItem="rGK-Jr-Dm8" firstAttribute="width" secondItem="u2l-RE-clR" secondAttribute="width" id="P3G-hu-0lt"/>
                 <constraint firstItem="JvF-XU-hbw" firstAttribute="centerX" secondItem="u2l-RE-clR" secondAttribute="centerX" id="WWt-XM-3yW"/>
                 <constraint firstAttribute="bottom" secondItem="u2l-RE-clR" secondAttribute="bottom" constant="9" id="XX8-CC-MA5"/>
                 <constraint firstItem="JvF-XU-hbw" firstAttribute="centerY" secondItem="u2l-RE-clR" secondAttribute="centerY" id="Xrb-ul-TeJ"/>
+                <constraint firstItem="rGK-Jr-Dm8" firstAttribute="centerX" secondItem="u2l-RE-clR" secondAttribute="centerX" id="cud-Cj-diE"/>
                 <constraint firstItem="u2l-RE-clR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="k2X-tL-otJ"/>
                 <constraint firstItem="r5Z-f7-2Tu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="oNC-2d-ukb"/>
+                <constraint firstItem="rGK-Jr-Dm8" firstAttribute="height" secondItem="u2l-RE-clR" secondAttribute="height" id="pBe-Xy-mfj"/>
                 <constraint firstItem="JvF-XU-hbw" firstAttribute="height" secondItem="u2l-RE-clR" secondAttribute="height" id="uMo-fe-TYi"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
