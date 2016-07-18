@@ -160,6 +160,11 @@ extension MCPacksViewController {
         
         self.removePacks()
         
+        if ((NSUserDefaults.standardUserDefaults().objectForKey("FirstRun")) != nil) {
+            return
+        }
+        NSUserDefaults.standardUserDefaults().setObject("NO", forKey: "FirstRun")
+        
         self.makePacks()
         
     }
@@ -180,54 +185,136 @@ extension MCPacksViewController {
         
         // leon
         
+//        newPack = MCPack()
+//        newPack.movieName = "Leon"
+//        newPack.packName = "لغات ضروری"
+//        newPack.imageURL = NSURL(string: "http://ahmadhashemi.com/motivecard/leon.jpg")
+//        newPack.movieURL = NSURL(string: "http://as7.asset.aparat.com/aparat-video/a_01d72f5l6qnk0lp6n29n2pq74n99384noq4249275418-733a__b53da.mp4")
+//        
+//        newCard = MCCard()
+//        newCard.word = "call you back"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "pick up"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "productive"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "leave"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "hire"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "license"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "keep calm"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "cursing"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "rent"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "afford"
+//        newPack.words.append(newCard)
+//        
+//        newCard = MCCard()
+//        newCard.word = "filthy"
+//        newPack.words.append(newCard)
+//        
+//        packs.addObject(newPack)
+        
+        //
+        
         newPack = MCPack()
-        newPack.movieName = "Leon"
+        newPack.movieName = "The Revenant"
         newPack.packName = "لغات ضروری"
-        newPack.imageURL = NSURL(string: "http://ahmadhashemi.com/motivecard/leon.jpg")
-        newPack.movieURL = NSURL(string: "http://as7.asset.aparat.com/aparat-video/a_01d72f5l6qnk0lp6n29n2pq74n99384noq4249275418-733a__b53da.mp4")
+        newPack.imageURL = NSURL(string: "http://ahmadhashemi.com/motivecard/revenant.jpg")
+        newPack.movieURL = NSURL(string: "http://ahmadhashemi.com/motivecard/Revenant.mp4")
         
         newCard = MCCard()
-        newCard.word = "call you back"
+        newCard.word = "give up"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "pick up"
+        newCard.word = "haul"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "productive"
+        newCard.word = "spit"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "leave"
+        newCard.word = "savage"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "hire"
+        newCard.word = "keep the pelts"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "license"
+        newCard.word = "miracle"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "keep calm"
+        newCard.word = "twist"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "cursing"
+        newCard.word = "grab a breath"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "rent"
+        newCard.word = "sacrament"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "afford"
+        newCard.word = "begging"
         newPack.words.append(newCard)
         
         newCard = MCCard()
-        newCard.word = "filthy"
+        newCard.word = "burial"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "proud of"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "fortunately"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "trace"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "supposed to"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "alongside"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "justify"
+        newPack.words.append(newCard)
+        
+        newCard = MCCard()
+        newCard.word = "revenge"
         newPack.words.append(newCard)
         
         packs.addObject(newPack)
@@ -238,7 +325,7 @@ extension MCPacksViewController {
         newPack.movieName = "The Avengers"
         newPack.packName = "لغات ضروری"
         newPack.imageURL = NSURL(string: "http://ahmadhashemi.com/motivecard/theavengers.jpg")
-        newPack.movieURL = NSURL(string: "http://as9.asset.aparat.com/aparat-video/a_bmci8k0g3h9lj7ml44h52jji9khlh33h4m5hj6834037-480w__72196.mp4")
+        newPack.movieURL = NSURL(string: "http://ahmadhashemi.com/motivecard/Avengers.mp4")
         
         newCard = MCCard()
         newCard.word = "immediately"

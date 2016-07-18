@@ -70,6 +70,7 @@
 		E023E0C01D28702700F58077 /* UIViewController+KMNavigationBarTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E023E0BC1D28702700F58077 /* UIViewController+KMNavigationBarTransition.m */; };
 		E023E0C21D2871F100F58077 /* MoaDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E0C11D2871F100F58077 /* MoaDistrib.swift */; };
 		E023E0C61D287A3000F58077 /* MCStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E0C51D287A3000F58077 /* MCStatusViewController.swift */; };
+		E03991A51D3D817F001A854E /* The Revenant.srt in Resources */ = {isa = PBXBuildFile; fileRef = E03991A41D3D817F001A854E /* The Revenant.srt */; };
 		E08502951D398D0F00E82068 /* MCPacksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E08502941D398D0F00E82068 /* MCPacksTableViewCell.xib */; };
 		E0B531191D2718330075F999 /* MCCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B531181D2718330075F999 /* MCCard.swift */; };
 		E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B5311A1D27183C0075F999 /* MCPack.swift */; };
@@ -182,6 +183,7 @@
 		E023E0BC1D28702700F58077 /* UIViewController+KMNavigationBarTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KMNavigationBarTransition.m"; sourceTree = "<group>"; };
 		E023E0C11D2871F100F58077 /* MoaDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoaDistrib.swift; sourceTree = "<group>"; };
 		E023E0C51D287A3000F58077 /* MCStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCStatusViewController.swift; sourceTree = "<group>"; };
+		E03991A41D3D817F001A854E /* The Revenant.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "The Revenant.srt"; sourceTree = "<group>"; };
 		E08502941D398D0F00E82068 /* MCPacksTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCPacksTableViewCell.xib; sourceTree = "<group>"; };
 		E0B531181D2718330075F999 /* MCCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCCard.swift; sourceTree = "<group>"; };
 		E0B5311A1D27183C0075F999 /* MCPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPack.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 				E0B9CDB11D241FAF00A8C61F /* Info.plist */,
 				E0024E6D1D3D67A9009022D9 /* Leon.srt */,
 				E0024E6E1D3D67A9009022D9 /* The Avengers.srt */,
+				E03991A41D3D817F001A854E /* The Revenant.srt */,
 				E023E02C1D2848D700F58077 /* Room.srt */,
 				E0B531171D2718100075F999 /* Models */,
 				E0B530D11D2531720075F999 /* ViewControllers */,
@@ -569,6 +572,7 @@
 				E0024E511D3D5B4C009022D9 /* NotificationBackgroundError.png in Resources */,
 				E023E02D1D2848D700F58077 /* Room.srt in Resources */,
 				E0024E5D1D3D5B4C009022D9 /* NotificationBackgroundWarningIcon.png in Resources */,
+				E03991A51D3D817F001A854E /* The Revenant.srt in Resources */,
 				E0024E621D3D5B4C009022D9 /* .gitkeep in Resources */,
 				E0024E701D3D67A9009022D9 /* The Avengers.srt in Resources */,
 				E0B9CDAD1D241FAF00A8C61F /* Assets.xcassets in Resources */,
