@@ -81,26 +81,26 @@ extension MCHandlers {
 
 extension MCHandlers {
     
-    static func makeLocalPackWithOnlinePack(online: MCOnlinePack) -> MCPack {
-        
-        let newPack = MCPack()
-        
-        newPack.packName = online.packName
-        newPack.movieName = online.movieName
-        newPack.imageURL = online.imageURL
-        
-        for word in online.words {
-            
-            let newCard = MCCard()
-            newCard.word = word
-            
-            newPack.words.append(newCard)
-            
-        }
-        
-        return newPack
-        
-    }
+//    static func makeLocalPackWithOnlinePack(online: MCOnlinePack) -> MCPack {
+//        
+//        let newPack = MCPack()
+//        
+//        newPack.packName = online.packName
+//        newPack.movieName = online.movieName
+//        newPack.imageURL = online.imageURL
+//        
+//        for word in online.words {
+//            
+//            let newCard = MCCard()
+//            newCard.word = word
+//            
+//            newPack.words.append(newCard)
+//            
+//        }
+//        
+//        return newPack
+//        
+//    }
     
 }
 

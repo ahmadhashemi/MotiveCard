@@ -18,6 +18,9 @@
             <string>IRANSans</string>
             <string>IRANSans</string>
             <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
+            <string>IRANSans</string>
         </mutableArray>
         <mutableArray key="IRANSansMobile(FaNum)_Medium.ttf">
             <string>IRANSansMobileFaNum-Medium</string>
@@ -388,8 +391,8 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nis-1N-eU4">
-                                <rect key="frame" x="44" y="192" width="232" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nis-1N-eU4">
+                                <rect key="frame" x="44" y="113" width="232" height="190"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="نام فیلم (لاتین)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UGn-6z-D6m">
                                         <rect key="frame" x="0.0" y="0.0" width="232" height="30"/>
@@ -403,13 +406,31 @@
                                         <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="آدرس فیلم" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kUi-NO-0uJ">
+                                        <rect key="frame" x="0.0" y="80" width="232" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="آدرس پوستر فیلم" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpT-cA-G3K">
+                                        <rect key="frame" x="0.0" y="120" width="232" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="آدرس زیرنویس فیلم" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAy-VZ-Jhr">
+                                        <rect key="frame" x="0.0" y="160" width="232" height="30"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="IRANSans" family="IRAN Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="232" id="MSO-AC-LrE"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AC-Or-723">
-                                <rect key="frame" x="111" y="304" width="99" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AC-Or-723">
+                                <rect key="frame" x="111" y="312.5" width="99" height="35"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobileFaNum-Medium" family="IRANSansMobile(FaNum)" pointSize="15"/>
                                 <state key="normal" title="اضافه کردن لغات">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -422,15 +443,18 @@
                         <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1AC-Or-723" firstAttribute="centerX" secondItem="7fh-2c-PTE" secondAttribute="centerX" id="8rn-kL-v9U"/>
-                            <constraint firstItem="Nis-1N-eU4" firstAttribute="centerY" secondItem="7fh-2c-PTE" secondAttribute="centerY" id="8xy-5e-YBG"/>
+                            <constraint firstItem="Nis-1N-eU4" firstAttribute="centerY" secondItem="7fh-2c-PTE" secondAttribute="centerY" constant="-40" id="8xy-5e-YBG"/>
                             <constraint firstItem="Nis-1N-eU4" firstAttribute="centerX" secondItem="7fh-2c-PTE" secondAttribute="centerX" id="9xP-SD-YxC"/>
-                            <constraint firstItem="1AC-Or-723" firstAttribute="top" secondItem="Nis-1N-eU4" secondAttribute="bottom" constant="42" id="Ogj-yI-BCQ"/>
+                            <constraint firstItem="1AC-Or-723" firstAttribute="top" secondItem="Nis-1N-eU4" secondAttribute="bottom" constant="50" id="Ogj-yI-BCQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ساخت بسته مرور" id="tmk-QZ-gzW"/>
                     <connections>
+                        <outlet property="movieAddressField" destination="kUi-NO-0uJ" id="Nk0-i6-ve6"/>
                         <outlet property="movieNameField" destination="UGn-6z-D6m" id="Xti-IS-9iN"/>
                         <outlet property="packNameField" destination="Epc-nc-8Mh" id="VNF-1o-jAB"/>
+                        <outlet property="posterAddressField" destination="dpT-cA-G3K" id="dko-Iu-G3w"/>
+                        <outlet property="subtitleAddressField" destination="aAy-VZ-Jhr" id="uXk-EJ-zmr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4U-Gq-Gto" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -565,39 +589,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="141" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oe2-dk-9Cx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qgZ-U7-upe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="170" id="Ycq-Ux-bKe" customClass="MCMoviesTableViewCell" customModule="MotiveCard" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="170" id="FhQ-Cc-V3T">
                                         <rect key="frame" x="0.0" y="28" width="320" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ycq-Ux-bKe" id="wC7-Aw-O0J">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FhQ-Cc-V3T" id="Jlq-uD-p6X">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="p1c-Ac-H1B" id="1i7-Wi-Sfx"/>
-                                    <outlet property="delegate" destination="p1c-Ac-H1B" id="pB1-Vz-sLX"/>
+                                    <outlet property="dataSource" destination="p1c-Ac-H1B" id="KAa-MX-PtQ"/>
+                                    <outlet property="delegate" destination="p1c-Ac-H1B" id="Kp7-Ce-Dot"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.12156862745098039" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Oe2-dk-9Cx" firstAttribute="height" secondItem="AOy-mk-2FQ" secondAttribute="height" id="A0T-BO-bBf"/>
-                            <constraint firstItem="Oe2-dk-9Cx" firstAttribute="width" secondItem="AOy-mk-2FQ" secondAttribute="width" id="RcR-HQ-tQr"/>
-                            <constraint firstItem="Oe2-dk-9Cx" firstAttribute="centerY" secondItem="AOy-mk-2FQ" secondAttribute="centerY" id="TPo-W4-bd9"/>
-                            <constraint firstItem="Oe2-dk-9Cx" firstAttribute="centerX" secondItem="AOy-mk-2FQ" secondAttribute="centerX" id="e2m-Ks-Tbt"/>
+                            <constraint firstItem="qgZ-U7-upe" firstAttribute="centerY" secondItem="AOy-mk-2FQ" secondAttribute="centerY" id="4pf-hj-sXE"/>
+                            <constraint firstItem="qgZ-U7-upe" firstAttribute="width" secondItem="AOy-mk-2FQ" secondAttribute="width" id="LTT-2j-dze"/>
+                            <constraint firstItem="qgZ-U7-upe" firstAttribute="height" secondItem="AOy-mk-2FQ" secondAttribute="height" id="Tev-gi-vmV"/>
+                            <constraint firstItem="qgZ-U7-upe" firstAttribute="centerX" secondItem="AOy-mk-2FQ" secondAttribute="centerX" id="r3a-pa-4s6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="بسته‌های مرور" id="omX-1l-Mc5"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="tableView" destination="Oe2-dk-9Cx" id="RTl-4N-anz"/>
+                        <outlet property="tableView" destination="qgZ-U7-upe" id="D7f-ft-AMO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22J-zE-unY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -637,7 +660,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1176470588" green="0.1215686275" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="93n-Hi-fNP" firstAttribute="height" secondItem="QI4-7T-9kO" secondAttribute="height" id="20h-6R-gJq"/>
                             <constraint firstItem="93n-Hi-fNP" firstAttribute="width" secondItem="QI4-7T-9kO" secondAttribute="width" id="EtN-Dg-2xq"/>

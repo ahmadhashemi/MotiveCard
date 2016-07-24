@@ -158,7 +158,7 @@ extension MCPacksViewController {
     
     func handlePacks() {
         
-        self.removePacks()
+        //self.removePacks()
         
         if ((NSUserDefaults.standardUserDefaults().objectForKey("FirstRun")) != nil) {
             return

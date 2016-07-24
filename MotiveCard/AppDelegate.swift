@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        self.configureAppearance()
+        //self.configureAppearance()
         
         Parse.initializeWithConfiguration(ParseClientConfiguration(block: { (config) in
             
             config.applicationId = "ZCDx0cqm6Wu4JJ7hWFJXqErhaA0qpka11Daxgd5n"
             config.clientKey = " "
-            config.server = "https://back.ahmadhashemi.com/parse"
+            config.server = "https://server.ahmadhashemi.com/parse"
             
         }))
         

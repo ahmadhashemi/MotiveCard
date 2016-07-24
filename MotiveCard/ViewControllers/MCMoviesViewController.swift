@@ -13,7 +13,7 @@ class MCMoviesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var dataSource: [NSString : [MCOnlinePack]] = [:]
+    var dataSource: [NSString : [MCPack]] = [:]
     
     override func viewDidLoad() {
         
@@ -36,8 +36,9 @@ extension MCMoviesViewController {
         
         query.findObjectsInBackgroundWithBlock { (packs, error) in
             
-            if error == nil {
+            if error != nil {
                 print("fetch error")
+                return
             }
             
             self.makeDataSourceWithReponse(packs!)
@@ -51,17 +52,26 @@ extension MCMoviesViewController {
         
         for pack in response {
             
-            let aPack = MCOnlinePack()
+            let aPack = MCPack()
             
             aPack.movieName = pack["MovieName"] as! String
             aPack.packName = pack["PackName"] as! String
-            aPack.words = pack["Words"] as! [String]
-            aPack.imageURL = NSURL(string: pack["ImageURL"] as! String)!
             
-            if dataSource.keys.contains(aPack.movieName) {
-                dataSource[aPack.movieName]?.append(aPack)
+            let words = (pack["Words"] as! [String]).map({ (word) -> MCCard in
+                let newCard = MCCard()
+                newCard.word = word
+                return newCard
+            })
+            
+            aPack.words = words
+            aPack.imageURL = NSURL(string: pack["ImageURL"] as! String)!
+            aPack.subtitleURL = NSURL(string: pack["SubtitleURL"] as! String)!
+            aPack.movieURL = NSURL(string: pack["MovieURL"] as! String)!
+            
+            if dataSource.keys.contains(aPack.movieName!) {
+                dataSource[aPack.movieName!]?.append(aPack)
             } else {
-                dataSource[aPack.movieName] = [aPack]
+                dataSource[aPack.movieName!] = [aPack]
             }
             
         }
@@ -83,6 +93,12 @@ extension MCMoviesViewController: UITableViewDelegate, UITableViewDataSource {
         let cellTitle = Array(dataSource.keys)[indexPath.row] as String
         let cellPacks = self.dataSource[cellTitle]
         
+        //cell.tintView.backgroundColor = self.randomColorForTintView()
+        
+        cell.nameLabel.text = cellTitle
+        cell.detailsLabel.text = "\((cellPacks?.count)!) بسته لغت"
+        cell.coverImageView.moa.url = cellPacks![0].imageURL?.absoluteString
+        
         //cell.movieNameLabel.text = cellTitle
         //cell.movieDetailsLabel?.text = "\((cellPacks?.count)!) بسته لغت"
         
@@ -91,6 +107,8 @@ extension MCMoviesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let packsVC = self.storyboard?.instantiateViewControllerWithIdentifier("MoviePacksVC") as! MCMoviePacksViewController
         
@@ -103,8 +121,8 @@ extension MCMoviesViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 170;
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 170
     }
     
 }

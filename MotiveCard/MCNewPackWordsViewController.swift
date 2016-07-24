@@ -11,7 +11,7 @@ import Parse
 
 class MCNewPackWordsViewController: UIViewController {
     
-    var newOnlinePack = MCOnlinePack()
+    var newOnlinePack = MCPack()
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -59,7 +59,10 @@ extension MCNewPackWordsViewController {
                 return
             }
             
-            self.newOnlinePack.words.insert(wordTextField.text!, atIndex: 0)
+            let newCard = MCCard()
+            newCard.word = wordTextField.text!
+            
+            self.newOnlinePack.words.insert(newCard, atIndex: 0)
             self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Fade)
             
         }))
@@ -84,7 +87,7 @@ extension MCNewPackWordsViewController {
         
         alert.addAction(UIAlertAction(title: "بله", style: .Default, handler: { (action) in
             
-            self.makeNewOnlinePack(withName: self.newOnlinePack.packName, movieName: self.newOnlinePack.movieName, andWords: self.newOnlinePack.words as NSArray)
+            self.makeNewOnlinePack()
             
         }))
         
@@ -102,15 +105,23 @@ extension MCNewPackWordsViewController {
 
 extension MCNewPackWordsViewController {
     
-    func makeNewOnlinePack(withName name: NSString, movieName: NSString, andWords words: NSArray) {
+    func makeNewOnlinePack() {
         
-        let newOnlinePack = PFObject(className: "Packs")
+        let newPack = PFObject(className: "Packs")
         
-        newOnlinePack.setObject(name, forKey: "PackName")
-        newOnlinePack.setObject(movieName, forKey: "MovieName")
-        newOnlinePack.setObject(words, forKey: "Words")
+        newPack.setObject(self.newOnlinePack.packName!, forKey: "PackName")
+        newPack.setObject(self.newOnlinePack.movieName!, forKey: "MovieName")
         
-        newOnlinePack.saveInBackgroundWithBlock { (saved, error) in
+        let words = self.newOnlinePack.words.map { (card) -> String in
+            return (card.word! as String)
+        }
+        
+        newPack.setObject(words, forKey: "Words")
+        newPack.setObject(self.newOnlinePack.imageURL!.absoluteString, forKey: "ImageURL")
+        newPack.setObject(self.newOnlinePack.subtitleURL!.absoluteString, forKey: "SubtitleURL")
+        newPack.setObject(self.newOnlinePack.movieURL!.absoluteString, forKey: "MovieURL")
+        
+        newPack.saveInBackgroundWithBlock { (saved, error) in
             
             if !saved {
                 print(error?.localizedDescription)
@@ -134,7 +145,7 @@ extension MCNewPackWordsViewController : UITableViewDelegate, UITableViewDataSou
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
-        cell?.textLabel!.text = self.newOnlinePack.words[indexPath.row] as String
+        cell?.textLabel!.text = self.newOnlinePack.words[indexPath.row].word as! String
         
         return cell!
     }
@@ -152,14 +163,14 @@ extension MCNewPackWordsViewController : UITableViewDelegate, UITableViewDataSou
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let word = self.newOnlinePack.words[indexPath.row]
+        let word = self.newOnlinePack.words[indexPath.row].word
         
         let message = "ویرایش لغت"
         let alert = UIAlertController(title: "", message: message, preferredStyle: .Alert)
         
         alert.addTextFieldWithConfigurationHandler { (textField) in
             textField.textAlignment = .Center
-            textField.text = word as String
+            textField.text = word as! String
         }
         
         alert.addAction(UIAlertAction(title: "ذخیره", style: .Default, handler: { (action) in
@@ -174,7 +185,10 @@ extension MCNewPackWordsViewController : UITableViewDelegate, UITableViewDataSou
                 
             } else {
                 
-                self.newOnlinePack.words.insert(newWord!, atIndex: indexPath.row)
+                let newCard = MCCard()
+                newCard.word = newWord!
+                
+                self.newOnlinePack.words.insert(newCard, atIndex: indexPath.row)
                 self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
                 
             }

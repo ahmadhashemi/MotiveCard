@@ -36,23 +36,14 @@
 		E0024E6F1D3D67A9009022D9 /* Leon.srt in Resources */ = {isa = PBXBuildFile; fileRef = E0024E6D1D3D67A9009022D9 /* Leon.srt */; };
 		E0024E701D3D67A9009022D9 /* The Avengers.srt in Resources */ = {isa = PBXBuildFile; fileRef = E0024E6E1D3D67A9009022D9 /* The Avengers.srt */; };
 		E0231F0D1D29CE6A00DC7A24 /* MCMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F0C1D29CE6A00DC7A24 /* MCMoviesViewController.swift */; };
-		E0231F421D29D2BC00DC7A24 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3C1D29D2BC00DC7A24 /* Bolts.framework */; };
-		E0231F431D29D2BC00DC7A24 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3D1D29D2BC00DC7A24 /* Parse.framework */; };
-		E0231F441D29D2BC00DC7A24 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3E1D29D2BC00DC7A24 /* ParseFacebookUtils.framework */; };
-		E0231F451D29D2BC00DC7A24 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3F1D29D2BC00DC7A24 /* ParseFacebookUtilsV4.framework */; };
-		E0231F461D29D2BC00DC7A24 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F401D29D2BC00DC7A24 /* ParseTwitterUtils.framework */; };
-		E0231F471D29D2BC00DC7A24 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F411D29D2BC00DC7A24 /* ParseUI.framework */; };
-		E0231F491D29D2CE00DC7A24 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F481D29D2CE00DC7A24 /* AudioToolbox.framework */; };
 		E0231F4B1D29D2D500DC7A24 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F4A1D29D2D500DC7A24 /* CFNetwork.framework */; };
 		E0231F4D1D29D2DC00DC7A24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F4C1D29D2DC00DC7A24 /* CoreGraphics.framework */; };
 		E0231F4F1D29D2E200DC7A24 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F4E1D29D2E200DC7A24 /* CoreLocation.framework */; };
-		E0231F511D29D2E900DC7A24 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F501D29D2E900DC7A24 /* QuartzCore.framework */; };
 		E0231F531D29D2F000DC7A24 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F521D29D2F000DC7A24 /* Security.framework */; };
 		E0231F551D29D2F600DC7A24 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F541D29D2F600DC7A24 /* StoreKit.framework */; };
 		E0231F571D29D2FC00DC7A24 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F561D29D2FC00DC7A24 /* SystemConfiguration.framework */; };
 		E0231F591D29D30100DC7A24 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F581D29D30100DC7A24 /* libz.tbd */; };
 		E0231F5B1D29D30700DC7A24 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F5A1D29D30700DC7A24 /* libsqlite3.tbd */; };
-		E0231F5D1D29D5DE00DC7A24 /* MCOnlinePack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F5C1D29D5DE00DC7A24 /* MCOnlinePack.swift */; };
 		E0231F5F1D29E21A00DC7A24 /* MCHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231F5E1D29E21A00DC7A24 /* MCHandlers.swift */; };
 		E023E01B1D281E8400F58077 /* MCReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E01A1D281E8400F58077 /* MCReviewViewController.swift */; };
 		E023E01D1D281E8F00F58077 /* MCCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E01C1D281E8F00F58077 /* MCCardViewController.swift */; };
@@ -71,6 +62,12 @@
 		E023E0C21D2871F100F58077 /* MoaDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E0C11D2871F100F58077 /* MoaDistrib.swift */; };
 		E023E0C61D287A3000F58077 /* MCStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023E0C51D287A3000F58077 /* MCStatusViewController.swift */; };
 		E03991A51D3D817F001A854E /* The Revenant.srt in Resources */ = {isa = PBXBuildFile; fileRef = E03991A41D3D817F001A854E /* The Revenant.srt */; };
+		E0618BBD1D43AEB300DB0141 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F501D29D2E900DC7A24 /* QuartzCore.framework */; };
+		E0618BC51D43AEB300DB0141 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F481D29D2CE00DC7A24 /* AudioToolbox.framework */; };
+		E0618BC71D43AEB300DB0141 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3C1D29D2BC00DC7A24 /* Bolts.framework */; };
+		E0618BC91D43AEB300DB0141 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3D1D29D2BC00DC7A24 /* Parse.framework */; };
+		E0618BCB1D43AEB300DB0141 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3E1D29D2BC00DC7A24 /* ParseFacebookUtils.framework */; };
+		E0618BCD1D43AEB300DB0141 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F3F1D29D2BC00DC7A24 /* ParseFacebookUtilsV4.framework */; };
 		E08502951D398D0F00E82068 /* MCPacksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E08502941D398D0F00E82068 /* MCPacksTableViewCell.xib */; };
 		E0B531191D2718330075F999 /* MCCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B531181D2718330075F999 /* MCCard.swift */; };
 		E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B5311A1D27183C0075F999 /* MCPack.swift */; };
@@ -82,6 +79,8 @@
 		E0E05D3A1D2C656E00DC288F /* MCNewPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D391D2C656E00DC288F /* MCNewPackViewController.swift */; };
 		E0E05D3C1D2C6DB300DC288F /* MCMoviePacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D3B1D2C6DB300DC288F /* MCMoviePacksViewController.swift */; };
 		E0E05D3E1D2C871700DC288F /* MCHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E05D3D1D2C871700DC288F /* MCHistory.swift */; };
+		E0E91D271D43AF5F006F2301 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F401D29D2BC00DC7A24 /* ParseTwitterUtils.framework */; };
+		E0E91D291D43AF5F006F2301 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0231F411D29D2BC00DC7A24 /* ParseUI.framework */; };
 		E0F5F11E1D2D488800A5D099 /* MCStatusPacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5F11D1D2D488800A5D099 /* MCStatusPacksViewController.swift */; };
 		E0F5F1201D2D489300A5D099 /* MCStatusWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5F11F1D2D489300A5D099 /* MCStatusWordsViewController.swift */; };
 		E0F5F1241D2D61F900A5D099 /* MCHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5F1231D2D61F900A5D099 /* MCHistoryViewController.swift */; };
@@ -95,16 +94,6 @@
 			dstSubfolderSpec = 7;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E0F5F1381D2D650300A5D099 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -161,7 +150,6 @@
 		E0231F561D29D2FC00DC7A24 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E0231F581D29D30100DC7A24 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E0231F5A1D29D30700DC7A24 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		E0231F5C1D29D5DE00DC7A24 /* MCOnlinePack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCOnlinePack.swift; sourceTree = "<group>"; };
 		E0231F5E1D29E21A00DC7A24 /* MCHandlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCHandlers.swift; sourceTree = "<group>"; };
 		E023E01A1D281E8400F58077 /* MCReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCReviewViewController.swift; sourceTree = "<group>"; };
 		E023E01C1D281E8F00F58077 /* MCCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCCardViewController.swift; sourceTree = "<group>"; };
@@ -207,22 +195,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0E91D291D43AF5F006F2301 /* ParseUI.framework in Frameworks */,
+				E0618BC71D43AEB300DB0141 /* Bolts.framework in Frameworks */,
+				E0618BBD1D43AEB300DB0141 /* QuartzCore.framework in Frameworks */,
+				E0618BCD1D43AEB300DB0141 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				E0618BCB1D43AEB300DB0141 /* ParseFacebookUtils.framework in Frameworks */,
 				E0231F5B1D29D30700DC7A24 /* libsqlite3.tbd in Frameworks */,
 				E0231F591D29D30100DC7A24 /* libz.tbd in Frameworks */,
 				E0231F571D29D2FC00DC7A24 /* SystemConfiguration.framework in Frameworks */,
 				E0231F551D29D2F600DC7A24 /* StoreKit.framework in Frameworks */,
+				E0618BC91D43AEB300DB0141 /* Parse.framework in Frameworks */,
+				E0E91D271D43AF5F006F2301 /* ParseTwitterUtils.framework in Frameworks */,
 				E0231F531D29D2F000DC7A24 /* Security.framework in Frameworks */,
-				E0231F511D29D2E900DC7A24 /* QuartzCore.framework in Frameworks */,
 				E0231F4F1D29D2E200DC7A24 /* CoreLocation.framework in Frameworks */,
 				E0231F4D1D29D2DC00DC7A24 /* CoreGraphics.framework in Frameworks */,
 				E0231F4B1D29D2D500DC7A24 /* CFNetwork.framework in Frameworks */,
-				E0231F491D29D2CE00DC7A24 /* AudioToolbox.framework in Frameworks */,
-				E0231F471D29D2BC00DC7A24 /* ParseUI.framework in Frameworks */,
-				E0231F431D29D2BC00DC7A24 /* Parse.framework in Frameworks */,
-				E0231F421D29D2BC00DC7A24 /* Bolts.framework in Frameworks */,
-				E0231F451D29D2BC00DC7A24 /* ParseFacebookUtilsV4.framework in Frameworks */,
-				E0231F441D29D2BC00DC7A24 /* ParseFacebookUtils.framework in Frameworks */,
-				E0231F461D29D2BC00DC7A24 /* ParseTwitterUtils.framework in Frameworks */,
+				E0618BC51D43AEB300DB0141 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +382,6 @@
 				E0231F5E1D29E21A00DC7A24 /* MCHandlers.swift */,
 				E0B531181D2718330075F999 /* MCCard.swift */,
 				E0B5311A1D27183C0075F999 /* MCPack.swift */,
-				E0231F5C1D29D5DE00DC7A24 /* MCOnlinePack.swift */,
 				E0E05D3D1D2C871700DC288F /* MCHistory.swift */,
 			);
 			path = Models;
@@ -504,7 +491,6 @@
 				E0B9CD9F1D241FAE00A8C61F /* Frameworks */,
 				E0B9CDA01D241FAE00A8C61F /* Resources */,
 				E023E0AD1D28562700F58077 /* CopyFiles */,
-				E0F5F1381D2D650300A5D099 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -528,6 +514,7 @@
 				TargetAttributes = {
 					E0B9CDA11D241FAE00A8C61F = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = T2Z44K28L6;
 					};
 				};
 			};
@@ -622,7 +609,6 @@
 				E0F5F1241D2D61F900A5D099 /* MCHistoryViewController.swift in Sources */,
 				E0024E641D3D5B4C009022D9 /* TSBlurView.m in Sources */,
 				E023E01D1D281E8F00F58077 /* MCCardViewController.swift in Sources */,
-				E0231F5D1D29D5DE00DC7A24 /* MCOnlinePack.swift in Sources */,
 				E023E0BD1D28702700F58077 /* KMSwizzle.m in Sources */,
 				E0F5F11E1D2D488800A5D099 /* MCStatusPacksViewController.swift in Sources */,
 				E0B5311B1D27183C0075F999 /* MCPack.swift in Sources */,
@@ -740,7 +726,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MotiveCard/Frameworks/Parse",
@@ -750,6 +737,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.MotiveCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MotiveCard/Components/MotiveCard-Bridging-Header.h";
 			};
 			name = Debug;
@@ -758,7 +746,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MotiveCard/Frameworks/Parse",
@@ -768,6 +757,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.MotiveCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MotiveCard/Components/MotiveCard-Bridging-Header.h";
 			};
 			name = Release;
