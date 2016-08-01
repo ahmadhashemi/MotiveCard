@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E3378AD1D45015100109F78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E3378AC1D45015100109F78 /* AVFoundation.framework */; };
 		7E8167191D2C2B27009003A4 /* MCNewPackWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8167181D2C2B27009003A4 /* MCNewPackWordsViewController.swift */; };
 		E0024E501D3D5B4C009022D9 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = E0024E331D3D5B4C009022D9 /* .gitkeep */; };
 		E0024E511D3D5B4C009022D9 /* NotificationBackgroundError.png in Resources */ = {isa = PBXBuildFile; fileRef = E0024E341D3D5B4C009022D9 /* NotificationBackgroundError.png */; };
@@ -99,6 +100,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7E3378AC1D45015100109F78 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7E8167181D2C2B27009003A4 /* MCNewPackWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCNewPackWordsViewController.swift; path = ../MCNewPackWordsViewController.swift; sourceTree = "<group>"; };
 		E0024E331D3D5B4C009022D9 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E0024E341D3D5B4C009022D9 /* NotificationBackgroundError.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotificationBackgroundError.png; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E3378AD1D45015100109F78 /* AVFoundation.framework in Frameworks */,
 				E0E91D291D43AF5F006F2301 /* ParseUI.framework in Frameworks */,
 				E0618BC71D43AEB300DB0141 /* Bolts.framework in Frameworks */,
 				E0618BBD1D43AEB300DB0141 /* QuartzCore.framework in Frameworks */,
@@ -390,6 +393,7 @@
 		E0B9CD991D241FAE00A8C61F = {
 			isa = PBXGroup;
 			children = (
+				7E3378AC1D45015100109F78 /* AVFoundation.framework */,
 				E0B9CDA41D241FAF00A8C61F /* MotiveCard */,
 				E0B9CDA31D241FAE00A8C61F /* Products */,
 			);
@@ -514,7 +518,7 @@
 				TargetAttributes = {
 					E0B9CDA11D241FAE00A8C61F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = T2Z44K28L6;
+						DevelopmentTeam = YVTC4WR9M8;
 					};
 				};
 			};
@@ -735,7 +739,7 @@
 				INFOPLIST_FILE = MotiveCard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.MotiveCard;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Mohamadreza-Ahvaraki.MotiveCard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MotiveCard/Components/MotiveCard-Bridging-Header.h";
@@ -755,7 +759,7 @@
 				INFOPLIST_FILE = MotiveCard/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.MotiveCard;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Mohamadreza-Ahvaraki.MotiveCard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MotiveCard/Components/MotiveCard-Bridging-Header.h";

@@ -8,6 +8,8 @@
 
 import UIKit
 import MediaPlayer
+import AVFoundation
+import AVKit
 
 class MCReviewViewController: UIViewController {
 
@@ -40,7 +42,7 @@ extension MCReviewViewController {
         self.findCardsToReview()
         self.configurePageView()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(moviePlayStarted), name: MPMoviePlayerPlaybackStateDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("moviePlayStarted"), name: "MPMoviePlayerPlaybackStateDidChangeNotification: ", object: nil)
         
     }
     
@@ -133,24 +135,48 @@ extension MCReviewViewController {
         if containedTime == nil {
             print("couldn't fine time")
             return
+        }else{
+            self.moviePlayStarted()
         }
         
         print(containedTime)
         
-        self.presentMoviePlayerViewControllerAnimated(moviePlayer)
+        //self.presentMoviePlayerViewControllerAnimated(moviePlayer)
         
     }
     
     func moviePlayStarted() {
         
-        if (moviePlayer.moviePlayer.playbackState == .Playing) {
+        let beginTime = CMTimeMakeWithSeconds(Float64(containedTime!) - (30 as Float64), 1)
+        let delay = 30 as! Double//integer ( 60 seconds for our app )
+        //let endTime = beginTime.seconds + delay
+        
+        let player = AVPlayer(URL: self.selectedPack.movieURL!) // Local Player
+        
+        
+        let playerController = AVPlayerViewController()
+        playerController.player = player
+        self.presentViewController(playerController, animated: true) {
+            player.currentItem?.seekToTime(beginTime)
+            player.performSelector(Selector("pause"), withObject: nil, afterDelay: delay)
+            
+            
+            func pause(player : AVPlayer){
+                player.pause()
+            }
+        }
+    }
+
+        
+        
+     /*   if (moviePlayer.moviePlayer.playbackState == .Playing) {
             
             moviePlayer.moviePlayer.currentPlaybackTime = Double(containedTime!) - 30;
             //containedTime = nil
             
-        }
+        }*/
         
-    }
+    
     
 }
 

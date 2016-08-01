@@ -18,6 +18,8 @@ class MCNewPackViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
     
     @IBAction func addWordsButtonTapped(sender: UIButton) {
@@ -58,6 +60,9 @@ class MCNewPackViewController: UIViewController {
         
         self.navigationController?.pushViewController(addWordsVC, animated: true)
         
+    }
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
 
 }

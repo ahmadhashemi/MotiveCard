@@ -56,7 +56,7 @@ extension MCMoviePacksViewController: UITableViewDelegate, UITableViewDataSource
             //let newPack = MCHandlers.makeLocalPackWithOnlinePack(thisPack)
             MCHandlers.addNewPackToLocalPacks(thisPack)
             
-            self.downloadAndSaveSubtitle(for: thisPack)
+            self.downloadAndSaveSubtitle(thisPack)
             
             // temp
             // show success
@@ -79,7 +79,7 @@ extension MCMoviePacksViewController: UITableViewDelegate, UITableViewDataSource
 
 extension MCMoviePacksViewController {
     
-    func downloadAndSaveSubtitle(for pack: MCPack) {
+    func downloadAndSaveSubtitle(pack: MCPack) {
         
         if pack.subtitleURL?.absoluteString == "" {
             return
